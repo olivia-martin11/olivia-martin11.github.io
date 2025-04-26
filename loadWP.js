@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json();
       })
       .then(papers => {
-        populatePapers(papers, 'papersList', false, true); // isWorkingPaper = true
+        populatePapers(papers, 'pubList', false, true); // isWorkingPaper = true
       })
       .catch(error => {
         console.error("Fetch error for pub.json:", error);
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json();
       })
       .then(papers => {
-        populatePapers(papers, 'wipList', true, false); // isWorkingPaper = false
+        populatePapers(papers, 'wpList', true, false); // isWorkingPaper = false
       })
       .catch(error => {
         console.error("Fetch error for wp.json:", error);
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json();
       })
       .then(papers => {
-        populatePapers(papers, 'otherPubsList', true, false); // isWorkingPaper = false
+        populatePapers(papers, 'wipList', true, false); // isWorkingPaper = false
       })
       .catch(error => {
         console.error("Fetch error for wip.json:", error);
