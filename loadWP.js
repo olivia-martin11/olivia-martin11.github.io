@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json();
       })
       .then(papers => {
-        populatePapers(papers, 'pubList', false, true); // isWorkingPaper = true
+        populatePapers(papers, 'pubList', false, false); // isWorkingPaper = true
       })
       .catch(error => {
         console.error("Fetch error for pub.json:", error);
