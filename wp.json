@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Individual and Social Effects of Shelter for People Experiencing Homelessness: Evidence From Los Angeles County's Winter Shelters Program",
+        "authors": [
+          {
+            "name": "Olivia Martin",
+            "link": "https://olivia-martin11.github.io/"
+          },
+          {
+            "name": "Derek Christopher",
+            "link": "https://www.derekachristopher.com/"
+          },
+          {
+            "name": "Mark Duggan",
+            "link": "https://mgduggan.people.stanford.edu/"
+          }
+        ],
+        "pdf": "https://olivia-martin11.github.io/files/Shelters_Working_Paper_Christopher_Duggan_Martin.pdf",
+        "abstract": "We exploit variation from shocks to shelter availability from Los Angeles County’s winter shelters program to study the effects of shelter provision and sheltered (versus unsheltered) home- lessness. We leverage records of homeless services to generate daily, site-level counts of shelter beds and occupants from 2014 to 2019. We pair shelter counts with block-level crime data and facility-level data on ER visits to assess the impacts of shelter on crime and health outcomes. Fur- ther, using enrollment-level homeless services data, we evaluate the effect of shelter on returns to homeless services, observed exits from homelessness, and observed mortality. While preliminary estimates suggest that street outreach may be just as effective as shelter in reducing an individual’s likelihood of still being homeless 6-18 months in the future, our findings indicate that increased investment in shelter provision may be optimal given its ability to mitigate both private and social costs of homelessness.",
+        "appendedText": ""
+      }
+]
