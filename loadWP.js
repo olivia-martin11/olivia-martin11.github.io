@@ -97,7 +97,7 @@ function populatePapers(jsonList, containerID, showDate) {
         `;
       }
   
-      papersList.innerHTML += html;
+      papersList.innerHTML += `<div class="paper-entry">${html}</div>`;
     });
   }
   
@@ -110,7 +110,6 @@ function populatePapers(jsonList, containerID, showDate) {
   // On DOM load, fetch and populate with correct showDate flags
   document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM Content Loaded");
-    
     fetch('pub.json')
       .then(r => r.json())
       .then(papers => populatePapers(papers, 'pubList', false))
