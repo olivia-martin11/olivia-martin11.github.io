@@ -8,10 +8,13 @@ function populatePapers(jsonList, containerID, showDate) {
     papersList.innerHTML = '';
   
     jsonList.forEach((paper) => {
-      paper.id = paper.title.replace(/\s+/g, '-').toLowerCase();
-  
-      // Filter out your own name
-      const coauthors = paper.authors.filter(a => a.name !== yourName);
+    paper.id = paper.title
+        .toLowerCase()
+        .replace(/['‘’"]/g, '')           // remove smart & straight quotes
+        .replace(/[^a-z0-9]+/g, '-')     // non-alphanumerics → hyphens
+        .replace(/(^-|-$)/g, '');        // trim leading/trailing hyphens      // Filter out your own name
+    
+    const coauthors = paper.authors.filter(a => a.name !== yourName);
   
       // Build coauthor display: link only if URL present
       let authorsHTML = '';
