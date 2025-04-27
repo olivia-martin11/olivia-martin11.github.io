@@ -49,7 +49,7 @@ function populatePapers(jsonList, containerID, showDate) {
         `;
       }
   
-      // Appended text with small-caps for <em> tags
+      // Appended text: journals in small caps
       if (paper.appendedText) {
         const formatted = paper.appendedText.replace(/<em>([^<]+)<\/em>/g,
           '<span style="font-variant:small-caps">$1</span>'
@@ -61,7 +61,7 @@ function populatePapers(jsonList, containerID, showDate) {
         `;
       }
   
-      // Only show date for actual "Working Papers"
+      // Only show date for actual 'Working Papers'
       if (showDate && paper.date) {
         html += `
           <p class="paper-date">
@@ -70,26 +70,32 @@ function populatePapers(jsonList, containerID, showDate) {
         `;
       }
   
-      // Links (abstract + extras)
-      let linksLine = `[ <a href="#" data-id="${paper.id}" onclick="toggleAbstract('${paper.id}'); return false;">Abstract</a>`;
+      // Build links line: show Abstract link only if abstract text exists
+      const linkParts = [];
+      if (paper.abstract && paper.abstract.trim() !== '') {
+        linkParts.push(`<a href="#" data-id="${paper.id}" onclick="toggleAbstract('${paper.id}'); return false;">Abstract</a>`);
+      }
       if (paper.extraLinks) {
         paper.extraLinks.forEach(link => {
-          linksLine += ` | <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`;
+          linkParts.push(`<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`);
         });
       }
-      linksLine += ' ]';
-      html += `
-        <p class="paper-links">
-          ${linksLine}
-        </p>
-      `;
+      if (linkParts.length > 0) {
+        html += `
+          <p class="paper-links">
+            [ ${linkParts.join(' | ')} ]
+          </p>
+        `;
+      }
   
       // Abstract container (initially hidden via CSS)
-      html += `
-        <div id="abstract-${paper.id}" class="abstract-content" style="display:none;">
-          <small>${paper.abstract}</small><br/><br/>
-        </div>
-      `;
+      if (paper.abstract && paper.abstract.trim() !== '') {
+        html += `
+          <div id="abstract-${paper.id}" class="abstract-content" style="display:none;">
+            <small>${paper.abstract}</small><br/><br/>
+          </div>
+        `;
+      }
   
       papersList.innerHTML += html;
     });
