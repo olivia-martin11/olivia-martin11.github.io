@@ -256,3 +256,7 @@ a:hover{
 .coauthor-name:hover {
   text-decoration: underline;
 }
+
+.paper-entry {
+  margin-bottom: 1.5rem;  /* adjust to taste */
+}
