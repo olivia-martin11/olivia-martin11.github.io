@@ -109,15 +109,28 @@ function populatePapers(jsonList, containerID, showDate) {
   
   // On DOM load, fetch and populate with correct showDate flags
   document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM Content Loaded");
+    
     fetch('pub.json')
       .then(r => r.json())
       .then(papers => populatePapers(papers, 'pubList', false))
       .catch(e => console.error("Error loading pub.json:", e));
   
     fetch('wp.json')
-      .then(r => r.json())
-      .then(papers => populatePapers(papers, 'wpList', true))
-      .catch(e => console.error("Error loading wp.json:", e));
+      .then(response => {
+        console.log("wp.json response received:", response);
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(papers => {
+        console.log("wp.json papers:", papers);
+        populatePapers(papers, 'wpList', true);
+      })
+      .catch(error => {
+        console.error("Fetch error for wp.json:", error);
+      });
   
     fetch('wip.json')
       .then(r => r.json())
