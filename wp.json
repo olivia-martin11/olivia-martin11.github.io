@@ -24,10 +24,22 @@
             "link": "https://www.alexiaolaizola.com/"
           }
         ],
-        "date": "October 2025",
+        "date": "January 2026",
         "pdf": "files/Martin_Homelessness_30Jan2026.pdf",
         "abstract": "Federal court decisions can reshape local governments’ enforcement authority, but their impact depends on how cities adapt. Between 2018 and 2024, federal rulings restricted Western U.S. cities’ ability to cite individuals for sleeping or camping in public unless adequate shelter was available. This limitation was widely blamed for rising visible homelessness. Using novel data on enforcement and homelessness from over 50 cities along with a synthetic difference-in-differences design, we find no evidence that the rulings substantially reduced enforcement or increased visible homelessness. Cities responded heterogeneously: some curtailed citations, while others maintained enforcement through alternative mechanisms such as encampment clearings. When the Supreme Court reversed the restrictions in 2024, citations rose but homelessness did not decline. These results suggest that federal constraints on local enforcement have limited effects when cities can adapt along unregulated margins, and that structural conditions such as housing costs and service capacity likely play a larger role in shaping unsheltered homelessness.",
         "appendedText": ""
+      },
+      {
+        "title": "Participation and Representation in Local Government Speech",
+        "authors": [
+          {
+            "name": "Amar Venugopal",
+            "link": "http://amarvenugopal.com/"
+          }
+        ],
+        "date": "April 2026 (arXiv)",
+        "pdf": "https://arxiv.org/abs/2604.21202",
+        "abstract": "Local government meetings are the most common formal channel through which residents speak directly with elected officials, contest policies, and shape local agendas. However, data constraints typically limit the empirical study of these meetings to agendas, single cities, or short time horizons. We collect and transcribe a massive new dataset of city council meetings from 115 California cities over the last decade, using advanced transcription and diarization techniques to analyze the speech content of the meetings themselves. We document two sets of descriptive findings: First, city council meetings are frequent, long, and vary modestly across towns and time in topical content. Second, public participants are substantially older, whiter, more male, more liberal, and more likely to own homes than the registered voter population, and public participation surges when topics related to land use and zoning are included in meeting agendas. Given this skew, we examine the main policy lever municipalities have to shift participation patterns: meeting access costs. Exploiting pandemic-era variation in remote access, we show that eliminating remote options reduces the number of speakers, but does not clearly change the composition of speakers. Collectively, these results provide the most comprehensive empirical portrait to date of who participates in local democracy, what draws them in, and how institutional design choices shape both the volume and composition of public input."
       }
 ]
 
