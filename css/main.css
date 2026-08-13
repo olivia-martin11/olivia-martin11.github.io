@@ -45,6 +45,21 @@ img{
     width: 250px;
 }
 
+.cv-link-wrap {
+    margin: 0.7em 0 0.4em;
+}
+
+.cv-link {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cv-link i {
+    margin-right: 0.4em;
+    font-size: 0.85em;
+}
+
 @media (min-width:1000px){  
 
 .block{
