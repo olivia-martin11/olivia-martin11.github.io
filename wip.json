@@ -1,5 +1,13 @@
 [
   {
+    "title": "Who Takes the Fast Lane? Multifamily Permit Streamlining in California",
+    "authors": [
+
+    ],
+    "abstract": "This paper studies the take-up and supply effects of California's statutory effort to streamline multifamily housing projects through Senate Bill 35. Using project-level data on 190,000 housing applications, I show that the policy's take-up among developers is strikingly low and trace the shortfall, in part, to the law's wage requirements. Formal legal reform is distinct from effective reform, and streamlined pathways can only increase supply if incentives are such that developers use these pathways.",
+    "appendedText": ""
+  },
+  {
     "title": "Neighborhood Impacts of Homeless Encampment Sweeps: Evidence from Los Angeles",
     "authors": [
       {
@@ -13,14 +21,5 @@
     ],
     "abstract": "",
     "appendedText": ""
-  },
-  {
-    "title": "Streamlining as a Housing Supply Tool: Evidence from California",
-    "authors": [
-
-    ],
-    "abstract": "This paper examines the effects of permit streamlining on affordable housing supply using California's Senate Bill 35 (SB 35), which streamlines approval processes for urban affordable apartment projects in exchange for prevailing wage requirements. Using novel project-level data covering approximately 190,000 housing applications from 2018-2025, I exploit variation in statutory eligibility cutoffs and geographic differences in prevailing wage costs to identify the causal effects of streamlining on affordable housing supply.",
-    "appendedText": ""
   }
 ]
-

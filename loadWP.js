@@ -35,12 +35,15 @@ function populatePapers(jsonList, containerID, showDate) {
         }
       }
   
-      // Title (no quotes)
+      // Title (no quotes); optional grey parenthetical stays outside the link
+      const titleNote = paper.titleNote
+        ? ` <span class="paper-title-note">(${paper.titleNote})</span>`
+        : '';
       let html = `
         <p class="paper-title-container">
           ${paper.pdf
             ? `<a href="${paper.pdf}" class="paper-title" target="_blank" rel="noopener noreferrer">${paper.title}</a>`
-            : `<span class="paper-title">${paper.title}</span>`}
+            : `<span class="paper-title">${paper.title}</span>`}${titleNote}
         </p>
       `;
   
