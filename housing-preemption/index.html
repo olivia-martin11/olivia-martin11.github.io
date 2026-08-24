@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>State housing preemption tracker (draft)</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #dbe7f3;
+      --card: #ffffff;
+      --accent: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --warn: #9a3412;
+      --warn-bg: #fff7ed;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+    h1 { font-size: 32px; line-height: 1.15; margin: 0 0 8px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    p, li { font-size: 15px; line-height: 1.55; }
+    .subtitle { color: #334155; max-width: 820px; margin: 0 0 16px; }
+    .meta { color: var(--muted); font-size: 13px; }
+    a { color: var(--accent); }
+    .banner {
+      background: var(--warn-bg);
+      border: 1px solid #fed7aa;
+      color: var(--warn);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      margin: 16px 0 22px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 22px;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .stat b { display: block; font-size: 26px; }
+    .stat span { color: var(--muted); font-size: 13px; }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 22px 22px;
+      margin-bottom: 16px;
+    }
+    details.methods summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: end;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    select, input[type="search"] {
+      font: inherit;
+      color: var(--ink);
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 7px 10px;
+      min-width: 140px;
+      background: white;
+    }
+    input[type="search"] { min-width: 220px; }
+    .checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #1e293b;
+    }
+    .checks label { flex-direction: row; align-items: center; gap: 6px; font-size: 13px; color: #1e293b; }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin: 8px 0 14px;
+      flex-wrap: wrap;
+    }
+    .toggle {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .toggle button, .sort-btn {
+      border: 0;
+      background: white;
+      padding: 7px 12px;
+      cursor: pointer;
+      font: inherit;
+      color: var(--muted);
+    }
+    .toggle button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px 16px;
+      background: #fcfdff;
+    }
+    .card h3 { font-size: 16px; margin: 0 0 4px; }
+    .bill { font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 10px; }
+    .chip {
+      font-size: 11px;
+      background: var(--accent-soft);
+      color: #1e3a8a;
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+    .chip.status-failed_notable { background: #fee2e2; color: #991b1b; }
+    .chip.status-admin_rule { background: #f3e8ff; color: #6b21a8; }
+    .chip.status-amended { background: #ecfeff; color: #155e75; }
+    .chip.juris-local_notable { background: #f1f5f9; color: #334155; }
+    .chip.type-funding_incentive { background: #fef9c3; color: #854d0e; }
+    .desc { font-size: 14px; margin: 0 0 10px; }
+    .notes { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+    .links { font-size: 13px; }
+    .links a { margin-right: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 8px 8px;
+      vertical-align: top;
+    }
+    th {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tl-row {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .tl-year { font-size: 13px; color: #1e293b; }
+    .tl-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .tl-dot {
+      font-size: 11px;
+      border-radius: 6px;
+      padding: 2px 6px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .tl-dot.CA { background: #dbeafe; color: #1e3a8a; }
+    .tl-dot.WA { background: #dcfce7; color: #166534; }
+    .tl-dot.OR { background: #ffedd5; color: #9a3412; }
+    .tl-dot.TX { background: #fce7f3; color: #9d174d; }
+    .tl-dot.NY { background: #ede9fe; color: #5b21b6; }
+    .empty { color: var(--muted); padding: 20px 0; }
+    #table-wrap { overflow-x: auto; }
+    td.desc-cell { max-width: 420px; }
+    .review-list { margin: 8px 0 0; padding-left: 18px; }
+    .review-list li { font-size: 14px; margin: 4px 0; }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .legend i {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    @media (max-width: 800px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      .page { padding: 20px 14px 48px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>State housing preemption tracker</h1>
+    <p class="subtitle">A curated cheat sheet of the housing-supply laws people actually argue about — not a census of every bill. v1 covers California, Washington, New York, Texas, and Oregon, 2015–present.</p>
+    <p class="meta">Draft for review. Generated <span id="generated"></span>. Unlisted page; not indexed.</p>
+    <div class="banner" id="draft-banner"></div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="section">
+      <h2>Review these before locking</h2>
+      <ul class="review-list">
+        <li><strong>New York:</strong> Compact (failed), City of Yes (local), 485-x / 467-m (tax), MDL FAR cap (NYC-enabling). Keep as flagged rows, or drop everything that is not statewide zoning override?</li>
+        <li><strong>California ADUs:</strong> one package row (current) vs split 2016 vs 2019?</li>
+        <li><strong>SB 35 and SB 423:</strong> two cards (current) vs one regime?</li>
+        <li><strong>CEQA 2025:</strong> AB 130 / SB 131 as one row — labels look right; confirm.</li>
+        <li><strong>Drop candidates:</strong> CA SB 10 (opt-in), CA SB 50 (failed), OR SB 8, WA HB 5412, WA HB 1998.</li>
+      </ul>
+      <details class="methods" style="margin-top:14px">
+        <summary>What this is, and what it is not</summary>
+        <p>Existing inventories already cover the universe: Furman’s enacted-bill database, Terner’s and SPUR’s California catalogs, Only Plans’ overlay atlas. None of them ranks the ~10 laws per state that reporters and YIMBY/NIMBY fights actually mean. This page is that salience layer.</p>
+        <p><strong>In:</strong> statewide or large-city-class rules that constrain local zoning, permitting, environmental review, parking, ADUs, TOD, design review, lot size, HOAs, or housing-element enforcement.</p>
+        <p><strong>Also flagged:</strong> famous failures (NY Housing Compact, CA SB 50, WA TOD, TX ADUs), NYC’s local City of Yes, and NY tax incentives that get lumped in with preemption.</p>
+        <p><strong>Out:</strong> the other ~90 California housing bills, pure funding, tenant law (HSTPA), and Florida’s Live Local Act (not Texas).</p>
+      </details>
+    </div>
+
+    <div class="section">
+      <h2>Filters</h2>
+      <div class="filters">
+        <label>State
+          <select id="state"></select>
+        </label>
+        <label>Type
+          <select id="type"></select>
+        </label>
+        <label>Status
+          <select id="status"></select>
+        </label>
+        <label>Jurisdiction
+          <select id="jurisdiction"></select>
+        </label>
+        <label>From year
+          <select id="yearFrom"></select>
+        </label>
+        <label>Through year
+          <select id="yearTo"></select>
+        </label>
+        <label>Search
+          <input type="search" id="q" placeholder="SB 35, duplex, CEQA…">
+        </label>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="hideFailed"> Hide failed bills</label>
+        <label><input type="checkbox" id="hideLocal"> Hide local-only (e.g. City of Yes)</label>
+        <label><input type="checkbox" id="hideIncentive"> Hide tax / incentive rows</label>
+        <label><input type="checkbox" id="strict"> Strict preemption only</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>By year</h2>
+      <div class="legend" id="tl-legend"></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+
+    <div class="section">
+      <div class="toolbar">
+        <h2 id="result-count">Laws</h2>
+        <div class="toggle" role="group" aria-label="View">
+          <button type="button" id="view-cards" class="active">Cards</button>
+          <button type="button" id="view-table">Table</button>
+        </div>
+      </div>
+      <div id="cards" class="cards"></div>
+      <div id="table-wrap" hidden>
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="state">State</th>
+              <th data-sort="year_enacted">Year</th>
+              <th data-sort="bill_number">Bill</th>
+              <th data-sort="popular_name">Name</th>
+              <th data-sort="status">Status</th>
+              <th>Types</th>
+              <th>What it does to local control</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="empty" hidden>No laws match these filters.</p>
+    </div>
+
+    <footer>
+      Source of truth: <code>state_preemption/data/laws.json</code>.
+      Upstream catalogs:
+      <a href="https://www.furmancenter.org/data-tool/land-use-reform-tracker/">Furman</a>,
+      <a href="https://ternercenter.berkeley.edu/california-land-use-housing/">Terner CA</a>,
+      <a href="https://www.spur.org/CAhousinglaws">SPUR CA</a>.
+      Rebuild with <code>python3 state_preemption/build_dashboard.py</code>.
+    </footer>
+  </div>
+  <script id="data" type="application/json">{"generated":"2026-08-24","states":{"CA":"California","WA":"Washington","NY":"New York","TX":"Texas","OR":"Oregon"},"typeLabels":{"zoning":"Zoning","missing_middle":"Missing middle","adu":"ADUs","tod":"TOD","environment":"Environment","parking":"Parking","ministerial":"Ministerial","builders_remedy":"Builder’s remedy / HAA","housing_element":"Housing element","hoa_covenants":"HOA / covenants","design_review":"Design review","lot_size":"Lot size","funding_incentive":"Tax / incentive"},"statusLabels":{"enacted":"Enacted","amended":"Enacted (amended)","repealed":"Repealed","failed_notable":"Failed (notable)","admin_rule":"Admin rule"},"jurisdictionLabels":{"statewide":"Statewide","city_class":"Large-city class","local_notable":"Local (notable)"},"laws":[{"id":"ca-sb35","state":"CA","bill_number":"SB 35 (2017)","popular_name":"SB 35 streamlining","year_enacted":2017,"date_enacted":"2017-09-29","status":"amended","types":["ministerial","housing_element","environment"],"jurisdiction":"statewide","description":"In cities behind on RHNA production, qualifying multifamily infill must be approved ministerially against objective standards — no CUP, no discretionary design review, and no CEQA. The field still calls the process “SB 35” even after SB 423 rewrote the trigger.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201720180SB35","explainer_url":"https://www.hcd.ca.gov/planning-and-community-development/housing-element-and-regional-housing-needs-allocation/sb-35","related_ids":["ca-sb423"],"notes":"Codified at Gov. Code § 65913.4. Expanded and effectively replaced by SB 423 (2023).","review_status":"draft"},{"id":"ca-sb423","state":"CA","bill_number":"SB 423 (2023)","popular_name":"SB 423 (SB 35 expansion)","year_enacted":2023,"date_enacted":"2023-10-11","status":"enacted","types":["ministerial","housing_element","environment"],"jurisdiction":"statewide","description":"Rewrites the SB 35 ministerial path: extends the sunset to 2036, adds housing-element noncompliance as a trigger, and changes labor and affordability rules. Locals still cannot impose discretionary review on qualifying projects.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB423","explainer_url":"https://www.hcd.ca.gov/planning-and-community-development/housing-element-and-regional-housing-needs-allocation/sb-35","related_ids":["ca-sb35"],"notes":"People cite both SB 35 and SB 423. Keep as a separate card.","review_status":"draft"},{"id":"ca-sb9","state":"CA","bill_number":"SB 9 (2021)","popular_name":"HOME Act (duplex + lot split)","year_enacted":2021,"date_enacted":"2021-09-16","status":"enacted","types":["missing_middle","ministerial","zoning"],"jurisdiction":"statewide","description":"Requires ministerial approval of a duplex and an urban lot split in single-family zones, up to four units on a former one-house lot if objective standards are met. Cities may not hold discretionary hearings on qualifying projects.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9","explainer_url":"https://ternercenter.berkeley.edu/research-and-policy/sb-9-turns-one-data-and-insights-from-californias-first-year/","related_ids":[],"notes":"Follow-ons include SB 450 and SB 1123 (2024). Uptake has been modest relative to ADUs. Charter-city litigation.","review_status":"draft"},{"id":"ca-sb79","state":"CA","bill_number":"SB 79 (2025)","popular_name":"Abundant and Affordable Homes Near Transit Act","year_enacted":2025,"date_enacted":"2025-10-10","status":"enacted","types":["tod","zoning","ministerial"],"jurisdiction":"statewide","description":"Sets state height, density, and FAR for housing as an allowed use within about half a mile of qualifying rail and BRT stops in urban transit counties. Qualifying projects can use the SB 423 ministerial path. Closest successor to failed SB 827 / SB 50.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB79","explainer_url":"https://www.hcd.ca.gov/planning-and-research/sb79-tod","related_ids":["ca-sb50","ca-sb423"],"notes":"Signed Oct 10, 2025; operative July 1, 2026. Local TOD alternative plans allowed if HCD concurs. Unincorporated areas wait until the 7th RHNA cycle.","review_status":"draft"},{"id":"ca-ceqa-infill","state":"CA","bill_number":"AB 130 / SB 131 (2025)","popular_name":"CEQA infill housing exemption","year_enacted":2025,"date_enacted":"2025-06-30","status":"enacted","types":["environment","ministerial"],"jurisdiction":"statewide","description":"Budget trailers creating a statutory CEQA exemption for qualifying urban infill housing (Pub. Res. Code § 21080.66), plus exemptions for housing-element rezones and a limited ‘near-miss’ review path. This is the 2025 CEQA housing reform.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB130","explainer_url":"https://abag.ca.gov/sites/default/files/documents/2025-07/AB-130-SB-131-2025-Summary-07312025.pdf","related_ids":["ca-sb330"],"notes":"AB 130 also made SB 330 / HAA vesting and hearing limits permanent. SB 131 is the broader CEQA trailer.","review_status":"draft"},{"id":"ca-haa","state":"CA","bill_number":"SB 167 / AB 678 / AB 1515 (2017)","popular_name":"Housing Accountability Act and builder’s remedy revival","year_enacted":2017,"date_enacted":null,"status":"amended","types":["builders_remedy","zoning","housing_element"],"jurisdiction":"statewide","description":"The HAA bars denial or density cuts of code-compliant housing without written findings. The 2017 bills raised the proof standard and added per-unit penalties. When a housing element is noncompliant, builder’s remedy lets qualifying affordable projects proceed even if they violate local zoning.","source_url":"https://www.hcd.ca.gov/community-development/housing-element/housing-element-memos/docs/hcd-memo-on-haa-final-sept2020.pdf","explainer_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB1893","related_ids":["ca-housing-element"],"notes":"HAA originated in 1982. AB 1633 (2023) treats abusive CEQA delay as an HAA disapproval. AB 1893 / AB 1886 (2024) write builder’s remedy into statute and cap density/standards.","review_status":"draft"},{"id":"ca-adu","state":"CA","bill_number":"SB 1069 / AB 2299 (2016); 2019 package","popular_name":"Statewide ADU / JADU by-right package","year_enacted":2016,"date_enacted":null,"status":"amended","types":["adu","ministerial","parking","hoa_covenants"],"jurisdiction":"statewide","description":"Converts ADUs from an optional local courtesy to a statewide by-right use: ministerial approval, capped parking, banned owner-occupancy, fee limits, shot clocks, and HOA/CC&R preemption. 2016 is the break; 2019 closed the loopholes that produced the ADU boom.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB1069","explainer_url":"https://bipartisanpolicy.org/article/accessory-dwelling-units-adus-in-california/","related_ids":[],"notes":"Treat as one policy. 2019 package: AB 68, AB 881, SB 13; HOA bills AB 670 / AB 3182; later AB 976 made the owner-occupancy ban permanent. Gov. Code §§ 65852.2, 65852.22.","review_status":"draft"},{"id":"ca-sb330","state":"CA","bill_number":"SB 330 (2019)","popular_name":"Housing Crisis Act","year_enacted":2019,"date_enacted":"2019-10-09","status":"amended","types":["zoning","ministerial","housing_element"],"jurisdiction":"statewide","description":"Statewide housing-crisis rules: no net-loss downzoning of housing capacity, a preliminary application that vests standards, and a cap on hearings. Constrains process and downzoning more than it upzones.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200SB330","explainer_url":"https://bbklaw.com/resources/la-071025-ab-130-and-sb-131-include-updates-to-major-california-housing-laws","related_ids":["ca-ceqa-infill"],"notes":"Extended by SB 8 (2021). Made permanent by AB 130 (2025).","review_status":"draft"},{"id":"ca-ab2011","state":"CA","bill_number":"AB 2011 (2022)","popular_name":"Affordable Housing and High Road Jobs Act","year_enacted":2022,"date_enacted":"2022-09-28","status":"amended","types":["tod","ministerial","zoning"],"jurisdiction":"statewide","description":"Ministerial, CEQA-exempt path for 100% affordable or mixed-income housing on commercially zoned sites and specified corridors, with labor standards. Locals cannot impose extra discretionary review on eligible projects.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB2011","explainer_url":"https://www.hcd.ca.gov/sites/default/files/docs/planning-and-community/aff-hsg-high-roads-jobs-act-ab-2011.pdf","related_ids":[],"notes":"Cleaned up by AB 2243 (2024). Companion SB 6 is the weaker commercial-to-residential path — not a separate greatest hit.","review_status":"draft"},{"id":"ca-ab2097","state":"CA","bill_number":"AB 2097 (2022)","popular_name":"Parking near transit","year_enacted":2022,"date_enacted":"2022-09-22","status":"enacted","types":["parking","tod"],"jurisdiction":"statewide","description":"Public agencies may not impose parking minimums on most residential or commercial projects within half a mile of a major transit stop, with a narrow hardship exception.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB2097","explainer_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB2097","related_ids":["wa-sb5184","or-cfec"],"notes":"California’s analog to Oregon CFEC parking rules and Washington SB 5184.","review_status":"draft"},{"id":"ca-density-bonus","state":"CA","bill_number":"AB 2345 (2020); AB 1287 (2023)","popular_name":"State Density Bonus Law (modern expansions)","year_enacted":2020,"date_enacted":null,"status":"amended","types":["zoning"],"jurisdiction":"statewide","description":"If a project provides specified affordable units, the city must grant extra density and incentives or waivers of local development standards (height, setbacks, parking). Local refusal is tightly limited. Post-2015 expansions are what practice actually uses.","source_url":"https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=65915","explainer_url":"https://ternercenter.berkeley.edu/wp-content/uploads/2023/04/New-Pathways-to-Encourage-Housing-Production-Evaluating-Californias-Recent-Housing-Legislation-April-2023-Final.pdf","related_ids":["ca-sb35","ca-ab2011","ca-sb79"],"notes":"Original statute 1979 (Gov. Code § 65915). Do not treat 1979 as a post-2015 reform. Stacks with SB 35/423, AB 2011, SB 79.","review_status":"draft"},{"id":"ca-housing-element","state":"CA","bill_number":"AB 72 (2017); SB 166 (2017)","popular_name":"Housing Element / RHNA enforcement","year_enacted":2017,"date_enacted":null,"status":"enacted","types":["housing_element","builders_remedy"],"jurisdiction":"statewide","description":"Locals must zone for state-assigned RHNA. After 2017, HCD can find adopted elements out of compliance; that turns on builder’s remedy, SB 35/423, and AG/HCD enforcement. Planning preemption with a project-level penalty, not a by-right duplex bill.","source_url":"https://www.hcd.ca.gov/planning-and-community-development/housing-elements","explainer_url":"https://ternercenter.berkeley.edu/wp-content/uploads/2023/04/New-Pathways-to-Encourage-Housing-Production-Evaluating-Californias-Recent-Housing-Legislation-April-2023-Final.pdf","related_ids":["ca-haa","ca-sb35"],"notes":"6th-cycle RHNA (2021–29) is when this became politically explosive.","review_status":"draft"},{"id":"ca-sb10","state":"CA","bill_number":"SB 10 (2021)","popular_name":"SB 10 optional upzoning","year_enacted":2021,"date_enacted":"2021-09-16","status":"enacted","types":["zoning","environment"],"jurisdiction":"statewide","description":"Lets a local legislative body upzone a parcel to up to 10 units with a CEQA exemption. It does not require cities to do so. Frequently cited; weaker as preemption than SB 9, SB 35, or SB 79.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB10","explainer_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB10","related_ids":["ca-sb9"],"notes":"Opt-in. Include only as a discussed-but-optional item. Candidate for drop.","review_status":"draft"},{"id":"ca-sb50","state":"CA","bill_number":"SB 50 (2019)","popular_name":"SB 50 TOD / missing-middle (failed)","year_enacted":2019,"date_enacted":null,"status":"failed_notable","types":["tod","missing_middle","zoning"],"jurisdiction":"statewide","description":"Would have required denser housing near transit and job centers statewide. Died in the Legislature. The political ancestor of SB 79.","source_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200SB50","explainer_url":"https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200SB50","related_ids":["ca-sb79"],"notes":"Failed. Also related: SB 827 (2018). Keep for the political record; easy to hide with the failed filter.","review_status":"draft"},{"id":"wa-hb1110","state":"WA","bill_number":"E2SHB 1110 (2023)","popular_name":"Middle housing","year_enacted":2023,"date_enacted":"2023-05-08","status":"enacted","types":["missing_middle","zoning","parking","hoa_covenants"],"jurisdiction":"city_class","description":"GMA cities must allow duplex through sixplex (tiered by population and transit) in former single-family zones, with standards no stricter than houses. Parking caps; HOAs cannot ban middle housing. If a city misses the deadline, the statute and model ordinance preempt conflicting local rules.","source_url":"https://lawfilesext.leg.wa.gov/biennium/2023-24/Pdf/Bills/Session%20Laws/House/1110-S2.SL.pdf","explainer_url":"https://mrsc.org/stay-informed/mrsc-insight/july-2023/major-changes-to-washington-housing-laws","related_ids":["wa-hb1337"],"notes":"2024 HB 2321 adjusted tiers/timelines. Implementation generally six months after the periodic comprehensive-plan update.","review_status":"draft"},{"id":"wa-hb1337","state":"WA","bill_number":"EHB 1337 (2023)","popular_name":"ADU reform","year_enacted":2023,"date_enacted":"2023-05-08","status":"enacted","types":["adu","parking","zoning"],"jurisdiction":"city_class","description":"GMA cities and counties must allow two ADUs per lot in single-family zones. Bans owner-occupancy mandates, extra-restrictive design standards, and most extra parking (none within half a mile of transit).","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=1337&Year=2023","explainer_url":"https://mrsc.org/stay-informed/mrsc-insight/july-2023/major-changes-to-washington-housing-laws","related_ids":["wa-hb1110"],"notes":"Same implementation clock as HB 1110. Mercatus treats Washington as a strong ADU state.","review_status":"draft"},{"id":"wa-hb1293","state":"WA","bill_number":"ESHB 1293 (2023)","popular_name":"Design review limits","year_enacted":2023,"date_enacted":null,"status":"enacted","types":["design_review","ministerial"],"jurisdiction":"statewide","description":"If a city uses exterior design review, the criteria must be clear and objective, may not cut allowed density or bulk, and public meetings are capped. Complements HB 1110’s administrative-only design review for middle housing.","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=1293&Year=2023","explainer_url":"https://mrsc.org/stay-informed/mrsc-insight/july-2023/major-changes-to-washington-housing-laws","related_ids":["wa-hb1110"],"notes":"Broader than housing-only.","review_status":"draft"},{"id":"wa-hb1220","state":"WA","bill_number":"E2SHB 1220 (2021)","popular_name":"GMA housing element","year_enacted":2021,"date_enacted":null,"status":"enacted","types":["housing_element"],"jurisdiction":"statewide","description":"Changes the GMA housing goal from “encourage” to “plan for and accommodate” housing at all income levels. Commerce issues income-banded need numbers. Enforcement is through GMA hearings boards — there is no builder’s remedy.","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=1220&Year=2021","explainer_url":"https://www.commerce.wa.gov/growth-management/housing-planning/housing-guidance/","related_ids":["wa-hb1110"],"notes":"Foundation for the 2024–25 comprehensive-plan updates that implement 1110/1337.","review_status":"draft"},{"id":"wa-sb5184","state":"WA","bill_number":"ESSB 5184 (2025)","popular_name":"Parking Reform and Modernization Act","year_enacted":2025,"date_enacted":null,"status":"enacted","types":["parking"],"jurisdiction":"city_class","description":"Dedicated parking-minimum preemption: cities over about 30,000 cannot require more than 0.5 space per multifamily unit or 1 space per single-family home, and must use zero minimums for listed uses (affordable, small units, change of use, childcare).","source_url":"https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bills/Session%20Laws/Senate/5184-S.SL.pdf","explainer_url":"https://wacities.org/advocacy/news/advocacy-news/2025/04/18/another-bill-restricts-cities--ability-to-ensure-parking-is-provided-with-development","related_ids":["wa-hb1110","ca-ab2097"],"notes":"This is the parking bill, not a lot-split bill. Builds on parking caps already in HB 1110 / 1337 / 1998.","review_status":"draft"},{"id":"wa-hb1998","state":"WA","bill_number":"ESHB 1998 (2024)","popular_name":"Co-living / SROs","year_enacted":2024,"date_enacted":null,"status":"enacted","types":["missing_middle","parking","zoning"],"jurisdiction":"city_class","description":"Cities must allow co-living on lots that already allow at least six multifamily units. Caps room-size rules to the state building code; no parking within half a mile of major transit. Preempts noncompliant local codes after December 31, 2025.","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=1998&Year=2023","explainer_url":"https://app.leg.wa.gov/billsummary?BillNumber=1998&Year=2023","related_ids":["wa-hb1110"],"notes":"Candidate for drop if the ~10 cap is tight.","review_status":"draft"},{"id":"wa-hb5412","state":"WA","bill_number":"HB 5412 (2023)","popular_name":"SEPA infill exemption","year_enacted":2023,"date_enacted":null,"status":"enacted","types":["environment","ministerial"],"jurisdiction":"city_class","description":"Expands SEPA categorical exemptions for plan-compliant housing inside urban growth areas, reducing project-level environmental review when the comprehensive plan already studied the capacity.","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=5412&Year=2023","explainer_url":"https://www.sightline.org/2023/05/08/how-the-washington-legislature-burst-the-housing-abundance-dam/","related_ids":["wa-hb1220"],"notes":"Less famous than 1110/1337. Candidate for drop.","review_status":"draft"},{"id":"wa-tod-failed","state":"WA","bill_number":"SB 5466 (2023); HB 2160 (2024)","popular_name":"Statewide TOD upzoning (failed)","year_enacted":2023,"date_enacted":null,"status":"failed_notable","types":["tod","zoning"],"jurisdiction":"statewide","description":"Would have required denser housing near transit statewide. SB 5466 passed the Senate and died; HB 2160 passed the House and died. Washington has no SB 79 analog.","source_url":"https://app.leg.wa.gov/billsummary?BillNumber=5466&Year=2023","explainer_url":"https://www.sightline.org/2023/05/08/how-the-washington-legislature-burst-the-housing-abundance-dam/","related_ids":["ca-sb79"],"notes":"Failed. Do not list TOD as enacted in Washington.","review_status":"draft"},{"id":"or-hb2001-2019","state":"OR","bill_number":"HB 2001 (2019)","popular_name":"Missing-middle housing","year_enacted":2019,"date_enacted":"2019-08-08","status":"enacted","types":["missing_middle","zoning","parking","hoa_covenants","adu"],"jurisdiction":"city_class","description":"Cities of 10,000+ must allow duplexes by right in single-family zones. Cities of 25,000+ and Metro must allow duplexes through fourplexes, townhouses, and cottage clusters. Locals may not use siting or design rules that cause unreasonable cost or delay. New CC&Rs cannot ban middle housing or ADUs. LCDC model code preempts if cities miss the deadline.","source_url":"https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/HB2001/Enrolled","explainer_url":"https://www.oregon.gov/lcd/UP/Documents/HB2001TechnicalOverview.pdf","related_ids":["or-sb1051","or-sb458","or-ohna"],"notes":"Not the same bill as HB 2001 (2023) OHNA. Implemented via OAR 660-046, including parking caps.","review_status":"draft"},{"id":"or-sb1051","state":"OR","bill_number":"SB 1051 (2017)","popular_name":"ADU legalization","year_enacted":2017,"date_enacted":null,"status":"amended","types":["adu","ministerial"],"jurisdiction":"statewide","description":"Requires cities to allow at least one ADU in single-family zones, with clear-and-objective approval and a 120-day clock. HB 2001 (2019) then banned owner-occupancy and extra off-street parking for ADUs.","source_url":"https://olis.oregonlegislature.gov/liz/2017R1/Downloads/MeasureDocument/SB1051/Enrolled","explainer_url":"https://www.mercatus.org/research/policy-briefs/taxonomy-state-accessory-dwelling-unit-laws-2025","related_ids":["or-hb2001-2019"],"notes":"2017 is legalization; 2019 is the preemption tightening. Mercatus treats Oregon as a strong ADU state.","review_status":"draft"},{"id":"or-hb2003","state":"OR","bill_number":"HB 2003 (2019)","popular_name":"Housing needs / production strategies","year_enacted":2019,"date_enacted":null,"status":"amended","types":["housing_element"],"jurisdiction":"statewide","description":"State-led housing-needs analysis: cities must plan for 20-year need by type and affordability and adopt housing production strategies. Planning preemption more than project-level by-right.","source_url":"https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/HB2003/Enrolled","explainer_url":"https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/HB2003/Enrolled","related_ids":["or-ohna"],"notes":"Superseded/expanded by 2023 HB 2001 + HB 2889 (OHNA).","review_status":"draft"},{"id":"or-sb458","state":"OR","bill_number":"SB 458 (2021)","popular_name":"Middle-housing land divisions","year_enacted":2021,"date_enacted":null,"status":"enacted","types":["missing_middle","ministerial"],"jurisdiction":"statewide","description":"Expedited partition so each middle-housing unit can sit on its own lot. Locals cannot pile on extra approval criteria such as street frontage or extra parking. Makes HB 2001 financeable as fee-simple ownership, not only rentals.","source_url":"https://olis.oregonlegislature.gov/liz/2021R1/Downloads/MeasureDocument/SB458/Enrolled","explainer_url":"https://www.oregon.gov/lcd/housing/pages/choice.aspx","related_ids":["or-hb2001-2019"],"notes":"","review_status":"draft"},{"id":"or-sb1537","state":"OR","bill_number":"SB 1537 (2024)","popular_name":"HAPO and mandatory adjustments","year_enacted":2024,"date_enacted":null,"status":"enacted","types":["ministerial","zoning","parking"],"jurisdiction":"statewide","description":"Creates the Housing Accountability and Production Office. Locals must grant specified adjustments for qualifying housing (parking fully adjustable; about 10% lot-size and coverage, among others). Limited urban-growth-boundary land-readiness tools.","source_url":"https://olis.oregonlegislature.gov/liz/2024R1/Downloads/MeasureDocument/SB1537/Enrolled","explainer_url":"https://www.oregon.gov/lcd/Housing/Documents/DLCD_SB1537_Guidance_FAQ.pdf","related_ids":[],"notes":"HAPO operational July 1, 2025. Cities can apply for an exemption if they already grant adjustments at a high rate. Do not conflate with CFEC.","review_status":"draft"},{"id":"or-ohna","state":"OR","bill_number":"HB 2001 (2023); HB 2889 (2023)","popular_name":"Oregon Housing Needs Analysis (OHNA)","year_enacted":2023,"date_enacted":null,"status":"enacted","types":["housing_element"],"jurisdiction":"statewide","description":"Replaces the 2019 housing-needs machinery with a DAS-run needs analysis, allocated need by income, production targets, and a DLCD housing-acceleration audit path for underperforming cities. Closer to California RHNA than to duplex legalization.","source_url":"https://www.oregon.gov/lcd/Housing/Documents/RAC1_09_HB2001_2889_Summary_FINAL.pdf","explainer_url":"https://olis.oregonlegislature.gov/liz/2023R1/Measures/Overview/HB2889","related_ids":["or-hb2003","or-hb2001-2019"],"notes":"Different bill from 2019 HB 2001. Same number, different session.","review_status":"draft"},{"id":"or-cfec","state":"OR","bill_number":"LCDC CFEC rules (2022)","popular_name":"Climate-Friendly and Equitable Communities","year_enacted":2022,"date_enacted":null,"status":"admin_rule","types":["parking","tod"],"jurisdiction":"city_class","description":"Binding LCDC rules (not a statute): Metro-area cities must designate dense, transit-served climate-friendly areas and reform parking — no mandates within half a mile of frequent transit, and no mandates for small units, affordable housing, and similar uses, or repeal minimums outright.","source_url":"https://www.oregon.gov/lcd/CL/Pages/CFEC.aspx","explainer_url":"https://www.oregon.gov/lcd/CL/Documents/CFECOverviewImplementation.pdf","related_ids":["or-hb2001-2019"],"notes":"EO 20-04; OAR 660-012, 660-044. Often mis-cited as a single statute.","review_status":"draft"},{"id":"or-sb8","state":"OR","bill_number":"SB 8 (2021)","popular_name":"Affordable housing on religious and nonprofit land","year_enacted":2021,"date_enacted":null,"status":"enacted","types":["zoning","ministerial"],"jurisdiction":"statewide","description":"Requires local governments to allow affordable housing on land owned by religious organizations, nonprofits, and public bodies, with limits on local siting barriers.","source_url":"https://olis.oregonlegislature.gov/liz/2021R1/Downloads/MeasureDocument/SB8/Enrolled","explainer_url":"https://onlyplans.io/zoning/preemptions/","related_ids":[],"notes":"Optional / borderline for the ~10 cap.","review_status":"draft"},{"id":"tx-sb840","state":"TX","bill_number":"SB 840 (2025)","popular_name":"Housing in commercial zones","year_enacted":2025,"date_enacted":"2025-06-20","status":"enacted","types":["zoning","ministerial","tod"],"jurisdiction":"city_class","description":"In large cities (population over 150,000 in counties over 300,000), multifamily and mixed-use (at least 65% residential) is by right in districts that already allow office, retail, commercial, or warehouse. No rezoning or CUP if standards are met.","source_url":"https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB840","explainer_url":"https://www.aei.org/research-products/report/texas-sb-840/","related_ids":["tx-sb2477"],"notes":"Effective September 1, 2025. Not Florida Live Local; drafted to avoid that downzoning loophole. Cities are already testing overlay workarounds.","review_status":"draft"},{"id":"tx-sb15","state":"TX","bill_number":"SB 15 (2025)","popular_name":"Small-lot / lot-size preemption","year_enacted":2025,"date_enacted":"2025-06-20","status":"enacted","types":["lot_size","zoning","parking","missing_middle"],"jurisdiction":"city_class","description":"Covered large cities may not require new residential lots larger than 3,000 square feet (or wider than 30 feet / deeper than 75 feet), and may not use density ratios that block a house on a 3,000 sq ft lot. Extra limits on setbacks, covered parking, and open space for lots of 4,000 sq ft or less.","source_url":"https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00015F.htm","explainer_url":"https://natlawreview.com/article/texas-enacts-critical-real-estate-reforms-senate-bills-15-17-840","related_ids":["tx-sb840"],"notes":"Enrolled text is 3,000 sq ft, not the 1,400 sq ft Senate draft still circulating. HOAs untouched. Effective September 1, 2025.","review_status":"draft"},{"id":"tx-hb24","state":"TX","bill_number":"HB 24 (2025)","popular_name":"Zoning protest / “tyrant’s veto”","year_enacted":2025,"date_enacted":null,"status":"enacted","types":["zoning"],"jurisdiction":"statewide","description":"For rezonings that increase residential capacity, neighbor protest no longer easily forces a supermajority: the protest threshold is 60% of adjoining land, and even then only a majority council vote is required (versus the old 20% → three-fourths vote). Does not upzone anything; it removes a neighbor veto on upzones.","source_url":"https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00024F.htm","explainer_url":"https://texaslawbook.net/unlocking-multifamily-development-and-land-use-in-texas-cities/","related_ids":["tx-sb840"],"notes":"Effective September 1, 2025.","review_status":"draft"},{"id":"tx-sb2477","state":"TX","bill_number":"SB 2477 (2025)","popular_name":"Adaptive reuse","year_enacted":2025,"date_enacted":null,"status":"enacted","types":["ministerial","parking"],"jurisdiction":"city_class","description":"For qualifying conversions of existing commercial and office buildings in the same large cities: no rezoning, no extra parking, no traffic studies, and sharply limited impact fees.","source_url":"https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB2477","explainer_url":"https://www.foley.com/insights/publications/2025/texas-senate-bill-840-and-texas-senate-bill-2477/","related_ids":["tx-sb840"],"notes":"Effective September 1, 2025. Pairs with SB 840.","review_status":"draft"},{"id":"tx-sb673","state":"TX","bill_number":"SB 673 (2025)","popular_name":"Statewide ADUs (failed)","year_enacted":2025,"date_enacted":null,"status":"failed_notable","types":["adu","parking","ministerial"],"jurisdiction":"statewide","description":"Would have required ministerial ADU approval and banned owner-occupancy and most parking mandates. Passed the Senate; died in the House. Texas still has no statewide ADU law.","source_url":"https://legalclarity.org/sb-673-texas-adu-bill-key-provisions-and-legislative-history/","explainer_url":"https://legalclarity.org/sb-673-texas-adu-bill-key-provisions-and-legislative-history/","related_ids":[],"notes":"Failed. Austin HOME and similar codes are local. Live Local is Florida, not Texas.","review_status":"draft"},{"id":"ny-compact","state":"NY","bill_number":"FY2024 Housing Compact (2023)","popular_name":"New York Housing Compact","year_enacted":2023,"date_enacted":null,"status":"failed_notable","types":["zoning","tod","housing_element"],"jurisdiction":"statewide","description":"Would have imposed three-year housing-growth targets, about 25 dwelling units per acre as-of-right near downstate rail, and a state appeals board. Died in the Legislature. Not revived as a mandate in FY2025 or FY2026.","source_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-statewide-strategy-address-new-yorks-housing-crisis","explainer_url":"https://www.cityandstateny.com/policy/2024/04/all-details-albanys-final-housing-deal/395953/","related_ids":["ny-adu-tod-failed"],"notes":"The famous item. Enacted trackers omit it because it failed. Statewide ADU and TOD mandates were withdrawn with it.","review_status":"draft"},{"id":"ny-mdl-far","state":"NY","bill_number":"FY2025 budget, MDL § 26(3)","popular_name":"NYC residential FAR cap lift","year_enacted":2024,"date_enacted":null,"status":"enacted","types":["zoning"],"jurisdiction":"city_class","description":"Repeals the statewide 12 FAR cap on NYC residential bulk if the City maps MIH-equivalent affordability districts. Removes a state ceiling so NYC may map high-FAR districts; does not upzone any lot by itself and does not bind suburbs.","source_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","explainer_url":"https://www.mondaq.com/unitedstates/government-contracts-procurement-ppp/1459550/state-budget-approves-elimination-of-12-far-cap-in-new-york-city","related_ids":["ny-city-of-yes"],"notes":"Enabling, NYC-only. Closest enacted statewide land-use row in 2024. Needed for City of Yes high-density districts.","review_status":"draft"},{"id":"ny-city-of-yes","state":"NY","bill_number":"NYC City of Yes (2024)","popular_name":"City of Yes for Housing Opportunity","year_enacted":2024,"date_enacted":"2024-12-05","status":"enacted","types":["zoning","adu","parking","missing_middle"],"jurisdiction":"local_notable","description":"Citywide NYC Zoning Resolution reform: ADUs, modest density in low-density districts, Universal Affordability Preference, parking cuts, and new high-FAR districts. Local law, not state preemption.","source_url":"https://www.nyc.gov/content/planning/pages/our-work/plans/citywide/city-of-yes-housing-opportunity","explainer_url":"https://council.nyc.gov/press/2024/12/05/2761/","related_ids":["ny-mdl-far"],"notes":"LOCAL. Include only so it is not confused with a state mandate. Candidate to hide behind a statewide-only filter.","review_status":"draft"},{"id":"ny-485x","state":"NY","bill_number":"RPTL § 485-x (2024)","popular_name":"Affordable Neighborhoods for New Yorkers (421-a successor)","year_enacted":2024,"date_enacted":null,"status":"enacted","types":["funding_incentive"],"jurisdiction":"city_class","description":"Ten-year NYC tax-exemption program replacing expired 421-a. Changes project economics; does not override zoning.","source_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","explainer_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","related_ids":["ny-467m"],"notes":"Not zoning preemption. Draft row so it can be dropped.","review_status":"draft"},{"id":"ny-467m","state":"NY","bill_number":"RPTL § 467-m (2024)","popular_name":"Office-to-residential conversion tax incentive","year_enacted":2024,"date_enacted":null,"status":"enacted","types":["funding_incentive"],"jurisdiction":"city_class","description":"Tax abatement for office-to-residential conversions, plus a 421-a completion extender to 2031. Does not override zoning.","source_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","explainer_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","related_ids":["ny-485x"],"notes":"Not zoning preemption. Draft row so it can be dropped.","review_status":"draft"},{"id":"ny-adu-tod-failed","state":"NY","bill_number":"Statewide ADU / TOD mandates (2023–24)","popular_name":"Statewide ADU and TOD mandates (withdrawn)","year_enacted":2023,"date_enacted":null,"status":"failed_notable","types":["adu","tod"],"jurisdiction":"statewide","description":"Hochul proposed statewide ADU legalization and as-of-right TOD density; both were withdrawn after municipal opposition. FY2025 left opt-in ADU tax incentives outside NYC and an NYC basement-apartment pilot.","source_url":"https://www.underbergkessler.com/post/new-york-state-budget-attempts-to-pre-empt-local-municipal-zoning-regulation","explainer_url":"https://www.governor.ny.gov/news/governor-hochul-unveils-landmark-agreement-address-housing-crisis-and-unlock-new-yorks-housing","related_ids":["ny-compact"],"notes":"Failed as preemption. Remaining pieces are opt-in or local.","review_status":"draft"}]}</script>
+  <script>
+    const DATA = JSON.parse(document.getElementById("data").textContent);
+    const laws = DATA.laws;
+    const $ = (id) => document.getElementById(id);
+    let view = "cards";
+    let sortKey = "year_enacted";
+    let sortDir = -1;
+
+    document.getElementById("generated").textContent = DATA.generated;
+    $("draft-banner").textContent =
+      laws.length + " rows, all marked draft. Use Strict preemption only to hide failures, local zoning, and tax programs while you cut the list.";
+
+    function unique(arr) { return [...new Set(arr)]; }
+    function fillSelect(id, entries, allLabel) {
+      const el = $(id);
+      el.innerHTML = "";
+      const all = document.createElement("option");
+      all.value = "";
+      all.textContent = allLabel;
+      el.appendChild(all);
+      entries.forEach(([value, label]) => {
+        const o = document.createElement("option");
+        o.value = value;
+        o.textContent = label;
+        el.appendChild(o);
+      });
+    }
+
+    const years = unique(laws.map(l => l.year_enacted)).sort((a,b) => a-b);
+    fillSelect("state", Object.entries(DATA.states).map(([k,v]) => [k, v]), "All states");
+    fillSelect("type", Object.entries(DATA.typeLabels), "All types");
+    fillSelect("status", Object.entries(DATA.statusLabels), "All statuses");
+    fillSelect("jurisdiction", Object.entries(DATA.jurisdictionLabels), "All jurisdictions");
+    fillSelect("yearFrom", years.map(y => [y, y]), "Any");
+    fillSelect("yearTo", years.map(y => [y, y]), "Any");
+    $("yearFrom").value = String(years[0]);
+    $("yearTo").value = String(years[years.length-1]);
+
+    $("tl-legend").innerHTML = Object.entries(DATA.states).map(([k,v]) =>
+      `<span><i class="tl-dot ${k}" style="width:10px;height:10px;padding:0;display:inline-block;vertical-align:middle"></i> ${v}</span>`
+    ).join("");
+
+    function filtered() {
+      const state = $("state").value;
+      const type = $("type").value;
+      const status = $("status").value;
+      const juris = $("jurisdiction").value;
+      const y0 = Number($("yearFrom").value || 0);
+      const y1 = Number($("yearTo").value || 9999);
+      const q = $("q").value.trim().toLowerCase();
+      const hideFailed = $("hideFailed").checked || $("strict").checked;
+      const hideLocal = $("hideLocal").checked || $("strict").checked;
+      const hideIncentive = $("hideIncentive").checked || $("strict").checked;
+      return laws.filter(l => {
+        if (state && l.state !== state) return false;
+        if (type && !(l.types || []).includes(type)) return false;
+        if (status && l.status !== status) return false;
+        if (juris && l.jurisdiction !== juris) return false;
+        if (l.year_enacted < y0 || l.year_enacted > y1) return false;
+        if (hideFailed && l.status === "failed_notable") return false;
+        if (hideLocal && l.jurisdiction === "local_notable") return false;
+        if (hideIncentive && (l.types || []).includes("funding_incentive")) return false;
+        if (q) {
+          const blob = [l.bill_number, l.popular_name, l.description, l.notes, (l.types||[]).join(" ")].join(" ").toLowerCase();
+          if (!blob.includes(q)) return false;
+        }
+        return true;
+      }).sort((a,b) => {
+        const av = a[sortKey], bv = b[sortKey];
+        if (av < bv) return -sortDir;
+        if (av > bv) return sortDir;
+        return a.id < b.id ? -1 : 1;
+      });
+    }
+
+    function chip(text, cls) {
+      return `<span class="chip ${cls || ""}">${esc(text)}</span>`;
+    }
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    }
+    function typeChips(l) {
+      return (l.types || []).map(t => chip(DATA.typeLabels[t] || t, "type-" + t)).join("");
+    }
+
+    function renderStats(rows) {
+      const enactedish = rows.filter(l => l.status === "enacted" || l.status === "amended" || l.status === "admin_rule");
+      const failed = rows.filter(l => l.status === "failed_notable").length;
+      const states = unique(rows.map(l => l.state)).length;
+      const yearsSpan = rows.length ? Math.min(...rows.map(l => l.year_enacted)) + "–" + Math.max(...rows.map(l => l.year_enacted)) : "—";
+      $("stats").innerHTML = [
+        ["Filtered laws", rows.length],
+        ["Enacted / in force", enactedish.length],
+        ["Failed (shown)", failed],
+        ["States / years", states + " / " + yearsSpan],
+      ].map(([label, val]) => `<div class="stat"><b>${val}</b><span>${label}</span></div>`).join("");
+    }
+
+    function renderTimeline(rows) {
+      const byYear = {};
+      rows.forEach(l => {
+        (byYear[l.year_enacted] ||= []).push(l);
+      });
+      const ys = Object.keys(byYear).map(Number).sort((a,b) => a-b);
+      $("timeline").innerHTML = ys.map(y => {
+        const dots = byYear[y].map(l => {
+          const short = (l.bill_number || "").split("(")[0].trim();
+          return `<span class="tl-dot ${l.state}" title="${esc(l.popular_name)}">${esc(l.state)} ${esc(short)}</span>`;
+        }).join("");
+        return `<div class="tl-row"><div class="tl-year">${y}</div><div class="tl-track">${dots}</div></div>`;
+      }).join("") || `<p class="empty">No years to plot.</p>`;
+    }
+
+    function renderCards(rows) {
+      $("cards").innerHTML = rows.map(l => {
+        const date = l.date_enacted ? ` · ${esc(l.date_enacted)}` : "";
+        const notes = l.notes ? `<p class="notes">${esc(l.notes)}</p>` : "";
+        const src = l.source_url ? `<a href="${esc(l.source_url)}">Bill / statute</a>` : "";
+        const exp = l.explainer_url ? `<a href="${esc(l.explainer_url)}">Explainer</a>` : "";
+        return `<article class="card">
+          <h3>${esc(l.popular_name)}</h3>
+          <p class="bill">${esc(DATA.states[l.state])} · ${esc(l.bill_number)} · ${l.year_enacted}${date}</p>
+          <div class="chips">
+            ${chip(DATA.statusLabels[l.status] || l.status, "status-" + l.status)}
+            ${chip(DATA.jurisdictionLabels[l.jurisdiction] || l.jurisdiction, "juris-" + l.jurisdiction)}
+            ${typeChips(l)}
+          </div>
+          <p class="desc">${esc(l.description)}</p>
+          ${notes}
+          <div class="links">${src}${exp}</div>
+        </article>`;
+      }).join("");
+    }
+
+    function renderTable(rows) {
+      $("tbody").innerHTML = rows.map(l => `<tr>
+        <td>${esc(l.state)}</td>
+        <td>${l.year_enacted}</td>
+        <td>${esc(l.bill_number)}</td>
+        <td>${esc(l.popular_name)}</td>
+        <td>${esc(DATA.statusLabels[l.status] || l.status)}</td>
+        <td>${(l.types || []).map(t => DATA.typeLabels[t] || t).join(", ")}</td>
+        <td class="desc-cell">${esc(l.description)}</td>
+        <td>${l.source_url ? `<a href="${esc(l.source_url)}">source</a>` : ""}${l.explainer_url ? ` · <a href="${esc(l.explainer_url)}">explainer</a>` : ""}</td>
+      </tr>`).join("");
+    }
+
+    function paint() {
+      const rows = filtered();
+      renderStats(rows);
+      renderTimeline(rows);
+      $("result-count").textContent = rows.length + " laws";
+      $("empty").hidden = rows.length > 0;
+      $("cards").hidden = view !== "cards" || rows.length === 0;
+      $("table-wrap").hidden = view !== "table" || rows.length === 0;
+      if (view === "cards") renderCards(rows);
+      else renderTable(rows);
+    }
+
+    ["state","type","status","jurisdiction","yearFrom","yearTo","q","hideFailed","hideLocal","hideIncentive","strict"].forEach(id => {
+      $(id).addEventListener("input", paint);
+      $(id).addEventListener("change", paint);
+    });
+    $("strict").addEventListener("change", () => {
+      $("hideFailed").checked = $("strict").checked;
+      $("hideLocal").checked = $("strict").checked;
+      $("hideIncentive").checked = $("strict").checked;
+      paint();
+    });
+    $("view-cards").addEventListener("click", () => {
+      view = "cards";
+      $("view-cards").classList.add("active");
+      $("view-table").classList.remove("active");
+      paint();
+    });
+    $("view-table").addEventListener("click", () => {
+      view = "table";
+      $("view-table").classList.add("active");
+      $("view-cards").classList.remove("active");
+      paint();
+    });
+    document.querySelectorAll("th[data-sort]").forEach(th => {
+      th.addEventListener("click", () => {
+        const key = th.getAttribute("data-sort");
+        if (sortKey === key) sortDir *= -1;
+        else { sortKey = key; sortDir = 1; }
+        paint();
+      });
+    });
+    paint();
+  </script>
+</body>
+</html>

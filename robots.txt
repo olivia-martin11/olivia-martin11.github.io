@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /housing-preemption/
 
 Sitemap: https://olivia-martin11.github.io/sitemap.xml
-
