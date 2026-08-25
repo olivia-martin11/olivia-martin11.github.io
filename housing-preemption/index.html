@@ -1162,10 +1162,7 @@
           const cx = xScale(xValue(p)).toFixed(1);
           const cy = yScale(yValue(p)).toFixed(1);
           const r = rScale(p.pop_2025);
-          const ring = mark
-            ? `<circle cx="${cx}" cy="${cy}" r="${(r + 3.2).toFixed(1)}" fill="none" stroke="#c2410c" stroke-width="1.4" pointer-events="none"/>`
-            : "";
-          return `${ring}<circle class="msa-dot" data-cbsa="${esc(p.cbsa)}" cx="${cx}" cy="${cy}" r="${r.toFixed(1)}" fill="${fill}" fill-opacity="${op}" stroke="${sc}" stroke-width="${sw}" style="cursor:pointer"/>`;
+          return `<circle class="msa-dot" data-cbsa="${esc(p.cbsa)}" cx="${cx}" cy="${cy}" r="${r.toFixed(1)}" fill="${fill}" fill-opacity="${op}" stroke="${sc}" stroke-width="${sw}" style="cursor:pointer"/>`;
         }).join("");
         svg.innerHTML = `${grid}${circles}
           <text x="${W/2}" y="${Ht-4}" text-anchor="middle" fill="#334155" font-size="12">${esc(xLabels[$("msa-x").value])}</text>
