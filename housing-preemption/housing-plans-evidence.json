@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "checked_on": "2026-09-20",
   "review_note": "First-pass source review. Not yet independently human-validated. Read state-specific open questions.",
   "population": {
@@ -51,9 +51,19 @@
     "state_or_regional": "State / regional allocation",
     "regional_subset": "Allocation in a specified region",
     "advisory_allocation": "Advisory municipal allocation",
-    "local_assessment": "Locally assessed need",
-    "capacity_target": "Capacity / production benchmark",
+    "local_assessment": "No external allocation (local estimate)",
+    "capacity_target": "Benchmark, not need allocation",
     "none_identified": "No allocation identified",
+    "unresolved": "Unresolved"
+  },
+  "assessment_labels": {
+    "state": "State",
+    "regional": "Regional agency",
+    "local": "Locality",
+    "local_or_regional": "Locality or region",
+    "state_and_local": "State and locality",
+    "benchmark_only": "Stock benchmark only",
+    "not_required_or_specified": "No required assessor identified",
     "unresolved": "Unresolved"
   },
   "content_labels": {
@@ -193,6 +203,14 @@
             "ca-65400"
           ],
           "reasoning": "Section65400 requires an annual public progress report including housing-program compliance and development milestones, with state correction requests and court compliance orders."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ca-65584",
+            "ca-65583"
+          ],
+          "reasoning": "Section65584(b)(1) assigns regional need determination to HCD; subsection(b)(2) separately assigns municipal apportionment. Section65583(a)(1) requires local analysis to include that share. The actor code follows the controlling regional calculation, not authorship of the element."
         }
       ],
       "sources": [
@@ -235,7 +253,7 @@
           "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65584.&lawCode=GOV",
           "kind": "statute",
           "accessed_on": "2026-09-20",
-          "locator": "(b)(2), (f)",
+          "locator": "(b)(1)–(2), (d), (f)",
           "quote": "allocates a share of the regional housing need to each city, county, or city and county",
           "supports": "External allocation and income categories.",
           "version_note": "Page identifies AB1275 (2025), effective January 1, 2026; separate seventh-cycle income categories."
@@ -265,6 +283,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "state",
+      "assessment_detail": "California HCD determines each region’s existing and projected housing need in consultation with its council of governments. Cities and counties separately assess local housing conditions and needs in their elements, but that local analysis must include the allocated regional share.",
+      "assessment_method": "The statutory RHNA process governs HCD’s regional determination and the subsequent allocation, with statutory allocation objectives. Section 65583 prescribes the separate local assessment of population, employment, household characteristics, special needs and constraints.",
+      "assessment_local_role": "The locality prepares and adopts its housing element, quantifies local needs and identifies sites and programs to accommodate its regional share. Local diagnosis does not replace the external RHNA number.",
+      "allocation_authority": "Councils of governments; HCD where no COG",
       "population": 39355309,
       "population_rank": 1,
       "fips": "06"
@@ -310,6 +333,13 @@
             "tx-213"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "tx-213"
+          ],
+          "reasoning": "Read §213.002’s operative delegation of content/design and optional topics: it assigns general plan choices to the municipality but no housing-need estimation duty to a state or local assessor."
         }
       ],
       "sources": [
@@ -327,6 +357,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Chapter 213 identifies no required municipal housing-need estimate or institution responsible for producing one. Its local comprehensive-plan authorization does not establish that cities actually assess housing need.",
+      "assessment_method": "The municipality defines plan content and design under §213.002; Chapter 213 prescribes no housing-need formula, dataset or state-calculated planning total.",
+      "assessment_local_role": "A municipality may choose to study housing in its plan. The reviewed chapter requires neither that optional analysis nor accommodation of an externally assigned housing number.",
+      "allocation_authority": "No external allocator identified",
       "population": 31709821,
       "population_rank": 2,
       "fips": "48"
@@ -414,6 +449,14 @@
             "fl-3177"
           ],
           "reasoning": "Section (1)(d) requires plan monitoring procedures; (5)(b) and (6)(f) require implementation policies and programs. No production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "fl-3177",
+            "fl-3167"
+          ],
+          "reasoning": "Section 163.3177(6)(f)2 requires the housing analysis within the local element. Section (1)(f)2–3 regulates acceptable data/methods and population baselines, rather than making the state the housing-needs assessor."
         }
       ],
       "sources": [
@@ -442,6 +485,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "Each local government prepares or commissions the housing-needs analysis for current and future residents, including projected households by size, income and age. State population projections are inputs, not a state housing-needs assessment assigned to the city.",
+      "assessment_method": "Section 163.3177 specifies housing data and requires professionally accepted methods. Population projections may come from the Office of Economic and Demographic Research or a professionally acceptable local method; state medium projections set a minimum land-accommodation baseline, with proportional county-growth safeguards.",
+      "assessment_local_role": "Translate demographic projections into local household and housing needs and adopt the housing element. The state-data and growth-floor requirements constrain inputs but do not supply a California-style municipal housing-unit allocation.",
+      "allocation_authority": "No external housing-unit allocator identified",
       "population": 23462518,
       "population_rank": 3,
       "fips": "12"
@@ -514,6 +562,15 @@
             "ny-village"
           ],
           "reasoning": "The effect-of-adoption subsections require land-use consistency, while preparation/content remain optional."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ],
+          "reasoning": "GCT §28-a(4)(h), Town Law §272-a(3)(h) and Village Law §7-722(3)(h) list optional housing topics. An optional local plan author does not establish a legally required housing-needs assessor."
         }
       ],
       "sources": [
@@ -566,6 +623,11 @@
       "uncertainties": [
         "NYC's special/local planning and fair-housing obligations are not exhaustively coded; the classification describes the state general municipal planning statutes."
       ],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "The reviewed general city, town and village planning statutes make housing resources and future housing needs optional plan topics. They do not require a housing-needs estimate or designate a mandatory assessor.",
+      "assessment_method": "No mandatory housing-needs calculation method appears in these optional comprehensive-plan provisions. This finding does not imply that state housing research or voluntary local studies do not exist.",
+      "assessment_local_role": "Local legislative/planning bodies may include housing analysis in an optional plan; that discretion is not coded as a mandatory local assessment. The general city provision excludes cities over one million.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 20002427,
       "population_rank": 4,
       "fips": "36"
@@ -644,6 +706,13 @@
             "pa-mpc"
           ],
           "reasoning": "Sections 301.3 and 302 prescribe consultation/adoption; §303(c) expressly limits inconsistency-based challenges."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "pa-mpc"
+          ],
+          "reasoning": "Section 301.2 assigns studies to the planning agency; §1103(a) expressly permits municipal or county-prepared regional plans covering the housing needs of the plan area. That legal choice supports local_or_regional."
         }
       ],
       "sources": [
@@ -663,6 +732,11 @@
       "uncertainties": [
         "Philadelphia and Pittsburgh's special planning laws have not been comprehensively reviewed; this row classifies the general MPC framework."
       ],
+      "assessment_actor": "local_or_regional",
+      "assessment_detail": "The municipal planning agency studies housing and growth for a municipal plan. Municipalities may instead prepare a joint plan, or request county planning-agency preparation, addressing housing needs across the agreed planning region.",
+      "assessment_method": "MPC §§301(a)(2.1), 301.2 and 1103 require housing-needs planning and surveys of housing, demographic and economic trends. No state numerical housing-needs formula was identified in these provisions; county consistency and consultation requirements still apply.",
+      "assessment_local_role": "A municipality electing to plan, or participating in a multimunicipal plan, develops the needs analysis individually or cooperatively and adopts the resulting plan. Joint regional housing analysis is distinct from a state-imposed municipal allocation.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 13059432,
       "population_rank": 5,
       "fips": "42"
@@ -769,6 +843,14 @@
             "il-ihda"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "il-act",
+            "il-25"
+          ],
+          "reasoning": "Section 20 explicitly makes IHDA the existing-stock/exemption calculator. Section 25(b)(i) requires the locally adopted plan to state the affordable units necessary for exemption, with local implementation and alternative statutory goals. This is a stock benchmark rather than a housing-demand estimate: no forward-looking housing-needs assessment or forecast is identified in the reviewed AHPAA planning regime. The benchmark_only classification preserves the separate IHDA/local roles without treating them as a state-and-local forecast of housing need."
         }
       ],
       "sources": [
@@ -819,6 +901,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "benchmark_only",
+      "assessment_detail": "IHDA calculates existing affordable housing stock and the affordable share for each local government to determine exemption status. A non-exempt local government’s plan must state the affordable units necessary to reach exemption and address local constraints and implementation. This is a stock/exemption benchmark, not a state forecast of total or regional future housing need.",
+      "assessment_method": "Sections 15 and 20 prescribe IHDA’s formula using Census and other relevant data: affordable owner units below 80% and rental units below 60% of county or metropolitan median household income, divided by total year-round housing units. Section 25 requires the local plan’s exemption-unit statement and supplies alternative statutory goals. IHDA’s additional income-band data are informational and do not determine exemptions.",
+      "assessment_local_role": "The local government adopts the affordable housing plan, states its exemption-related unit requirement using the statutory benchmark, identifies sites/constraints/incentives, and chooses one or more §25 goals. It can appeal IHDA’s exemption determination under the Act; it receives no allocated share of regional future need.",
+      "allocation_authority": "No regional-need allocator; statutory stock benchmarks",
       "population": 12719141,
       "population_rank": 6,
       "fips": "17"
@@ -866,6 +953,14 @@
             "oh-71302"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "oh-71301",
+            "oh-71302"
+          ],
+          "reasoning": "The institution named in §713.02 is a local planning commission, but its enumerated duties do not include housing-need estimation. General planning responsibility therefore does not justify coding a local housing assessor."
         }
       ],
       "sources": [
@@ -894,6 +989,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "The municipal planning commission prepares physical-development plans and maps, but §713.02 identifies no required housing-need estimate or housing assessor.",
+      "assessment_method": "The statute lists physical/public-facility planning topics and permits information and funding cooperation. It supplies no housing-demand calculation method or state housing total for municipal planning.",
+      "assessment_local_role": "The commission performs the statutory general planning work. A municipality’s voluntary housing study is not established by that general duty; no external housing-unit number must be accommodated under the reviewed sections.",
+      "allocation_authority": "No external allocator identified",
       "population": 11900510,
       "population_rank": 7,
       "fips": "39"
@@ -964,6 +1064,13 @@
             "ga-rules"
           ],
           "reasoning": "Rule .02 links planning compliance to qualified-local-government eligibility and describes state/regional review."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ga-rules"
+          ],
+          "reasoning": "Rule .03(9) directs the local housing evaluation and permits substitution of existing local/consolidated analysis. Rule .04 provides external review, without assigning the state or regional commission the city's need calculation."
         }
       ],
       "sources": [
@@ -981,6 +1088,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "For the CDBG entitlement communities required to include housing, the local comprehensive-plan process evaluates housing-stock adequacy for current and future community needs. Existing consolidated-plan or comparable local housing-plan analysis may substitute.",
+      "assessment_method": "DCA Rule 110-12-1-.03(9) prescribes factors including stock/type/condition, costs and burdens, jobs-housing balance, special populations and life-cycle options. The reviewed rule does not prescribe a state-calculated unit-need total.",
+      "assessment_local_role": "Prepare or incorporate the local housing analysis and integrate applicable goals, needs and work-program items into the comprehensive plan. Regional/state review of that plan is not the same as calculating and allocating municipal housing need.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 11302748,
       "population_rank": 8,
       "fips": "13"
@@ -1043,6 +1155,13 @@
             "nc-501"
           ],
           "reasoning": "Section (a) conditions zoning on planning, while (c) makes plans advisory and requires consideration in rezoning."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "nc-501"
+          ],
+          "reasoning": "Section 160D-501(a1),(b)(5) makes housing plans/topics discretionary, while (c) governs local adoption. It does not require an estimate or allocate an assessor."
         }
       ],
       "sources": [
@@ -1062,6 +1181,11 @@
       "uncertainties": [
         "The official coastal-rule server could not be fully retrieved. Secondary indexed text of 15A NCAC 07B .0702 identifies mandatory coastal-plan housing-stock estimates; this has not been elevated to a source-checked housing-element mandate."
       ],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Section 160D-501 permits housing plans and housing-affordability topics but does not require a housing-needs estimate or name a mandatory housing-needs assessor.",
+      "assessment_method": "The reviewed general-planning statute sets no mandatory housing-need calculation method. Its optional housing topic concerns types and affordability; the separate coastal stock-inventory access caveat remains.",
+      "assessment_local_role": "A local government may undertake housing analysis within its plan, which is adopted with planning-board advice. That optional analysis is not treated as a state-mandated local need assessment.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 11197968,
       "population_rank": 9,
       "fips": "37"
@@ -1132,6 +1256,13 @@
             "mi-mpea"
           ],
           "reasoning": "The reviewed act prescribes adoption, notice and five-year review; no housing-specific certification or output sanction was identified in that act."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "mi-mpea"
+          ],
+          "reasoning": "Sections31 and33 place plan preparation and the housing-demand assessment with the planning commission. State legislation specifies this local assessment duty; it does not itself calculate the community’s housing demand."
         }
       ],
       "sources": [
@@ -1149,6 +1280,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The local planning commission prepares the master plan, including an assessment of the community’s existing and forecast housing demands and responsive policies, subject to the statutory pertinence qualification and older-plan exception.",
+      "assessment_method": "The Planning Enabling Act requires the assessment and strategies but does not specify a statewide numerical housing-needs formula in the reviewed provisions. Its procedural and content requirements still constrain plan preparation.",
+      "assessment_local_role": "The commission assesses community housing demands and incorporates strategies into the master plan. No state or regional housing-unit number that the municipality must accommodate was identified in the reviewed act.",
+      "allocation_authority": "No external allocator identified",
       "population": 10127884,
       "population_rank": 10,
       "fips": "26"
@@ -1256,6 +1392,14 @@
             "nj-admin"
           ],
           "reasoning": "The 2024 act conditions immunity on compliance and creates dispute/court review; DCA confirms current unit/trust-fund monitoring rules."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "nj-pl24",
+            "nj-numbers"
+          ],
+          "reasoning": "Section 52:27D-304.1(a),(c),(e),(f) expressly separates DCA calculations from the municipality's ultimate determination. Sections 304.2–304.3 bind both to the statutory need/share methodology."
         }
       ],
       "sources": [
@@ -1319,6 +1463,11 @@
       "uncertainties": [
         "The current NJ legislature statute viewer failed; the MLUL zoning prerequisite is documented by an adopted municipal plan on an official state server. The 2024 Fair Housing Act itself was directly reviewed."
       ],
+      "assessment_actor": "state_and_local",
+      "assessment_detail": "DCA calculates regional low- and moderate-income need and municipal present/prospective obligations. Each municipality determines its own obligation under the same statutory formulas; the dispute-resolution program or courts can adjust the determination. Municipal housing elements also analyze local stock, demographics and capacity.",
+      "assessment_method": "Sections 52:27D-304.2–304.3 prescribe regional and municipal formulas and relevant datasets. DCA's published calculations are expressly nonbinding; that does not make the statutory formula optional.",
+      "assessment_local_role": "Adopt a binding resolution explaining the municipality's calculation, subject to challenge and program/court resolution, then prepare a housing element and fair-share plan for the resulting obligation. Separate local analysis does not permit unilateral disregard of the statutory fair share.",
+      "allocation_authority": "State statutory formula; municipal determination, subject to program/courts",
       "population": 9548215,
       "population_rank": 11,
       "fips": "34"
@@ -1414,6 +1563,13 @@
             "va-2230"
           ],
           "reasoning": "Plan preparation/adoption is compulsory and review is required every five years; the cited housing provision creates no certification or unit-production procedure."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "va-2223"
+          ],
+          "reasoning": "Section 15.2-2223(A) places plan preparation and study with the local commission; (D) frames the housing duty around local needs with consideration of district needs."
         }
       ],
       "sources": [
@@ -1453,6 +1609,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The local planning commission assesses current and future residents' affordable housing needs through the comprehensive plan, while considering the planning district's needs. The cited law does not prescribe a separate quantified state estimate.",
+      "assessment_method": "Section 15.2-2223 requires careful study of local conditions/growth and affordable-housing measures sufficient for current and future needs at all income levels. It supplies substantive criteria, without a housing-unit calculation formula in the reviewed section.",
+      "assessment_local_role": "Prepare local affordable-housing areas and measures, consider district needs, and adopt the plan locally. Considering the district does not itself create an externally apportioned municipal share.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 8880107,
       "population_rank": 12,
       "fips": "51"
@@ -1558,6 +1719,14 @@
             "wa-accountability"
           ],
           "reasoning": "Current agency implementation documents state housing review and consequences."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "wa-070",
+            "wa-rule"
+          ],
+          "reasoning": "RCW36.70A.070(2)(a) identifies Commerce as provider of projected housing need. WAC365-196-410(2)(c) separates that projection from the locally selected population input, county/city apportionment and municipal needs analysis. The state actor label does not mean Commerce independently chooses every input or writes local elements."
         }
       ],
       "sources": [
@@ -1619,6 +1788,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "state",
+      "assessment_detail": "Washington Commerce supplies countywide housing-need projections by income segment and for emergency and supportive housing. Counties coordinate municipal shares with their cities. Cities still inventory existing housing and analyze their net new needs and capacity.",
+      "assessment_method": "Commerce provides the housing-need projection model and technical guidance. The model uses a locally selected population projection; county/city allocation must preserve at least the projected countywide need for each economic segment and follow applicable countywide or multicounty policies.",
+      "assessment_local_role": "Counties and cities select the population input, coordinate local shares, and prepare local needs and capacity analyses. City plans use the resulting allocation; cities may plan for more capacity with supporting infrastructure and coordination.",
+      "allocation_authority": "Counties coordinating with cities and towns",
       "population": 8001020,
       "population_rank": 13,
       "fips": "53"
@@ -1734,6 +1908,14 @@
             "az-assessment"
           ],
           "reasoning": "Section9-469 mandates five-year assessments and annual reports; subsectionE expressly says there is no obligation to fulfill the projections."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ],
+          "reasoning": "The operative verbs assign identification, analysis and publication to municipalities. Section9-469(D) assigns the state agency report compilation, which is not a state calculation of municipal planning need."
         }
       ],
       "sources": [
@@ -1762,6 +1944,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The municipality identifies and analyzes existing and forecast housing needs in its general-plan housing element. Under the separately applicable assessment statute, it publishes five-year population/job projections and estimates additional rental and ownership units needed for existing deficits and growth across incomes.",
+      "assessment_method": "Sections9-461.05(E)(6) and9-469 prescribe subjects and required inputs, including population, jobs, zoning acreage and housing deficits. They do not supply an external municipal unit calculation. The Arizona Department of Housing compiles local annual reports rather than calculating the controlling local need under these provisions.",
+      "assessment_local_role": "The municipality produces the needs assessment and its response plan under the relevant population thresholds. No externally allocated regional number was identified; §9-469(E) expressly says the municipality need not fulfill the projections.",
+      "allocation_authority": "No external allocator identified",
       "population": 7623818,
       "population_rank": 14,
       "fips": "04"
@@ -1823,6 +2010,15 @@
             "tn-mtas"
           ],
           "reasoning": "Current substantive text was read in 2025 mirrors and compared with official guidance; TACIR is historical and is not evidence of 2026 currentness by itself."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "tn-201",
+            "tn-107",
+            "tn-tacir"
+          ],
+          "reasoning": "The municipal statute omits a specific housing-needs task; the county growth-plan statute uses may for substantive housing treatment. Broad needs/affordability objectives do not identify a mandatory housing estimator. TACIR’s interpretation corroborates that optional-element distinction."
         }
       ],
       "sources": [
@@ -1876,6 +2072,11 @@
         "Current official annotated-code section text was not extracted; a final current official text check should confirm the 2025 mirror before publication as independently validated law.",
         "The growth-plan affordability objective is a policy requirement, while the detailed housing element is optional. This classification uses the latter as the comparable municipal housing-element measure."
       ],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Municipal general planning and countywide growth planning identify no separately required housing-need estimate or housing assessor. The growth plan’s broad future-needs and affordability objectives coexist with expressly optional substantive housing treatment.",
+      "assessment_method": "Section 13-4-201 prescribes physical-development and service-area analysis. Section 6-58-107 makes a housing topic optional and states housing-choice/affordability goals; neither provision specifies a housing-unit formula or a state-calculated municipal housing total. Existing source-access limitations remain.",
+      "assessment_local_role": "Local officials may analyze housing when preparing the optional housing portion of a county growth plan or municipal plan. General growth-boundary planning and adoption do not establish a required housing-demand calculation or external housing-unit allocation.",
+      "allocation_authority": "No external allocator identified",
       "population": 7315076,
       "population_rank": 15,
       "fips": "47"
@@ -1952,6 +2153,16 @@
             "ma-3a"
           ],
           "reasoning": "Section 81D requires filing/public-record status; HPP guidance makes safe harbor conditional on certification, and §3A lists funding consequences."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ma-81a",
+            "ma-81d",
+            "ma-3a",
+            "ma-hpp"
+          ],
+          "reasoning": "Section 81D assigns the master plan and its housing needs analysis to the §81A planning board. The other sources establish separate zoning/production benchmarks, not state calculation of the master plan's need."
         }
       ],
       "sources": [
@@ -2002,6 +2213,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The §81A planning board identifies and analyzes existing and forecast housing needs in its §81D master plan. Separate MBTA zoning and Chapter 40B HPP stock-based benchmarks do not make the state the assessor of the master plan's housing need.",
+      "assessment_method": "Section 81D(3) specifies needs analysis, objectives and housing programs but no numerical state need-allocation formula. HPP production benchmarks use existing housing stock; MBTA district requirements are a separate zoning mechanism.",
+      "assessment_local_role": "Develop and adopt the master-plan housing analysis locally. Cities may pursue the separate HPP process and covered communities must meet applicable MBTA zoning duties, but neither is an assigned share of regional master-plan housing need.",
+      "allocation_authority": "No regional-need allocator identified; separate state zoning/HPP benchmarks",
       "population": 7154084,
       "population_rank": 16,
       "fips": "25"
@@ -2055,6 +2271,16 @@
             "in-guidance"
           ],
           "reasoning": "Section 601 makes the plan a zoning prerequisite. HEA1001 §§2–3,25 establish reports/review; the current agency notice supplies administrative submission deadlines."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "in-plan-appendix",
+            "in-502",
+            "in-hea1001",
+            "in-guidance"
+          ],
+          "reasoning": "Sections 501–503 do not mandate a housing estimate. HEA1001 §§2–3 collect historical outcomes and §25 calls for regulatory review and copies of existing studies; these are not duties to calculate future housing need."
         }
       ],
       "sources": [
@@ -2147,11 +2373,16 @@
           "version_note": "Enrolled act read via mirror; official governor page confirms March 5, 2026 signature. Effective July 1, 2026."
         }
       ],
-      "review_status": "source_checked",
+      "review_status": "needs_review",
       "uncertainties": [
         "Official current IGA code and enrolled-PDF endpoints returned an application shell. General statutory text was checked through a 2025 official municipal reproduction and 2025 mirrors, with HEA1001/SEA285 separately checked against enrolled text and official enactment status. A direct current-code verification remains desirable.",
         "The classification excludes one-time regulatory review and backward-looking housing data reports from the definition of a housing element/equivalent needs plan. Those mandatory adjacent duties are described explicitly."
       ],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "The reviewed general-plan provisions do not require a housing-needs estimate. HEA1001 requires review of housing regulations and reports on past housing outcomes; neither creates a required forward-looking housing-needs assessor.",
+      "assessment_method": "HEA1001 prescribes regulatory-review factors and reporting fields. It requires copies of specified preexisting housing studies where available, rather than commissioning a new needs calculation. IHCDA compiles reported outcomes and regional comparisons.",
+      "assessment_local_role": "Undertake the required regulatory review and report local outcomes beginning around January 2027. Optional existing local/regional studies may inform that work, but no externally assigned need total must be accommodated under the reviewed provisions.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 6973333,
       "population_rank": 17,
       "fips": "18"
@@ -2199,6 +2430,14 @@
             "mo-89340"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "mo-89310",
+            "mo-89340"
+          ],
+          "reasoning": "The local institution has a general city-plan duty; the contents section does not assign a housing-needs task. Optional residential/blight planning does not establish an actual mandatory assessment."
         }
       ],
       "sources": [
@@ -2227,6 +2466,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Section 89.340 directs a municipal commission to prepare the city plan but does not require a housing-need estimate or designate a housing assessor.",
+      "assessment_method": "Physical-development and land-use recommendations, optional blight replanning and optional zoning plans do not provide a housing-need formula or state-calculated total.",
+      "assessment_local_role": "The commission prepares general recommendations and may address additional local subjects. The reviewed municipal provisions do not require a housing-needs calculation or accommodation of external municipal housing shares.",
+      "allocation_authority": "No external allocator identified",
       "population": 6270541,
       "population_rank": 18,
       "fips": "29"
@@ -2313,6 +2557,16 @@
             "md-14071"
           ],
           "reasoning": "Mandatory plan/content duties apply; §3-114(d)(3)–(4) provides technical assistance and disclaims prescribing a particular fair-housing action."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "md-3114",
+            "md-14071",
+            "md-3101",
+            "md-ch110"
+          ],
+          "reasoning": "The operative statutes frame need within the local jurisdiction/county and describe state assistance, not state determination. Future §3-105(c) requires the element to be informed by specified state plans and supplied data, rather than an allocated municipal housing number."
         }
       ],
       "sources": [
@@ -2396,6 +2650,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The local jurisdiction's planning process addresses its affordable housing need, including workforce and low-income housing. This is a local assessment duty; the operative provisions do not require a state-calculated numerical need total for each municipality.",
+      "assessment_method": "Operative §§3-114 and 1-407.1 specify income categories and fair-housing assessment, with state technical assistance on request. The October 1, 2026 replacement adds state-plan and data inputs; those inputs do not transfer the local housing-needs assessment to the state.",
+      "assessment_local_role": "Prepare and adopt the local housing element, or participate in the approved county plan where permitted, assessing local affordable need and fair housing. No externally assigned municipal number is identified.",
+      "allocation_authority": "No external municipal need allocator identified",
       "population": 6265347,
       "population_rank": 19,
       "fips": "24"
@@ -2508,6 +2767,13 @@
             "co-part37"
           ],
           "reasoning": "Sections3703(3),3704(3),3705(4),(6) require departmental completeness/implementation review; §3710 establishes grant prioritization beginning December2027."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "co-part37"
+          ],
+          "reasoning": "Sections3703 and3704 expressly choose local or regional conduct of the operative assessment. Section3702 assigns methodology and a separate statewide study to DOLA. Thus state-prescribed methods and state review do not make DOLA the calculator of every locality’s need."
         }
       ],
       "sources": [
@@ -2536,6 +2802,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local_or_regional",
+      "assessment_detail": "The local government conducts a local housing-needs assessment, or a regional entity conducts a substituting regional assessment that estimates need and municipal allocations. DOLA separately must conduct a statewide assessment by November 30, 2027; that state research does not turn all local assessments into state-assigned need.",
+      "assessment_method": "DOLA’s executive director develops the required assessment methodologies, data standards and displacement guidance under§3702. Local and regional assessors apply them; DOLA checks conformity. Regional methodology includes jobs-based municipal allocations, while local methodology incorporates applicable state/regional needs as appropriate.",
+      "assessment_local_role": "A locality conducts and publicly considers its own assessment or participates in and comments on a regional assessment. The responsive action plan explains how any applicable regional allocation is addressed. Regional participation remains optional; first assessment and plan deadlines are separately stated.",
+      "allocation_authority": "Regional assessment entity, where that optional pathway is used",
       "population": 6012561,
       "population_rank": 20,
       "fips": "08"
@@ -2636,6 +2907,14 @@
             "wi-1001-adoption"
           ],
           "reasoning": "Consistency and adoption prerequisites create the identified plan compliance mechanism. Future Act 173 notes are separately dated."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "wi-1001",
+            "wi-1001-adoption"
+          ],
+          "reasoning": "Section66.1001(2)(a)–(b) locates forecasts and housing-demand assessment in the local government’s plan, while subsection(5) makes regional plans advisory. These texts support a local assessor, not merely an inference from absence of RHNA."
         }
       ],
       "sources": [
@@ -2675,6 +2954,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The local government assesses existing and forecast housing demand and the age, condition, value and occupancy of its own housing stock for the comprehensive-plan housing element.",
+      "assessment_method": "Section66.1001 prescribes housing and demographic subjects, income/age/special-needs coverage and plan horizons, rather than a state-calculated municipal need formula. The reviewed provisions do not designate a state or regional body to supply a controlling local housing-unit need.",
+      "assessment_local_role": "The locality uses its forecasts and stock analysis to adopt housing policies and programs within the comprehensive-plan framework. No external municipal allocation was identified; a regional planning commission’s comprehensive plan is expressly advisory.",
+      "allocation_authority": "No external allocator identified",
       "population": 5972787,
       "population_rank": 21,
       "fips": "55"
@@ -2767,6 +3051,15 @@
             "mn-plan"
           ],
           "reasoning": "Plan submission and consistency of local controls are express requirements."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "mn-content",
+            "mn-allocation",
+            "mn-policy"
+          ],
+          "reasoning": "Council policy expressly says the Council calculates Future Affordable Housing Need; statute473.859 requires provision for the locality’s metropolitan share. The regional actor label concerns that future-need calculation, not the separate assessment of existing unmet local need."
         }
       ],
       "sources": [
@@ -2839,6 +3132,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "regional",
+      "assessment_detail": "The Metropolitan Council calculates the region’s future affordable-housing need and each applicable sewer-growth jurisdiction’s share. This future-need calculation concerns added lower-income households; it excludes existing unmet demand. Cities and townships separately assess current local and regional housing needs.",
+      "assessment_method": "The Metropolitan Council sets and updates the regional methodology each planning cycle. Its 2021–2030 allocation uses forecast growth, existing affordable stock and low-wage job–worker balance. The 2031–2040 cycle focuses on housing affordable at or below 60% AMI, with lower-income bands. Council-provided Existing Housing Assessments are starting data for separate local diagnosis.",
+      "assessment_local_role": "Covered localities report their future-need allocation and guide sufficient land/density where the allocation applies. They also use local knowledge to analyze existing needs and prepare implementation policies. Jurisdictions without forecast sewer-serviced growth still have housing-element duties even when they receive no future-need allocation.",
+      "allocation_authority": "Metropolitan Council",
       "population": 5830405,
       "population_rank": 22,
       "fips": "27"
@@ -2917,6 +3215,13 @@
             "sc-ch29"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "sc-ch29"
+          ],
+          "reasoning": "Sections 320/330 permit municipal, joint and county-on-behalf-of-municipal planning. Sections 340 and 510 expressly assign surveys, the planning process, and needs/goals to that commission. The legal choice of local or joint assessment supports local_or_regional, without implying a state or regional allocation."
         }
       ],
       "sources": [
@@ -2934,6 +3239,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local_or_regional",
+      "assessment_detail": "The local planning commission produces the surveys, inventory and statement of housing needs/goals for its planning jurisdiction. A municipality may use its own commission, a joint commission, or a county commission acting by agreement. Those local/joint arrangements assess need; the statute does not assign that assessment to a state agency.",
+      "assessment_method": "Sections 6-29-340 and -510 prescribe the required process and subjects: conditions and probable future development, needs/goals, population and household trends, housing tenure/condition/affordability, and regulatory-cost/incentive analysis. The commission solicits housing-industry and finance input. The chapter prescribes no numerical state housing-need formula.",
+      "assessment_local_role": "The responsible municipal, joint or county commission develops the analysis and recommends the element for adoption by the governing bodies. It considers adjacent jurisdictions and regional issues; no externally assigned municipal housing-unit share appears in this regime.",
+      "allocation_authority": "No external allocator identified",
       "population": 5570274,
       "population_rank": 23,
       "fips": "45"
@@ -2993,6 +3303,14 @@
             "al-2"
           ],
           "reasoning": "A current official statewide section could not be extracted; this first-pass finding triangulates a 2015 official municipal reproduction, 2025 code mirrors, and current municipal guidance."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "al-code-mobile",
+            "al-8"
+          ],
+          "reasoning": "The municipal commission’s general survey duty in §11-52-9 is distinct from a required housing-needs assessment; §11-52-8’s detailed contents supply no such task or assessor. The finding retains the existing source-currentness limitation."
         }
       ],
       "sources": [
@@ -3045,6 +3363,11 @@
       "uncertainties": [
         "The legislature’s current code app returned a shell instead of § 11-52-8 text. A current official statewide text check remains desirable; the 2025 mirror and City of Mobile reproduction agree on the operative contents."
       ],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "The municipal commission must study general present conditions and future growth, but the reviewed master-plan provisions do not specify a housing-need estimate or housing assessor.",
+      "assessment_method": "Sections 11-52-8 and -9 identify physical-development topics and broad survey purposes, without a housing-unit demand formula or an incorporated state need estimate. The previously disclosed current official-code access gap remains.",
+      "assessment_local_role": "An established commission performs general master planning and may include locally selected housing work. This review does not establish a required local housing calculation or an external assigned count.",
+      "allocation_authority": "No external allocator identified",
       "population": 5193088,
       "population_rank": 24,
       "fips": "01"
@@ -3095,6 +3418,14 @@
             "la-1408"
           ],
           "reasoning": "These sections require general planning work but contain no dedicated housing-element compliance mechanism."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "la-106",
+            "la-1408"
+          ],
+          "reasoning": "Both content statutes name local commissions for master planning but omit a required housing-needs estimate. Public-housing layout is not itself an assessment of citywide demand."
         }
       ],
       "sources": [
@@ -3145,6 +3476,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Neither the general municipal master-plan provision nor the reviewed Shreveport provision requires a citywide housing-need estimate or designates a housing assessor.",
+      "assessment_method": "Sections 33:106 and 33:140.8 prescribe general physical-planning recommendations; the optional public-housing/blight subjects contain no municipal housing-demand formula or state need total.",
+      "assessment_local_role": "Municipal commissions prepare the general plan and may consider public-housing layout or blight. Those choices are not a required citywide housing-needs calculation, and no external housing-unit assignment appears in the reviewed provisions.",
+      "allocation_authority": "No external allocator identified",
       "population": 4618189,
       "population_rank": 25,
       "fips": "22"
@@ -3195,6 +3531,14 @@
             "ky-198a025"
           ],
           "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ky-187",
+            "ky-198a025"
+          ],
+          "reasoning": "The optional-element provision and policy encouragement do not designate a required municipal assessor. The separate statewide basic-needs objective is acknowledged without treating it as a state determination of municipal planning need."
         }
       ],
       "sources": [
@@ -3234,6 +3578,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "Housing is an optional local comprehensive-plan element. Section 198A.025 separately makes identifying Kentuckians’ basic housing needs a state policy objective, but these provisions do not establish a required municipal housing-need estimate or assign a state-calculated municipal number.",
+      "assessment_method": "Section 100.187(6) leaves inclusion of the additional element to the planning commission. Section 198A.025 lists state policy objectives and encouragement, not a municipal housing-assessment formula or required local dataset.",
+      "assessment_local_role": "A local commission may include a housing element and carry out housing analysis. The encouragement does not establish that it must do so or that any outside housing-unit estimate must be accommodated.",
+      "allocation_authority": "No external allocator identified",
       "population": 4606864,
       "population_rank": 26,
       "fips": "21"
@@ -3349,6 +3698,15 @@
             "or-program"
           ],
           "reasoning": "Official 2026 program guidance identifies state production-strategy review, progress checks and acceleration."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "or-184",
+            "or-197a",
+            "or-program"
+          ],
+          "reasoning": "Sections184.451–.453 establish DAS as the statewide/regional need calculator and municipal allocator. The local work in chapter197A concerns capacity, contextual needs and production strategy rather than replacement of the DAS allocation."
         }
       ],
       "sources": [
@@ -3376,11 +3734,11 @@
         },
         {
           "id": "or-184",
-          "citation": "Or. Rev. Stat. §§184.453–.455",
+          "citation": "Or. Rev. Stat. §§184.451–.455",
           "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors184.html",
           "kind": "statute",
           "accessed_on": "2026-09-20",
-          "locator": "§184.453(2), (4); §184.455",
+          "locator": "§184.451; §184.453(1)–(4); §184.455",
           "quote": "the department shall allocate a housing need for each city",
           "supports": "Separate universal 20-year allocations and threshold-based production targets.",
           "version_note": "Current code incorporates 2025 chapter476 amendments."
@@ -3399,6 +3757,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "state",
+      "assessment_detail": "The Oregon Department of Administrative Services conducts the annual Oregon Housing Needs Analysis, estimating statewide and regional needs over 20 years, underproduction, homelessness and second-home conversion. It allocates need to cities. Local housing-capacity and contextualized-needs analysis follows.",
+      "assessment_method": "State statute identifies the components and income bands; DAS performs the analysis and considers population forecasts, regional job growth, equitable distribution and specified Metro projections. DLCD and Oregon Housing and Community Services assist DAS and may recommend methodological changes.",
+      "assessment_local_role": "Cities use allocated need in their housing planning and assess buildable land, capacity and local context. Expanded jurisdictions prepare production strategies. Local capacity assessment is distinct from calculating the external 20-year need.",
+      "allocation_authority": "Oregon Department of Administrative Services",
       "population": 4273586,
       "population_rank": 27,
       "fips": "41"
@@ -3449,6 +3812,14 @@
             "ok-47106"
           ],
           "reasoning": "No housing-specific certification, target or penalty is present in these reviewed planning provisions."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ok-title11",
+            "ok-47106"
+          ],
+          "reasoning": "Read both ordinary and large-city planning responsibilities, plus regional commission powers. Their general planning/survey assignments do not identify a distinct housing-needs determination."
         }
       ],
       "sources": [
@@ -3521,6 +3892,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "not_required_or_specified",
+      "assessment_detail": "General municipal and regional commissions prepare development plans, and large-city commissions prepare master plans. The reviewed Title 11 provisions do not require a housing-need estimate or designate a housing assessor.",
+      "assessment_method": "Sections 45-103, 46-103 and 47-106 provide survey/planning powers and physical-development subjects without a housing-demand formula or a state-calculated municipal planning total.",
+      "assessment_local_role": "Commissions perform general physical planning and may investigate local development subjects. Regional cooperation or planning for residence is not, by itself, a required housing-needs assessment; the reviewed law supplies no external housing-unit share to accommodate.",
+      "allocation_authority": "No external allocator identified",
       "population": 4123288,
       "population_rank": 28,
       "fips": "40"
@@ -3619,6 +3995,14 @@
             "ct-pa26-129"
           ],
           "reasoning": "Sections 8-13bb(f)–(l) and 8-13cc(c)–(f) govern review, reporting, growth grants, late-plan consequences and council review."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ct-growth",
+            "ct-secog"
+          ],
+          "reasoning": "Section 8-13dd(b) expressly assigns the initial housing-needs evaluation and state/regional targets to OPM; (c) assigns municipal recommendations to COGs. Section 8-13bb(c) permits a reasoned local departure, so state assessment does not imply a binding municipal allocation."
         }
       ],
       "sources": [
@@ -3682,6 +4066,11 @@
       "uncertainties": [
         "OPM's implementation guidelines and first targets were not independently located in this review. Classification concerns the statutory framework, not completed implementation."
       ],
+      "assessment_actor": "state",
+      "assessment_detail": "Under the enacted framework, OPM's Secretary evaluates ten-year housing need and determines statewide and regional housing-growth targets. COGs then produce regional assessments recommending municipal affordable-unit goals. First state targets are due December 1, 2026, so completed implementation is not presumed.",
+      "assessment_method": "Section 8-13dd(b) sets state evaluation factors including replacement, affordability, household formation, demographics and cost burden. Section (c) governs COG methods for municipal recommendations, subject to OPM review, fair-housing factors and the recommendation ceiling.",
+      "assessment_local_role": "A municipality writes its growth plan or elects the regional plan. A municipality writing its own plan adopts an affordable goal and may depart from the COG recommendation with written reasons. Its site/infrastructure analysis is separate from OPM's state/regional need determination.",
+      "allocation_authority": "COGs recommend municipal goals; OPM approves",
       "population": 3688496,
       "population_rank": 29,
       "fips": "09"
@@ -3782,6 +4171,15 @@
             "ut-202"
           ],
           "reasoning": "Section202 provides compliance review, cure/appeal, funding consequences, fees and injunctive enforcement, with a 2026 reporting exception."
+        },
+        {
+          "claim": "assessment",
+          "source_ids": [
+            "ut-201",
+            "ut-202",
+            "ut-guidance"
+          ],
+          "reasoning": "Section201(3)(a) expressly places drafting and analysis with the planning commission. State reporting and compliance functions in§202 supervise the local planning duty without assigning municipal need totals."
         }
       ],
       "sources": [
@@ -3876,6 +4274,11 @@
       ],
       "review_status": "source_checked",
       "uncertainties": [],
+      "assessment_actor": "local",
+      "assessment_detail": "The municipal planning commission drafts the moderate-income housing element and analyzes the locality’s realistic opportunity to meet additional moderate-income housing needs over the next five years. The identified duty is local planning, not receipt of a state-calculated municipal housing-need number.",
+      "assessment_method": "State law sets the five-year horizon, moderate-income focus, strategy menu and implementation/reporting requirements. The reviewed§10-21-201 does not prescribe a state formula assigning each municipality a unit total. State compliance review examines the resulting plan and implementation.",
+      "assessment_local_role": "The planning commission analyzes local opportunities and selects the required strategy combination; the municipality adopts and implements its plan. No external regional unit allocation was identified in the reviewed provisions.",
+      "allocation_authority": "No external allocator identified",
       "population": 3538904,
       "population_rank": 30,
       "fips": "49"
