@@ -1,0 +1,3885 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-09-20",
+  "review_note": "First-pass source review. Not yet independently human-validated. Read state-specific open questions.",
+  "population": {
+    "source_url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv",
+    "source_title": "Census Vintage 2025 state population estimates",
+    "snapshot_date": "2025-07-01",
+    "release": "January 2026",
+    "accessed_on": "2026-09-20",
+    "column": "POPESTIMATE2025",
+    "unit": "resident persons",
+    "sha256": "92188e29cb0a67dcf95afa7d6c47359409782f086478b70ea4128eb70e223ca9",
+    "method": "SUMLEV = 040; exclude DC and Puerto Rico; rank 50 states by POPESTIMATE2025 descending; retain ranks 1–30.",
+    "boundary": [
+      {
+        "name": "Connecticut",
+        "population": 3688496,
+        "population_rank": 29,
+        "fips": "09"
+      },
+      {
+        "name": "Utah",
+        "population": 3538904,
+        "population_rank": 30,
+        "fips": "49"
+      },
+      {
+        "name": "Nevada",
+        "population": 3282188,
+        "population_rank": 31,
+        "fips": "32"
+      },
+      {
+        "name": "Iowa",
+        "population": 3238387,
+        "population_rank": 32,
+        "fips": "19"
+      }
+    ]
+  },
+  "requirement_labels": {
+    "required_statewide": "Required statewide",
+    "required_subset": "Required for a subset",
+    "required_if_plan": "Required if a plan is adopted",
+    "encouraged": "Encouraged / optional",
+    "no_explicit_requirement": "No explicit housing component found",
+    "unresolved": "Unresolved"
+  },
+  "allocation_labels": {
+    "state_or_regional": "State / regional allocation",
+    "regional_subset": "Allocation in a specified region",
+    "advisory_allocation": "Advisory municipal allocation",
+    "local_assessment": "Locally assessed need",
+    "capacity_target": "Capacity / production benchmark",
+    "none_identified": "No allocation identified",
+    "unresolved": "Unresolved"
+  },
+  "content_labels": {
+    "needs_assessment": "Housing needs",
+    "income_groups": "Income groups",
+    "land_inventory": "Land / sites inventory",
+    "capacity_analysis": "Land capacity",
+    "constraints": "Development constraints",
+    "fair_housing": "Fair housing",
+    "preservation": "Preservation",
+    "implementation": "Action program",
+    "monitoring": "Monitoring",
+    "other": "Other content"
+  },
+  "states": [
+    {
+      "state": "CA",
+      "name": "California",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "Every city and county must adopt a general plan; charter cities must include its mandatory elements.",
+      "housing_duty": "A housing element is mandatory under §65302(c), with detailed substantive requirements in §65583.",
+      "coverage": "All cities and counties, including charter cities; no population cutoff.",
+      "allocation": "state_or_regional",
+      "allocation_detail": "HCD determines regional need; councils of governments allocate municipal/county shares, or HCD does so where no council exists. Income-specific RHNA informs land capacity and programs, not a guarantee of construction. Seventh-cycle allocations separately identify acutely low and extremely low incomes.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Existing/projected need, household conditions, employment trends and special needs.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Needs and programs across income levels; seventh-cycle additions include acutely low income households.",
+          "source_ids": [
+            "ca-65583",
+            "ca-65584"
+          ]
+        },
+        {
+          "item": "land_inventory",
+          "status": "required",
+          "detail": "Inventory of vacant and realistically redevelopable residential sites; relate zoning, services and fair housing to sites.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Identify adequate sites; rezone when inventory cannot accommodate assigned need.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Analyze governmental and market constraints and responses.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Fair-housing assessment, priorities, metrics and actions.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "At-risk assisted housing and preservation programs.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Scheduled actions, responsible officials and quantified objectives.",
+          "source_ids": [
+            "ca-65583"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Annual progress report due April 1 covers housing-element implementation, regional-need progress, applications, approvals, entitlements, permits, occupancy and rezoned sites. Additional replacement/demolition reporting begins with the April 1, 2027 report.",
+          "source_ids": [
+            "ca-65400"
+          ]
+        }
+      ],
+      "enforcement": "HCD reviews drafts and adopted elements, may revoke compliance findings and refer violations to the Attorney General; courts can order compliance and impose escalating remedies under §65585.",
+      "key_distinction": "RHNA is an external allocation of planning need. Quantified program objectives may differ from total need (§65583(b)(2)); this does not eliminate the adequate-sites obligation.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ca-65300",
+            "ca-65302"
+          ],
+          "reasoning": "Universal plan-adoption duty plus mandatory housing element."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ca-65300"
+          ],
+          "reasoning": "Express county/city coverage, including charter cities; no size trigger."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ca-65584",
+            "ca-65583"
+          ],
+          "reasoning": "Regional determination becomes each locality's assigned share and housing-element input."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ca-65585"
+          ],
+          "reasoning": "Administrative review and court remedies address planning compliance."
+        },
+        {
+          "claim": "monitoring",
+          "source_ids": [
+            "ca-65400"
+          ],
+          "reasoning": "Section65400 requires an annual public progress report including housing-program compliance and development milestones, with state correction requests and court compliance orders."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ca-65300",
+          "citation": "Cal. Gov’t Code §65300",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65300.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "entire section",
+          "quote": "Chartered cities shall adopt general plans which contain the mandatory elements specified in Section 65302.",
+          "supports": "Underlying municipal and county plan mandate.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "ca-65302",
+          "citation": "Cal. Gov’t Code §65302(c)",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65302.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsection (c)",
+          "quote": "A housing element as provided in Article 10.6",
+          "supports": "Housing is a mandatory general-plan element.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "ca-65583",
+          "citation": "Cal. Gov’t Code §65583",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65583.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a), (b), (c)",
+          "quote": "An inventory of land suitable and available for residential development",
+          "supports": "Needs, inventory, constraints, programs and fair housing; seventh-cycle provisions distinguished.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "ca-65584",
+          "citation": "Cal. Gov’t Code §65584(a), (b), (f)",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65584.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(b)(2), (f)",
+          "quote": "allocates a share of the regional housing need to each city, county, or city and county",
+          "supports": "External allocation and income categories.",
+          "version_note": "Page identifies AB1275 (2025), effective January 1, 2026; separate seventh-cycle income categories."
+        },
+        {
+          "id": "ca-65585",
+          "citation": "Cal. Gov’t Code §65585(b), (h)–(l)",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65585.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(h), (i), (j), (l)",
+          "quote": "make a finding as to whether the adopted element or amendment is in substantial compliance",
+          "supports": "HCD review, revocation/referral and judicial enforcement.",
+          "version_note": "Page identifies AB507 (2025), effective January 1, 2026."
+        },
+        {
+          "id": "ca-65400",
+          "citation": "Cal. Gov’t Code §65400",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65400.&lawCode=GOV",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (a)(2), (b), (c)",
+          "quote": "Provide by April 1 of each year an annual report",
+          "supports": "Annual housing-element progress reporting, project/site information, correction requests and judicial enforcement.",
+          "version_note": "Amended by Stats.2026, ch.84, §22 (SB172), effective July 13, 2026; some reporting additions first apply April 1, 2027."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 39355309,
+      "population_rank": 1,
+      "fips": "06"
+    },
+    {
+      "state": "TX",
+      "name": "Texas",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "A municipality may adopt a comprehensive plan and determines its contents and its relationship to development regulations.",
+      "housing_duty": "No express municipal housing element duty in Chapter 213. A municipality can include housing by local choice.",
+      "coverage": "General municipal planning authority statewide; no population cutoff for a housing component appears in Chapter 213.",
+      "allocation": "none_identified",
+      "allocation_detail": "Chapter 213 delegates plan contents to municipalities; it neither calculates statewide housing need nor apportions units to individual municipalities.",
+      "contents": [],
+      "enforcement": "Chapter 213 provides public hearing and planning-department/commission review procedures for adopted plans; no housing-element certification or housing allocation enforcement appears there.",
+      "key_distinction": "Optional comprehensive planning is only one reason for this code: the operative content provisions themselves leave housing unspecified. This is not a conclusion about every HUD, land-bank, or housing-finance program.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "tx-213"
+          ],
+          "reasoning": "Section 213.002(a) delegates content and design; (b) gives nonexclusive optional subjects and does not require housing."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "tx-213"
+          ],
+          "reasoning": "Chapter 213 is a general municipal authorization without a housing-specific class trigger."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "tx-213"
+          ],
+          "reasoning": "No allocating entity, municipal share, or mandatory unit count appears in the reviewed chapter."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "tx-213"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "tx-213",
+          "citation": "Tex. Loc. Gov’t Code §§ 213.001–.005",
+          "url": "https://tcss.legis.texas.gov/resources/LG/pdf/LG.213.pdf",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§ 213.002(a)–(d); §§ 213.003–.005",
+          "quote": "A municipality may define the content and design of a comprehensive plan.",
+          "supports": "Optional adoption and local control of contents; adoption procedure and plan/zoning distinction.",
+          "version_note": "Official legislative chapter PDF opened; § 213.002 source note remains 2001. Old statutes.capitol.texas.gov HTML URL returned the app shell."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 31709821,
+      "population_rank": 2,
+      "fips": "48"
+    },
+    {
+      "state": "FL",
+      "name": "Florida",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "Each local government must maintain a comprehensive plan; a new municipality must adopt one within three years of incorporation.",
+      "housing_duty": "The comprehensive plan must contain a housing element.",
+      "coverage": "Incorporated municipalities and counties; no population cutoff for housing. The county plan controls a newly incorporated municipality until its own plan is adopted.",
+      "allocation": "local_assessment",
+      "allocation_detail": "Local housing-needs analysis derives household projections by income, size and age from population projections. State demographic data and a county-proportional growth floor constrain planning, but the reviewed sections do not allocate regional housing-unit need to each municipality.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Housing stock, condition, tenure, costs and cost burdens; projected households and minimum current/future housing need.",
+          "source_ids": [
+            "fl-3177"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Adequate sites for workforce, very-low-, low- and moderate-income housing and special housing types.",
+          "source_ids": [
+            "fl-3177"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Substandard conditions, rehabilitation, historic housing and preservation of affordability.",
+          "source_ids": [
+            "fl-3177"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Housing programs; partnerships, streamlined permitting and reduced affordable-housing costs/delays.",
+          "source_ids": [
+            "fl-3177"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "required",
+          "detail": "Adequate future housing sites and infrastructure are required, but this is not an express parcel-by-parcel sites inventory.",
+          "source_ids": [
+            "fl-3177"
+          ]
+        }
+      ],
+      "enforcement": "The plan must specify monitoring and implementation procedures. This inventory codes planning duties, not a guarantee of housing construction.",
+      "key_distinction": "Housing-unit needs are locally analyzed; the state population-projection framework is not California's income-specific municipal allocation system.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "fl-3167",
+            "fl-3177"
+          ],
+          "reasoning": "Plan maintenance is compulsory; housing appears in the mandatory elements."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "fl-3167"
+          ],
+          "reasoning": "Section 163.3167 covers municipalities and counties and provides the incorporation transition."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "fl-3177"
+          ],
+          "reasoning": "Subsections (1)(f) and (6)(f) prescribe population inputs and local needs analysis, without an external municipal housing-unit assignment."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "fl-3177"
+          ],
+          "reasoning": "Section (1)(d) requires plan monitoring procedures; (5)(b) and (6)(f) require implementation policies and programs. No production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "fl-3167",
+          "citation": "Fla. Stat. §163.3167(1)–(3)",
+          "url": "https://www.flsenate.gov/Laws/Statutes/2026/163.3167",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Subsections (1)–(3)",
+          "quote": "Each local government shall maintain a comprehensive plan",
+          "supports": "Mandatory plan; jurisdictional coverage and incorporation transition.",
+          "version_note": "Current official text read on September 20, 2026."
+        },
+        {
+          "id": "fl-3177",
+          "citation": "Fla. Stat. §163.3177(1)(d), (1)(f), (6)(f)",
+          "url": "https://www.flsenate.gov/Laws/Statutes/2026/163.3177",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Housing element (6)(f); projections (1)(f)",
+          "quote": "A housing element consisting of principles, guidelines, standards, and strategies",
+          "supports": "Housing content; local analysis; state population framework; implementation.",
+          "version_note": "Current official text read on September 20, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 23462518,
+      "population_rank": 3,
+      "fips": "12"
+    },
+    {
+      "state": "NY",
+      "name": "New York",
+      "checked_on": "2026-09-20",
+      "requirement": "encouraged",
+      "plan_mandate": "General city, town and village enabling statutes expressly encourage, but do not require, preparation and adoption of a comprehensive plan.",
+      "housing_duty": "Existing housing resources and future housing needs, including affordable housing, are expressly optional plan topics.",
+      "coverage": "General City Law §28-a applies to cities with population no greater than one million and excludes New York City. Town Law §272-a and Village Law §7-722 apply to those municipal types. NYC's local charter planning is a separate regime, not a general statewide housing-element mandate.",
+      "allocation": "none_identified",
+      "allocation_detail": "The reviewed city, town and village planning statutes do not assign municipal housing-unit need. They permit consideration of regional needs and local housing resources.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "encouraged",
+          "detail": "Existing housing resources and future need, including affordability, may be included.",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "encouraged",
+          "detail": "Optional measures/programs to carry out plan objectives.",
+          "source_ids": [
+            "ny-city"
+          ]
+        }
+      ],
+      "enforcement": "Once adopted, municipal land-use regulations must accord with the plan; adoption also triggers procedural review. These effects do not make the optional housing topic mandatory.",
+      "key_distinction": "A mandatory zoning-consistency rule is different from a duty to adopt a housing element. S2084 remained in Assembly committee when checked.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ],
+          "reasoning": "Plan adoption is expressly encouraged, and housing appears under may include."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ],
+          "reasoning": "The city statute contains the one-million exclusion; separate statutes cover towns and villages."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ],
+          "reasoning": "Regional context appears as an optional topic, without numeric assignment or a fair-share process."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ny-city",
+            "ny-town",
+            "ny-village"
+          ],
+          "reasoning": "The effect-of-adoption subsections require land-use consistency, while preparation/content remain optional."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ny-city",
+          "citation": "N.Y. General City Law §28-a(1), (2)(h), (4)(h), (12)",
+          "url": "https://www.nysenate.gov/legislation/laws/GCT/28-A",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Application, intent, content, effect",
+          "quote": "Existing housing resources and future housing needs, including affordable housing.",
+          "supports": "Optional housing topic; NYC exclusion; adoption effects.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ny-town",
+          "citation": "N.Y. Town Law §272-a(1)(h), (3)(h), (11)",
+          "url": "https://www.nysenate.gov/legislation/laws/TWN/272-A",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Intent, content and effect",
+          "quote": "encourage, but not to require",
+          "supports": "Permissive town comprehensive planning and housing topic.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ny-village",
+          "citation": "N.Y. Village Law §7-722(1)(h), (3)(h), (11)",
+          "url": "https://www.nysenate.gov/legislation/laws/VIL/7-722",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Intent, content and effect",
+          "quote": "encourage, but not to require",
+          "supports": "Permissive village comprehensive planning and housing topic.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ny-s2084",
+          "citation": "N.Y. Senate S2084 (2025–2026) status",
+          "url": "https://www.nysenate.gov/legislation/bills/2025/S2084",
+          "kind": "legislative_status",
+          "accessed_on": "2026-09-20",
+          "locator": "Current Bill Status",
+          "quote": "In Assembly Committee",
+          "supports": "Proposed planning changes were not enacted on the checked page.",
+          "version_note": "Current official text read September 20, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "NYC's special/local planning and fair-housing obligations are not exhaustively coded; the classification describes the state general municipal planning statutes."
+      ],
+      "population": 20002427,
+      "population_rank": 4,
+      "fips": "36"
+    },
+    {
+      "state": "PA",
+      "name": "Pennsylvania",
+      "checked_on": "2026-09-20",
+      "requirement": "required_if_plan",
+      "plan_mandate": "Municipalities governed by the Municipalities Planning Code may adopt a comprehensive plan. Counties have a separate adoption duty.",
+      "housing_duty": "A municipal, multimunicipal or county comprehensive plan must include a plan to meet present and anticipated residents' housing needs.",
+      "coverage": "Municipalities under the MPC: cities of second class A and third class, boroughs, incorporated towns and townships. The MPC does not govern first- and second-class cities (Philadelphia and Pittsburgh); their special regimes are outside this classification.",
+      "allocation": "local_assessment",
+      "allocation_detail": "The MPC requires assessment of present and anticipated local residents. Joint plans may accommodate uses across the participating area; the reviewed MPC provisions do not create state-assigned municipal housing-need numbers.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Housing/demographic/economic studies and a plan for present/future housing needs.",
+          "source_ids": [
+            "pa-mpc"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "encouraged",
+          "detail": "Housing types and densities across incomes are listed as permissible means of addressing need.",
+          "source_ids": [
+            "pa-mpc"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "encouraged",
+          "detail": "Conservation of sound housing and rehabilitation of declining neighborhoods are illustrative optional measures.",
+          "source_ids": [
+            "pa-mpc"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Discuss short- and long-range implementation strategies.",
+          "source_ids": [
+            "pa-mpc"
+          ]
+        }
+      ],
+      "enforcement": "Public adoption and county/neighbor consultation; plans generally guide decisions. Section 303(c) bars invalidating an action solely for inconsistency with the plan.",
+      "key_distinction": "The housing component is compulsory in an adopted comprehensive plan, while municipal plan adoption itself is generally permissive under the MPC.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "pa-mpc"
+          ],
+          "reasoning": "Section 302 says may adopt; §301(a)(2.1) lists required housing content."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "pa-mpc"
+          ],
+          "reasoning": "The act's scope excludes first- and second-class cities and separately requires county plans in §301.4."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "pa-mpc"
+          ],
+          "reasoning": "Sections 301, 301.2 and 1103 frame local/regional planning without an external municipal housing-unit allocation."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "pa-mpc"
+          ],
+          "reasoning": "Sections 301.3 and 302 prescribe consultation/adoption; §303(c) expressly limits inconsistency-based challenges."
+        }
+      ],
+      "sources": [
+        {
+          "id": "pa-mpc",
+          "citation": "Pennsylvania Municipalities Planning Code, Act 247 of 1968, §§301(a)(2.1), 301.2–301.4, 302, 303, 1103",
+          "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/1968/0/0247..HTM",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Title; Article III and §1103",
+          "quote": "A plan to meet the housing needs of present residents",
+          "supports": "Optional municipal adoption; compulsory housing content; local needs; regional option and scope.",
+          "version_note": "Current official text read September 20, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "Philadelphia and Pittsburgh's special planning laws have not been comprehensively reviewed; this row classifies the general MPC framework."
+      ],
+      "population": 13059432,
+      "population_rank": 5,
+      "fips": "42"
+    },
+    {
+      "state": "IL",
+      "name": "Illinois",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "The Affordable Housing Planning and Appeal Act imposes a separate affordable housing plan regardless of whether the municipality elects a comprehensive plan.",
+      "housing_duty": "Non-exempt local governments must adopt an affordable housing plan. Newly non-exempt governments have 18 months after IHDA notification.",
+      "coverage": "Municipalities with population at least 1,000 and less than 10% affordable year-round housing, as determined by IHDA; counties also covered. Municipalities under 1,000 or with at least 10% affordable housing are exempt.",
+      "allocation": "capacity_target",
+      "allocation_detail": "IHDA calculates existing affordable-stock percentages. The plan selects one or more statutory goals: 15% of new development/redevelopment affordable, a 5-percentage-point increase in affordable stock, or 10% overall affordable stock. These are uniform statutory benchmarks with local choice, not an allocation of regional housing need to cities.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "State the affordable units needed to reach exempt status.",
+          "source_ids": [
+            "il-25"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Affordability calculations distinguish owner units affordable below 80% and rental units below 60% of median household income in the county or primary metropolitan statistical area.",
+          "source_ids": [
+            "il-act"
+          ]
+        },
+        {
+          "item": "land_inventory",
+          "status": "required",
+          "detail": "Identify suitable land for affordable construction and structures suitable for conversion or rehabilitation; consider ownership/rental, committed developers, and public or semi-public sites. Not the detailed California parcel-capacity protocol.",
+          "source_ids": [
+            "il-25"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Describe market conditions, infrastructure limits, ordinances and policies constraining affordable housing; devise mitigation strategies.",
+          "source_ids": [
+            "il-25"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Constraints analysis includes policies or practices that fail to affirmatively further fair housing.",
+          "source_ids": [
+            "il-25"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Identify incentives, choose statutory goal(s), and propose timelines for actions to commence within 24 months of adoption.",
+          "source_ids": [
+            "il-25"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "File the plan with IHDA within 60 days; implementation report no later than four years after adoption/update; prior plans require progress summaries.",
+          "source_ids": [
+            "il-25"
+          ]
+        }
+      ],
+      "enforcement": "IHDA determines substantial compliance and notifies violations; the Attorney General may seek mandamus, injunction, or other relief. Section 30 also provides affordable-development appeals. These mechanisms do not guarantee unit production.",
+      "key_distinction": "The Act’s encouragement language in its purpose does not make the non-exempt-government duty optional. Its 10% exemption threshold and alternative goals are not California-style regional need allocation.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "il-25"
+          ],
+          "reasoning": "Section 25(a) expressly requires all non-exempt governments to approve a plan."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "il-act",
+            "il-25"
+          ],
+          "reasoning": "Read exempt-local-government definition together with IHDA calculation and notification provisions; a municipality at exactly 1,000 is not population-exempt."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "il-act",
+            "il-25"
+          ],
+          "reasoning": "IHDA’s arithmetic measures existing affordability; § 25(b)(vi) gives alternative uniform goals rather than dividing a regional need total."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "il-25",
+            "il-act",
+            "il-ihda"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "il-25",
+          "citation": "310 ILCS 67/25",
+          "url": "https://ilga.gov/Documents/legislation/ilcs/documents/031000670K25.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(c), (f)–(g)",
+          "quote": "all non-exempt local governments must approve an affordable housing plan",
+          "supports": "Separate housing-plan mandate, contents, alternative goals, timelines and enforcement.",
+          "version_note": "P.A. 103-487 effective January 1, 2024 is the latest source note for § 25."
+        },
+        {
+          "id": "il-act",
+          "citation": "310 ILCS 67/15, /20, /30, /70",
+          "url": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2477&ChapterID=29",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§§ 15, 20, 30, 70",
+          "quote": "or any municipality with a population under 1,000",
+          "supports": "Exemption threshold; IHDA affordability calculation; appeals and home-rule provision.",
+          "version_note": "§ 20 includes P.A. 104-319 effective January 1, 2026: additional informational income-band calculations do not affect exemptions."
+        },
+        {
+          "id": "il-hb5198",
+          "citation": "Illinois HB5198 (104th General Assembly), bill status",
+          "url": "https://www.ilga.gov/Legislation/BillStatus?DocNum=5198&DocTypeID=HB&GAID=18&LegId=166836&Print=1&SessionID=114",
+          "kind": "bill_status",
+          "accessed_on": "2026-09-20",
+          "locator": "Last action, June 1, 2026",
+          "quote": "Rule 3-9(a) / Re-referred to Assignments",
+          "supports": "Recent proposed amendments are not coded as enacted.",
+          "version_note": "No public-act enactment shown on accessed status page."
+        },
+        {
+          "id": "il-ihda",
+          "citation": "IHDA, Affordable Housing Planning and Appeal Act",
+          "url": "https://www.ihda.org/about-ihda/ahpaa/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Non-Exempt Local Government submissions",
+          "quote": "Affordable Housing Planning and Appeal Act",
+          "supports": "Official implementation and plan compliance postings.",
+          "version_note": "Live agency page reviewed, including 2026 compliance postings."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 12719141,
+      "population_rank": 6,
+      "fips": "17"
+    },
+    {
+      "state": "OH",
+      "name": "Ohio",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "Section 713.01 authorizes cities and villages to establish commissions. Once established, § 713.02 directs the commission to make plans and maps.",
+      "housing_duty": "The reviewed municipal planning statute does not expressly require a housing element, housing needs assessment, or equivalent citywide housing plan.",
+      "coverage": "General city/village planning-commission regime; no housing-specific population or geography trigger appears in §§ 713.01–.02. Local charter provisions may add duties.",
+      "allocation": "none_identified",
+      "allocation_detail": "The enumerated planning duties and public-project review powers in § 713.02 do not allocate state or regional housing need to municipalities.",
+      "contents": [],
+      "enforcement": "The statute requires commission review of specified public projects after a plan exists, with legislative overrides. No housing-element compliance or assigned-unit enforcement mechanism is identified in these provisions.",
+      "key_distinction": "A duty to make municipal plans is not itself a duty to prepare a housing element; a local housing strategy or federal consolidated plan is a different instrument.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "oh-71302"
+          ],
+          "reasoning": "Examined the mandatory list of plan/map recommendations: public ways, grounds, buildings and utilities, without a housing-needs component."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "oh-71301",
+            "oh-71302"
+          ],
+          "reasoning": "General city/village authorization and duties contain no housing-element trigger."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "oh-71302"
+          ],
+          "reasoning": "The statute concerns municipal physical planning and contains no quantified municipal housing shares or assigning state/regional body."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "oh-71301",
+            "oh-71302"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "oh-71301",
+          "citation": "Ohio Rev. Code § 713.01",
+          "url": "https://codes.ohio.gov/ohio-revised-code/section-713.01",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "may establish a city planning commission",
+          "supports": "Optional creation of city/village planning commissions under the general statute.",
+          "version_note": "Latest amendment displayed: effective September 29, 2017."
+        },
+        {
+          "id": "oh-71302",
+          "citation": "Ohio Rev. Code § 713.02",
+          "url": "https://codes.ohio.gov/ohio-revised-code/section-713.02",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "shall make plans and maps",
+          "supports": "Required planning work once the statutory commission exists, enumerated physical-development topics and public-project review.",
+          "version_note": "Latest legislation displayed: November 4, 1965."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 11900510,
+      "population_rank": 7,
+      "fips": "39"
+    },
+    {
+      "state": "GA",
+      "name": "Georgia",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "A comprehensive plan is required to retain qualified-local-government certification and eligibility for selected state funding and permitting programs.",
+      "housing_duty": "Housing element required for HUD Community Development Block Grant Entitlement Communities; expressly optional and encouraged for other local governments.",
+      "coverage": "The operative trigger is HUD CDBG entitlement-community status, not receipt of any federal grant. The standards operate within Georgia's qualified-local-government planning system; approved alternative planning requirements are possible.",
+      "allocation": "local_assessment",
+      "allocation_detail": "Evaluate local housing-stock adequacy and current/future needs. The reviewed rules prescribe no state or regional assignment of a municipal housing-unit share.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Evaluate housing mix, condition, occupancy, costs, cost-burdened households and jobs–housing balance.",
+          "source_ids": [
+            "ga-rules"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Affordability/cost burdens, special populations and housing across the life cycle.",
+          "source_ids": [
+            "ga-rules"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Integrate housing-related goals, needs/opportunities and work-program actions into the comprehensive plan even when using a Consolidated Plan analysis.",
+          "source_ids": [
+            "ga-rules"
+          ]
+        }
+      ],
+      "enforcement": "Regional Commission and Department of Community Affairs review for conformity; certification determines eligibility for selected funding and permitting programs.",
+      "key_distinction": "The required analysis inventories existing housing stock; it does not prescribe a parcel-level inventory of developable sites.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ga-rules"
+          ],
+          "reasoning": "Rules .02 and .03(9) expressly distinguish mandatory CDBG entitlement communities from other governments."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ga-rules"
+          ],
+          "reasoning": "The housing row in .02 and .03(9) provides the HUD entitlement trigger; .02 explains qualified-government eligibility and alternatives."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ga-rules"
+          ],
+          "reasoning": "The housing analytical factors concern local adequacy; the reviewed rules contain no external municipal unit allocation."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ga-rules"
+          ],
+          "reasoning": "Rule .02 links planning compliance to qualified-local-government eligibility and describes state/regional review."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ga-rules",
+          "citation": "Ga. Comp. R. & Regs. 110-12-1-.02; -.03(9)",
+          "url": "https://rules.sos.ga.gov/gac/110-12-1",
+          "kind": "regulation",
+          "accessed_on": "2026-09-20",
+          "locator": "Requirements; Housing Element",
+          "quote": "Required for Community Development Block Grant Entitlement Communities, optional but encouraged for all other local governments.",
+          "supports": "Trigger, planning certification, housing analytical factors and work-program integration.",
+          "version_note": "Official current compilation; purpose states effective October 1, 2018."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 11302748,
+      "population_rank": 8,
+      "fips": "13"
+    },
+    {
+      "state": "NC",
+      "name": "North Carolina",
+      "checked_on": "2026-09-20",
+      "requirement": "encouraged",
+      "plan_mandate": "A local government must adopt and reasonably maintain a comprehensive or land-use plan as a condition of exercising zoning authority.",
+      "housing_duty": "Housing plans and a comprehensive-plan topic covering diverse housing types and affordability are expressly optional under the general enabling statute.",
+      "coverage": "General framework applies to local governments exercising Chapter 160D zoning authority; no population trigger for the optional housing topic. Coastal CAMA land-use planning has additional rules and is treated separately in the caveat.",
+      "allocation": "none_identified",
+      "allocation_detail": "The reviewed general planning statute creates no state/regional allocation of municipal housing-unit need.",
+      "contents": [
+        {
+          "item": "income_groups",
+          "status": "encouraged",
+          "detail": "A plan may address housing types and affordability for all household types and income levels.",
+          "source_ids": [
+            "nc-501"
+          ]
+        },
+        {
+          "item": "needs_assessment",
+          "status": "encouraged",
+          "detail": "Optional separate housing plan and general needs analysis.",
+          "source_ids": [
+            "nc-501"
+          ]
+        }
+      ],
+      "enforcement": "Adoption is a condition of zoning authority. Plans are advisory without independent regulatory effect, and must be considered when amending zoning.",
+      "key_distinction": "Mandatory adoption of some plan does not make every suggested topic mandatory. Coastal land-use rules additionally require housing-stock information; stock description is not a housing-needs allocation.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "nc-501"
+          ],
+          "reasoning": "Section (a) mandates a plan for zoning, while (a1) and (b) make housing plans/topics permissive."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "nc-501"
+          ],
+          "reasoning": "The general trigger is zoning under Chapter 160D, not population."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "nc-501"
+          ],
+          "reasoning": "Review of Article 5 found optional housing content and planning coordination, but no externally assigned municipal unit count."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "nc-501"
+          ],
+          "reasoning": "Section (a) conditions zoning on planning, while (c) makes plans advisory and requires consideration in rezoning."
+        }
+      ],
+      "sources": [
+        {
+          "id": "nc-501",
+          "citation": "N.C. Gen. Stat. §160D-501(a)–(c), §160D-503",
+          "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_160D/Article_5.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Article 5, especially §501(b)(5)",
+          "quote": "A comprehensive plan may, among other topics, address any of the following",
+          "supports": "Plan-for-zoning condition; optional housing; advisory legal effect; no allocation.",
+          "version_note": "Current official text read September 20, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "The official coastal-rule server could not be fully retrieved. Secondary indexed text of 15A NCAC 07B .0702 identifies mandatory coastal-plan housing-stock estimates; this has not been elevated to a source-checked housing-element mandate."
+      ],
+      "population": 11197968,
+      "population_rank": 9,
+      "fips": "37"
+    },
+    {
+      "state": "MI",
+      "name": "Michigan",
+      "checked_on": "2026-09-20",
+      "requirement": "required_if_plan",
+      "plan_mandate": "The Planning Enabling Act authorizes a local government to adopt a master plan and create a planning commission; once constituted, the commission shall make and approve a plan. This is not a universal municipal housing-element mandate.",
+      "housing_duty": "Master plans must include an assessment of existing and forecast housing demands, with responsive strategies and policies, among subjects reasonably pertinent to future development. This express housing provision took effect April 2, 2025.",
+      "coverage": "No population cutoff in the housing provision. Applies through the master-plan framework and its pertinence qualification. Plans carried forward from repealed planning acts are exempt from §33 contents until first amended under the 2008 act.",
+      "allocation": "local_assessment",
+      "allocation_detail": "The statute calls for an assessment of the community's own housing demands. No state or regional assignment of municipal unit needs was identified in the reviewed Planning Enabling Act.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Assess existing and forecast community housing demands, subject to the statutory pertinence qualification.",
+          "source_ids": [
+            "mi-mpea"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Strategies and policies to address those demands; the plan also includes implementation recommendations.",
+          "source_ids": [
+            "mi-mpea"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Review the master plan at least every five years and record whether amendment or replacement should begin; this is plan review rather than a housing-production reporting duty.",
+          "source_ids": [
+            "mi-mpea"
+          ]
+        }
+      ],
+      "enforcement": "The act prescribes plan adoption, intergovernmental notice and periodic review. No housing-specific state certification, assigned unit quota or housing-production sanction was identified in this act.",
+      "key_distinction": "Michigan now expressly requires a housing-demand assessment in applicable master plans; a claim that its planning act is silent on housing misses the 2025-effective amendment.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "mi-mpea"
+          ],
+          "reasoning": "Sections 7 and 11 authorize planning; §31 makes plan preparation a commission duty, and §33(2)(e) expressly adds housing demands and policies."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "mi-mpea"
+          ],
+          "reasoning": "Section 33 uses a pertinence qualification without a size threshold; §81(1) preserves an exception for certain unamended older plans."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "mi-mpea"
+          ],
+          "reasoning": "Section 33 assigns the assessment to the community's plan and supplies no external allocation formula or municipal fair-share assignment."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "mi-mpea"
+          ],
+          "reasoning": "The reviewed act prescribes adoption, notice and five-year review; no housing-specific certification or output sanction was identified in that act."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mi-mpea",
+          "citation": "Mich. Comp. Laws §§ 125.3807, .3811, .3831, .3833(2)(e), .3845(2), .3881(1)",
+          "url": "https://www.legislature.mi.gov/documents/mcl/pdf/mcl-Act-33-of-2008.pdf",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Planning Enabling Act §§7, 11, 31, 33(2), 45(2), 81(1)",
+          "quote": "An assessment of the community's existing and forecasted housing demands",
+          "supports": "Optional statutory planning framework; express housing assessment and policies; five-year review; older-plan exception.",
+          "version_note": "Official compiled PDF rendered September 5, 2026, complete through PA 91 of 2026. Section 33 history lists 2024 PA 153, effective April 2, 2025."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 10127884,
+      "population_rank": 10,
+      "fips": "26"
+    },
+    {
+      "state": "NJ",
+      "name": "New Jersey",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "A housing element is a prerequisite to ordinary municipal zoning under the MLUL. The Fair Housing Act provides a housing-element/fair-share-plan process for obtaining protection against exclusionary-zoning suits; participation in that compliance process is voluntary, while the underlying fair-share obligation is not.",
+      "housing_duty": "Municipalities exercising ordinary zoning authority need a housing plan element; municipalities using the statutory fair-share compliance process must adopt the element and fair share plan on the statutory schedule.",
+      "coverage": "No housing-element population cutoff. Statewide fair-share obligations, with qualified urban-aid municipalities exempt from prospective need (not automatically from present need). Urban-aid eligibility requires designated state aid plus deficient-housing ratio above the regional ratio, density above 10,000/square mile, or density above 6,000 but below 10,000 and a statutory vacant-parcel measure below 5%.",
+      "allocation": "state_or_regional",
+      "allocation_detail": "Yes: regional low/moderate-income prospective need is allocated by a statutory average of nonresidential-valuation, income-capacity and land-capacity factors. DCA publishes nonbinding municipal calculations; municipal binding resolutions and the court/dispute process establish obligations. The duty is a realistic opportunity for housing, not municipal construction.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Housing-stock inventory and ten-year projection; household demographics and employment.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Present/prospective low- and moderate-income fair share; very-low-income requirements apply within the affordable program.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "land_inventory",
+          "status": "required",
+          "detail": "Consider land suitable for affordable construction and structures for conversion/rehabilitation, including committed developers' land.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Assess capacity to accommodate present/prospective need; special redevelopment analysis when claiming a vacant-land adjustment.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Evaluate ordinances/local factors affecting multigenerational family continuity.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Realistic-opportunity demonstration, implementing ordinances, prior-round obligations and trust-fund spending plan where applicable.",
+          "source_ids": [
+            "nj-pl24"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "State reporting of affordable units and municipal trust funds.",
+          "source_ids": [
+            "nj-admin"
+          ]
+        }
+      ],
+      "enforcement": "Compliance certification and court/dispute review; missed requirements can remove immunity from exclusionary-zoning litigation. DCA monitors units and trust funds; new monitoring rules took effect in December 2025.",
+      "key_distinction": "DCA numbers are guidance, but the statutory regional fair-share formula and enforceable obligation remain. Opting out of the administrative compliance process does not erase the obligation.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "nj-mlul-local",
+            "nj-pl24",
+            "nj-resources"
+          ],
+          "reasoning": "MLUL housing requirement attaches to zoning; DCA describes voluntary participation in the separate fair-share certification process."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "nj-pl24",
+            "nj-mlul-local"
+          ],
+          "reasoning": "The statute covers municipal obligations statewide; §52:27D-304.3(c)(1) precisely defines the prospective-need urban-aid exception."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "nj-pl24",
+            "nj-numbers"
+          ],
+          "reasoning": "Sections 304.2–304.3 assign regional need by formula; DCA expressly labels its calculations nonbinding pending the municipal/court process."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "nj-pl24",
+            "nj-admin"
+          ],
+          "reasoning": "The 2024 act conditions immunity on compliance and creates dispute/court review; DCA confirms current unit/trust-fund monitoring rules."
+        }
+      ],
+      "sources": [
+        {
+          "id": "nj-pl24",
+          "citation": "N.J. P.L.2024, c.2; N.J.S.A.52:27D-304.1–304.3, -310, -310.1, -311, -329.1",
+          "url": "https://pub.njleg.state.nj.us/Bills/2024/PL24/2_.HTM",
+          "kind": "session_law",
+          "accessed_on": "2026-09-20",
+          "locator": "§§3, 6–7, 22–24 and affordable-income provisions",
+          "quote": "Each municipality shall determine its municipal present and prospective obligations",
+          "supports": "Statewide fair-share formula, exceptions, housing-element contents and compliance process.",
+          "version_note": "Approved March 20, 2024; fourth round July 1, 2025–June 30, 2035."
+        },
+        {
+          "id": "nj-numbers",
+          "citation": "N.J. DCA, 2025–2035 Affordable Housing Calculations",
+          "url": "https://nj.gov/dca/dlps/4th_Round_Numbers.shtml",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Opening paragraphs",
+          "quote": "non-binding calculations of municipalities’ present and prospective need",
+          "supports": "DCA calculation role and nonbinding legal status.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "nj-resources",
+          "citation": "N.J. DCA, Fair Share Plan Preparation and Model Documents",
+          "url": "https://www.nj.gov/dca/dlps/hss/planresources.shtml",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Introduction",
+          "quote": "voluntary participation in the Fair Housing Act process",
+          "supports": "Voluntary statutory compliance procedure distinguished from underlying duty.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "nj-admin",
+          "citation": "N.J. DCA, Fair Housing Act Administration",
+          "url": "https://nj.gov/dca/dlps/hss/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Introduction",
+          "quote": "Rules governing monitoring requirements",
+          "supports": "December 2025 monitoring rules and current administration.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "nj-mlul-local",
+          "citation": "Berlin Township, adopted 2023 Master Plan Reexamination, explaining N.J.S.A.40:55D-62",
+          "url": "https://www.nj.gov/pinelands/home/hearings/documents/BT%202023%20MP%20Reex%20Report_adopted.pdf",
+          "kind": "municipal_document",
+          "accessed_on": "2026-09-20",
+          "locator": "Housing Plan Recommendation",
+          "quote": "municipal zoning may be adopted after the planning board has adopted the land use plan element and housing element",
+          "supports": "Official adopted municipal document explains the MLUL zoning prerequisite.",
+          "version_note": "Adopted 2023, hosted by NJ Pinelands Commission; used only for unchanged general MLUL prerequisite, not 2024 fair-share rules."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "The current NJ legislature statute viewer failed; the MLUL zoning prerequisite is documented by an adopted municipal plan on an official state server. The 2024 Fair Housing Act itself was directly reviewed."
+      ],
+      "population": 9548215,
+      "population_rank": 11,
+      "fips": "34"
+    },
+    {
+      "state": "VA",
+      "name": "Virginia",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "Every local governing body must adopt a comprehensive plan.",
+      "housing_duty": "The plan must designate areas and implementation measures for affordable housing sufficient for current and future residents across income levels.",
+      "coverage": "All localities, including cities and towns; no housing-component population cutoff. Population triggers for other topics, such as transit-oriented development, do not narrow this duty.",
+      "allocation": "local_assessment",
+      "allocation_detail": "Local need must be addressed while considering the planning district's needs. The reviewed provisions assign no externally calculated municipal unit share.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Current and future local housing need; planning-district context.",
+          "source_ids": [
+            "va-2223"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Residents at all income levels.",
+          "source_ids": [
+            "va-2223"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Construction, rehabilitation and maintenance of affordable housing.",
+          "source_ids": [
+            "va-2223"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Designate areas and implementation measures; area designation is not an express parcel inventory.",
+          "source_ids": [
+            "va-2223"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "required",
+          "detail": "At plan amendments after July 1, 2021, incorporate strategies promoting manufactured housing as affordable housing.",
+          "source_ids": [
+            "va-2223-5"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Review the comprehensive plan at least every five years to determine whether to amend.",
+          "source_ids": [
+            "va-2230"
+          ]
+        }
+      ],
+      "enforcement": "Statutory preparation/adoption and five-year review duties. No housing-specific state certification or municipal construction quota is created by the cited provisions.",
+      "key_distinction": "A functional affordable-housing component is mandatory even though the statute does not call it a separate housing element.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "va-2223"
+          ],
+          "reasoning": "Subsection A requires adoption and subsection D makes the affordable-housing content compulsory."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "va-2223"
+          ],
+          "reasoning": "Every governing body is covered; D has no population or regional exception."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "va-2223"
+          ],
+          "reasoning": "Considering district needs does not assign a quantified share; D frames sufficiency around residents' local needs."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "va-2223",
+            "va-2230"
+          ],
+          "reasoning": "Plan preparation/adoption is compulsory and review is required every five years; the cited housing provision creates no certification or unit-production procedure."
+        }
+      ],
+      "sources": [
+        {
+          "id": "va-2223",
+          "citation": "Va. Code §15.2-2223(A), (D)",
+          "url": "https://law.lis.virginia.gov/vacode/title15.2/chapter22/section15.2-2223/",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "A and D",
+          "quote": "every governing body shall adopt a comprehensive plan",
+          "supports": "Mandatory plan and housing component; local/district needs.",
+          "version_note": "Current code includes 2026 c.375."
+        },
+        {
+          "id": "va-2223-5",
+          "citation": "Va. Code §15.2-2223.5",
+          "url": "https://law.lis.virginia.gov/vacode/title15.2/chapter22/section15.2-2223.5/",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Sole operative paragraph",
+          "quote": "strategies to promote manufactured housing as a source of affordable housing",
+          "supports": "Manufactured-housing strategies at amendments after July 1, 2021.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "va-2230",
+          "citation": "Va. Code §15.2-2230",
+          "url": "https://law.lis.virginia.gov/vacode/title15.2/chapter22/section15.2-2230/",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Sole operative paragraph",
+          "quote": "At least once every five years the comprehensive plan shall be reviewed",
+          "supports": "Minimum review frequency.",
+          "version_note": "Current official text read September 20, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 8880107,
+      "population_rank": 12,
+      "fips": "51"
+    },
+    {
+      "state": "WA",
+      "name": "Washington",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "Counties fully planning under the Growth Management Act and every city within them must adopt comprehensive plans; counties can also opt into that system.",
+      "housing_duty": "A mandatory housing element applies to every jurisdiction required or choosing to plan under RCW36.70A.040.",
+      "coverage": "County-based trigger, not city size: county population ≥50,000 with >17% growth over ten years (historically >10% before May16,1995), or >20% growth regardless of size; all its cities follow. Prior qualifying status persists. Opt-in counties are covered, subject to statutory historical withdrawal exceptions; qualifying counties below50,000 may exercise the specified timely opt-out.",
+      "allocation": "state_or_regional",
+      "allocation_detail": "Commerce supplies countywide need projections by income and special housing category. Counties coordinate city/town shares through countywide planning; WAC365-196-410 requires consistent public allocations whose sum covers countywide need. Applicable fully planning municipalities must show sufficient capacity for their assigned need.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Inventory and analyze existing/projected housing needs, including emergency and supportive housing.",
+          "source_ids": [
+            "wa-070"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Moderate, low, very low and extremely low income housing needs.",
+          "source_ids": [
+            "wa-070"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Sufficient land capacity for housing types and incomes; compare zoned capacity to allocation.",
+          "source_ids": [
+            "wa-070",
+            "wa-rule"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Identify regulatory barriers, funding gaps and needed actions.",
+          "source_ids": [
+            "wa-070"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Analyze and address racially disparate impacts, exclusion, displacement and displacement risk.",
+          "source_ids": [
+            "wa-070"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Goals and mandatory provisions for housing preservation and improvement.",
+          "source_ids": [
+            "wa-070"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Programs/actions and anti-displacement policies.",
+          "source_ids": [
+            "wa-070"
+          ]
+        }
+      ],
+      "enforcement": "GMA compliance includes plan/development-regulation review. The 2025 Housing Accountability Act adds Commerce selected/voluntary housing reviews; noncompliance can restrict denials of affordable/moderate-income projects and eligibility for state funding.",
+      "key_distinction": "State projections are allocated through county/city coordination, not a single state formula that directly fixes every city's share. Land-capacity analysis is explicit; no universal California-style parcel schedule is coded from these provisions.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "wa-040",
+            "wa-070"
+          ],
+          "reasoning": "Mandatory element attaches to full GMA planning."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "wa-040"
+          ],
+          "reasoning": "County qualification/opt-in determines coverage of cities without a city population cutoff."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "wa-rule",
+            "wa-guidance"
+          ],
+          "reasoning": "Rule explicitly addresses local shares of state-projected countywide need and capacity comparisons."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "wa-accountability"
+          ],
+          "reasoning": "Current agency implementation documents state housing review and consequences."
+        }
+      ],
+      "sources": [
+        {
+          "id": "wa-040",
+          "citation": "Wash. Rev. Code §36.70A.040(1)–(5)",
+          "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=36.70A.040",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(1), (2), (5)",
+          "quote": "and the cities located within such county",
+          "supports": "County triggers, opt-ins, withdrawals and continuing coverage.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "wa-070",
+          "citation": "Wash. Rev. Code §36.70A.070(2)",
+          "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=36.70A.070",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "introductory paragraph; (2)(a)–(h)",
+          "quote": "Identifies sufficient capacity of land for housing",
+          "supports": "Housing element and required contents.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "wa-rule",
+          "citation": "Wash. Admin. Code365-196-410(2)(c)–(d)",
+          "url": "https://app.leg.wa.gov/wac/default.aspx?cite=365-196-410",
+          "kind": "regulation",
+          "accessed_on": "2026-09-20",
+          "locator": "(2)(c)(iii), (d)(v)",
+          "quote": "The sum of all allocated housing needs must be no less than the total projected countywide need",
+          "supports": "Municipal allocation coordination and land-capacity accounting.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "wa-guidance",
+          "citation": "Commerce, Updating GMA Housing Elements",
+          "url": "https://www.commerce.wa.gov/growth-management/housing-planning/housing-guidance/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "HAPT; GMA guidance",
+          "quote": "three methods for allocating housing needs to individual jurisdictions",
+          "supports": "State projection and local allocation workflow.",
+          "version_note": "Page includes January2026 guidance and June2026 STEP amendments."
+        },
+        {
+          "id": "wa-accountability",
+          "citation": "Commerce, Housing Accountability Act",
+          "url": "https://www.commerce.wa.gov/growth-management/housing-planning/housing-accountability-act/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Guidance for local governments",
+          "quote": "Jurisdictions determined to be non-compliant may not deny affordable or moderate-income housing developments",
+          "supports": "2025 state-review mechanism and consequences.",
+          "version_note": "Page updated September4,2026; distinguishes staggered local implementation."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 8001020,
+      "population_rank": 13,
+      "fips": "53"
+    },
+    {
+      "state": "AZ",
+      "name": "Arizona",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "Each municipality must adopt a comprehensive long-range general plan (§9-461.05(A)).",
+      "housing_duty": "Cities of at least 50,000 must include a housing element. Separately, nontribal municipalities of at least 30,000 must publish housing needs assessments and an annual plan to address identified needs.",
+      "coverage": "Housing element: cities ≥50,000; optional below that threshold. Separate assessment/report: municipalities ≥30,000, excluding municipalities on tribal land; five-year assessments and annual reports began January 1, 2025.",
+      "allocation": "local_assessment",
+      "allocation_detail": "Municipalities estimate additional rental/ownership need using population, jobs, existing deficits and income levels. The reviewed statutes supply no externally assigned municipal share; §9-469(E) expressly disclaims a duty to fulfill projections.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Existing/forecasted needs in the element; five-year population/jobs and additional-unit needs in the separate assessment.",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Element addresses every economic segment; assessment covers needs across incomes.",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Housing element requires provision of adequate sites; no express parcel inventory in the cited provisions.",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Standards/programs to eliminate substandard conditions and improve housing quality.",
+          "source_ids": [
+            "az-plan"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Equal provision regardless of race, color, creed or economic level.",
+          "source_ids": [
+            "az-plan"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Annual report includes a plan for satisfying identified additional-unit needs.",
+          "source_ids": [
+            "az-assessment"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Report development applications, approvals and production stages, plus progress.",
+          "source_ids": [
+            "az-assessment"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "required",
+          "detail": "Separate assessment reports aggregate residentially zoned land by single-family/multifamily; this is not a developable-sites inventory.",
+          "source_ids": [
+            "az-assessment"
+          ]
+        }
+      ],
+      "enforcement": "Annual housing reports go to Arizona Department of Housing for compilation and legislative/executive transmission. §9-469(E) does not require actual fulfillment of projected need.",
+      "key_distinction": "Two thresholds: 50,000 for the named element, 30,000 for the separate planning/reporting duty. Adequate sites and aggregate zoned acreage do not establish a California-style parcel inventory.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ],
+          "reasoning": "Mandatory language attaches to two distinct housing-planning duties."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "az-plan",
+            "az-assessment"
+          ],
+          "reasoning": "§9-461.05(E) and §9-469(F) provide the respective thresholds/exclusion."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "az-assessment"
+          ],
+          "reasoning": "Locally prepared assessment; projections need not be fulfilled. No external allocation specified in the provisions reviewed."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "az-assessment"
+          ],
+          "reasoning": "Section9-469 mandates five-year assessments and annual reports; subsectionE expressly says there is no obligation to fulfill the projections."
+        }
+      ],
+      "sources": [
+        {
+          "id": "az-plan",
+          "citation": "Ariz. Rev. Stat. §9-461.05(A), (E)(6)",
+          "url": "https://www.azleg.gov/ars/9/00461-05.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(A), (E) introductory clause, (E)(6)",
+          "quote": "for cities with a population of fifty thousand persons or more",
+          "supports": "General-plan and housing-element scope and contents.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "az-assessment",
+          "citation": "Ariz. Rev. Stat. §9-469",
+          "url": "https://www.azleg.gov/ars/9/00469.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(A)–(F)",
+          "quote": "This section does not require a municipality to fulfill the projections",
+          "supports": "Separate housing assessment, annual plan/report, threshold and no production guarantee.",
+          "version_note": "Current official code displayed on access."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 7623818,
+      "population_rank": 14,
+      "fips": "04"
+    },
+    {
+      "state": "TN",
+      "name": "Tennessee",
+      "checked_on": "2026-09-20",
+      "requirement": "encouraged",
+      "plan_mandate": "An established municipal commission has the general-plan duty stated in § 13-4-201. Separately, Chapter 58 requires a countywide growth plan and consistent local land-use decisions.",
+      "housing_duty": "Housing is expressly optional in the separate countywide growth plan under § 6-58-107(d); subsection (e)(8) states a housing-choice and affordability objective. The municipal general-plan provision does not add a required housing element.",
+      "coverage": "General municipal planning commissions plus the separate countywide growth-plan framework; no housing-element population cutoff identified. Private/special municipal planning acts may add requirements.",
+      "allocation": "none_identified",
+      "allocation_detail": "Future growth and affordability are planning objectives; the reviewed provisions do not assign state or regional housing-unit shares to municipalities.",
+      "contents": [],
+      "enforcement": "Section 6-58-107 requires local land-use decisions to be consistent with an approved growth plan. Neither that section nor § 13-4-201 supplies a housing-element certification or assigned-unit enforcement system.",
+      "key_distinction": "Tennessee’s affordability objective should not disappear from a negative coding. The statute expressly makes substantive housing treatment optional, and the TACIR staff report explains that distinction; this is not a finding of no housing-related policy in state law.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "tn-201",
+            "tn-107",
+            "tn-tacir"
+          ],
+          "reasoning": "Municipal contents omit a required housing component. Growth-plan subsection (d) says may, while (e)(8) lists a broad objective; the latter is not coded as a detailed mandatory housing element."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "tn-201",
+            "tn-107",
+            "tn-mtas"
+          ],
+          "reasoning": "Municipal general plans and countywide growth plans are separate instruments. MTAS notes private/special acts can supplement general statutory authority."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "tn-201",
+            "tn-107"
+          ],
+          "reasoning": "No assigned municipal number or external need-apportionment body appears in these provisions; future population growth alone is not allocation."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "tn-107",
+            "tn-201"
+          ],
+          "reasoning": "Growth-plan consistency under subsection (a) is distinct from enforcing a mandatory housing element or unit share."
+        },
+        {
+          "claim": "limitations",
+          "source_ids": [
+            "tn-201",
+            "tn-107",
+            "tn-tacir",
+            "tn-mtas"
+          ],
+          "reasoning": "Current substantive text was read in 2025 mirrors and compared with official guidance; TACIR is historical and is not evidence of 2026 currentness by itself."
+        }
+      ],
+      "sources": [
+        {
+          "id": "tn-201",
+          "citation": "Tenn. Code Ann. § 13-4-201 (2025 mirror)",
+          "url": "https://law.justia.com/codes/tennessee/title-13/chapter-4/part-2/section-13-4-201/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "make and adopt an official general plan for the physical development of the municipality",
+          "supports": "Commission’s municipal general-plan duty and operative physical-development contents.",
+          "version_note": "2025 Justia mirror; latest source note Acts 2008, ch. 1150, § 6. Current official annotated-code text not extracted."
+        },
+        {
+          "id": "tn-107",
+          "citation": "Tenn. Code Ann. § 6-58-107 (2025 mirror)",
+          "url": "https://law.justia.com/codes/tennessee/title-6/municipal-government-generally/chapter-58/section-6-58-107/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(e), particularly (d) and (e)(8)",
+          "quote": "A growth plan may address land-use, transportation, public infrastructure, housing, and economic development.",
+          "supports": "Countywide growth-plan requirement; optional substantive housing treatment and separate affordability objective.",
+          "version_note": "2025 Justia mirror; source note Acts 1998, ch. 1101, § 8."
+        },
+        {
+          "id": "tn-tacir",
+          "citation": "TACIR staff, Land Use and Planning in Tennessee (February 2011)",
+          "url": "https://www.tn.gov/content/dam/tn/tacir/documents/LandUseAndPlanning.pdf",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Printed p. 65 (PDF p. 69)",
+          "quote": "those elements are not legally required in the growth plan",
+          "supports": "Government staff interpretation of optional housing element in the countywide growth-plan statute.",
+          "version_note": "Historical February 2011 report, not a 2026 code update. Compared with 2025 statutory text."
+        },
+        {
+          "id": "tn-mtas",
+          "citation": "University of Tennessee MTAS, Municipal Planning Commissions",
+          "url": "https://www.mtas.tennessee.edu/reference/municipal-planning-commissions",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Commission powers; T.C.A. §§ 13-4-201–203",
+          "quote": "Adopt an official general plan for the municipality’s physical development.",
+          "supports": "Current official university municipal advisory guidance describing statutory municipal-planning powers.",
+          "version_note": "Page reviewed November 4, 2025."
+        }
+      ],
+      "review_status": "needs_review",
+      "uncertainties": [
+        "Current official annotated-code section text was not extracted; a final current official text check should confirm the 2025 mirror before publication as independently validated law.",
+        "The growth-plan affordability objective is a policy requirement, while the detailed housing element is optional. This classification uses the latter as the comparable municipal housing-element measure."
+      ],
+      "population": 7315076,
+      "population_rank": 15,
+      "fips": "47"
+    },
+    {
+      "state": "MA",
+      "name": "Massachusetts",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "A planning board established under Chapter 41 §81A shall make a master plan, which may cover the city/town or parts the board considers advisable.",
+      "housing_duty": "Section 81D master plans must include a housing element. A separate Chapter 40B Housing Production Plan is an optional route to permit-appeal safe harbor.",
+      "coverage": "Section 81D applies to §81A planning boards. Section 81A permits cities except Boston and towns to establish boards; towns reaching 10,000 inhabitants without a planning board must establish one. A town below 10,000 may authorize selectmen to act as the planning board. Boston is outside this general-law framework.",
+      "allocation": "capacity_target",
+      "allocation_detail": "The master-plan housing assessment is local. Separate MBTA Communities law requires qualifying as-of-right multifamily districts; Chapter 40B HPP certification uses a 0.5% annual subsidized-housing benchmark based on existing stock. These are zoning/production benchmarks, not an assignment of regional housing need to every municipality.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Identify/analyze existing and forecast housing needs and objectives.",
+          "source_ids": [
+            "ma-81d"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Programs to preserve, improve and develop housing.",
+          "source_ids": [
+            "ma-81d"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Policies for balanced local housing opportunities; schedule actions and regulatory changes needed to implement the plan.",
+          "source_ids": [
+            "ma-81d"
+          ]
+        }
+      ],
+      "enforcement": "Section 81D requires public-record plans and submission to the state housing office but sets no fixed adoption deadline. HPP safe harbor requires state approval and certification of production; MBTA noncompliance affects specified state funding.",
+      "key_distinction": "Do not equate the master-plan housing element, optional 40B HPP, or mandatory MBTA multifamily zoning. They are distinct legal mechanisms.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ma-81d",
+            "ma-hpp"
+          ],
+          "reasoning": "Section 81D says shall include a housing element; HPP is a separate conditional safe-harbor program."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ma-81a",
+            "ma-81d"
+          ],
+          "reasoning": "Section 81D refers to boards under §81A, which has board-establishment conditions and a Boston exception."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ma-81d",
+            "ma-3a",
+            "ma-hpp"
+          ],
+          "reasoning": "Local needs assessment differs from the separate numeric zoning/production benchmarks; these sources do not allocate regional municipal need."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ma-81d",
+            "ma-hpp",
+            "ma-3a"
+          ],
+          "reasoning": "Section 81D requires filing/public-record status; HPP guidance makes safe harbor conditional on certification, and §3A lists funding consequences."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ma-81a",
+          "citation": "Mass. Gen. Laws ch.41, §81A",
+          "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section81A",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "First and last paragraphs",
+          "quote": "Every town not having any planning board shall, upon attaining a population of ten thousand, so establish a planning board",
+          "supports": "Planning-board trigger, Boston exclusion and selectmen option.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ma-81d",
+          "citation": "Mass. Gen. Laws ch.41, §81D",
+          "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section81D",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "First paragraph and elements (2), (3), (9)",
+          "quote": "Housing element which identifies and analyzes existing and forecasted housing needs",
+          "supports": "Master-plan duty, housing content, implementation; no fixed deadline in section.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ma-3a",
+          "citation": "Mass. Gen. Laws ch.40A, §3A",
+          "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40A/Section3A",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(c)",
+          "quote": "at least 1 district of reasonable size in which multi-family housing is permitted as of right",
+          "supports": "Separate MBTA zoning mandate and funding effect.",
+          "version_note": "Official HTML retrieved directly after web-reader timeout; read locally."
+        },
+        {
+          "id": "ma-hpp",
+          "citation": "Massachusetts EOHLC, Chapter 40B Housing Production Plan (760 CMR 56.03(4))",
+          "url": "https://www.mass.gov/info-details/chapter-40b-housing-production-plan",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "About HPPs; Production Goals and certification",
+          "quote": "0.5% Production Goal",
+          "supports": "Separate HPP approval/certification; stock-based safe-harbor benchmark.",
+          "version_note": "Official HTML retrieved directly after web-reader 403; page updated September 11, 2024, current on access."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 7154084,
+      "population_rank": 16,
+      "fips": "25"
+    },
+    {
+      "state": "IN",
+      "name": "Indiana",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "A plan commission prepares a comprehensive plan under §36-7-4-501. A locality exercising planning/zoning powers uses this statutory framework; no zoning ordinance may be adopted before a comprehensive plan is approved.",
+      "housing_duty": "No express housing element in the reviewed general-plan requirements. HEA1001 (2026) separately requires a housing-oriented review of development regulations and housing reports; those duties are not a forward-looking housing-needs plan.",
+      "coverage": "General local planning framework; no housing-element population cutoff because no express element was found. New regulatory review covers counties, cities and towns. Housing-progress reporting applies to units exercising planning/zoning; housing-status reporting covers all counties, cities and towns.",
+      "allocation": "none_identified",
+      "timing_note": "Separate housing review/report due around January 2027; no housing element identified.",
+      "allocation_detail": "Neither the reviewed general-plan provisions nor 2026 HEA1001 assigns municipalities quantified regional housing need. New state reporting compiles outcomes and regional comparisons; it does not distribute a building obligation.",
+      "contents": [],
+      "enforcement": "A comprehensive plan is a zoning prerequisite. HEA1001 requires a public regulatory-review hearing and report by January 1, 2027, plus annual housing reports beginning 2027. IHCDA's September 2026 guidance implements the one-time report by December 31, 2026 and annual reporting by January 31. These are adjacent review/reporting duties, not housing-element certification.",
+      "key_distinction": "No express housing element does not mean no housing duties: HEA1001 mandates review of density, housing types, approvals and other housing reforms, and reports on local housing outcomes. It does not require adopting every reform or a California-style allocation.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "in-plan-appendix",
+            "in-502",
+            "in-hea1001"
+          ],
+          "reasoning": "Section 502 lists development objectives, land-use policy and public-facility policy; §503 allows broader studies. HEA1001 adds regulatory review/reporting, not a housing needs element."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "in-201",
+            "in-601",
+            "in-hea1001"
+          ],
+          "reasoning": "Sections 201/601 govern units choosing planning and zoning powers. HEA1001 §§2–3 distinguish progress-report and housing-status coverage; §25 defines county, city and town review duties."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "in-plan-appendix",
+            "in-hea1001"
+          ],
+          "reasoning": "The reviewed plan contents and new review/reporting provisions contain no externally calculated municipal need assignment. Regional comparisons of reported outcomes are not allocations."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "in-601",
+            "in-hea1001",
+            "in-guidance"
+          ],
+          "reasoning": "Section 601 makes the plan a zoning prerequisite. HEA1001 §§2–3,25 establish reports/review; the current agency notice supplies administrative submission deadlines."
+        }
+      ],
+      "sources": [
+        {
+          "id": "in-plan-appendix",
+          "citation": "Ind. Code §§36-7-4-501–503, reproduced in New Harmony Comprehensive Plan",
+          "url": "https://www.in.gov/towns/newharmony/files/New-Harmony-Comprehensive-Plan-compressed.pdf",
+          "kind": "municipal_document",
+          "accessed_on": "2026-09-20",
+          "locator": "Printed pp.50–51 (PDF pp.58–59), statutory appendix",
+          "quote": "The plan commission shall prepare the comprehensive plan.",
+          "supports": "Plan preparation and mandatory/optional general-plan contents.",
+          "version_note": "Official municipal plan published 2025; statutory text read directly from PDF. Not a substitute for a fully accessible current IGA compilation; corroborated with the 2025 mirror and 2026 enacted-law check."
+        },
+        {
+          "id": "in-502",
+          "citation": "Ind. Code §36-7-4-502 (2025 mirror)",
+          "url": "https://law.justia.com/codes/indiana/title-36/article-7/chapter-4/section-36-7-4-502/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "Entire section",
+          "quote": "A comprehensive plan must contain at least the following elements",
+          "supports": "Three required general-plan components do not expressly include housing.",
+          "version_note": "2025 text, nonofficial publisher; last listed amendment 1985. Official IGA current-law endpoint returned an application shell."
+        },
+        {
+          "id": "in-201",
+          "citation": "Ind. Code §36-7-4-201 (2025 mirror)",
+          "url": "https://law.justia.com/codes/indiana/title-36/article-7/chapter-4/section-36-7-4-201/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "(a), (c)–(d)",
+          "quote": "a unit wanting to exercise planning and zoning powers in Indiana",
+          "supports": "Enabling framework and cooperative/metropolitan planning distinctions.",
+          "version_note": "2025 text, nonofficial publisher; last listed amendment 2021. Official IGA endpoint inaccessible."
+        },
+        {
+          "id": "in-601",
+          "citation": "Ind. Code §36-7-4-601(a) (2025 mirror)",
+          "url": "https://law.justia.com/codes/indiana/title-36/article-7/chapter-4/section-36-7-4-601/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)",
+          "quote": "no zoning ordinance may be adopted until a comprehensive plan has been approved",
+          "supports": "Comprehensive plan prerequisite to zoning.",
+          "version_note": "2025 text, nonofficial publisher; last listed amendment 1995. Official IGA endpoint inaccessible."
+        },
+        {
+          "id": "in-hea1001",
+          "citation": "Indiana HEA1001 (2026), §§2–3,19,25",
+          "url": "https://billtexts.s3.amazonaws.com/_data/in/https-iga-in-gov-pdf-documents-124-2026-house-bills-HB1001-HB1001-06-ENRS-pdf.pdf",
+          "kind": "session_law_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "PDF pp.1–3,16,21–22; new IC5-20-1-28.5/29 and IC36-7-4.3",
+          "quote": "with the goal of increasing housing development",
+          "supports": "Mandatory housing regulatory review and data reporting; no required housing element or regional need allocation.",
+          "version_note": "Enrolled act read in full for relevant housing/planning provisions via public mirror because official PDF endpoint failed. Governor's official record confirms signature March 4, 2026. Review/report provisions effective July 1, 2026; first duties due around January 2027."
+        },
+        {
+          "id": "in-governor",
+          "citation": "Indiana Governor, 2026 Bill Watch",
+          "url": "https://www.in.gov/gov/newsroom/2026-bill-watch/",
+          "kind": "legislative_status",
+          "accessed_on": "2026-09-20",
+          "locator": "HEA1001 and SEA285 rows",
+          "quote": "2026 Regular Session Bills",
+          "supports": "HEA1001 signed March 4, 2026; SEA285 signed March 5, 2026.",
+          "version_note": "Current official executive enactment record read September 20, 2026."
+        },
+        {
+          "id": "in-guidance",
+          "citation": "IHCDA RED Notice 26-43, House Enrolled Act 1001 Reporting",
+          "url": "https://www.in.gov/ihcda/files/RED-Notice-26-43-House-Enrolled-Act-1001-Reporting.pdf",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Items 1–2",
+          "quote": "This report is a one-time report",
+          "supports": "Agency implementation of regulatory review and annual housing reports.",
+          "version_note": "Official notice dated September 1, 2026; annual deadline January 31 differs from statutory 'Beginning January 1' wording, which is preserved separately."
+        },
+        {
+          "id": "in-sea285",
+          "citation": "Indiana SEA285 (2026), §§1–5",
+          "url": "https://legiscan.com/IN/text/SB0285/id/3378088/Indiana-2026-SB0285-Enrolled.pdf",
+          "kind": "session_law_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "Entire enrolled act",
+          "quote": "federal Continuum of Care program",
+          "supports": "Recent housing act concerns homelessness reporting and other homelessness policy, not a general-plan housing element.",
+          "version_note": "Enrolled act read via mirror; official governor page confirms March 5, 2026 signature. Effective July 1, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "Official current IGA code and enrolled-PDF endpoints returned an application shell. General statutory text was checked through a 2025 official municipal reproduction and 2025 mirrors, with HEA1001/SEA285 separately checked against enrolled text and official enactment status. A direct current-code verification remains desirable.",
+        "The classification excludes one-time regulatory review and backward-looking housing data reports from the definition of a housing element/equivalent needs plan. Those mandatory adjacent duties are described explicitly."
+      ],
+      "population": 6973333,
+      "population_rank": 17,
+      "fips": "18"
+    },
+    {
+      "state": "MO",
+      "name": "Missouri",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "Municipalities may undertake city planning and appoint a commission; an appointed statutory commission shall make/adopt the city plan.",
+      "housing_duty": "No express housing-element requirement in the reviewed city-plan provisions. Blighted-area replanning is an optional listed subject.",
+      "coverage": "General municipal authorization in §§ 89.310–.340; no housing-specific population cutoff or mandatory municipal housing-plan class appears there.",
+      "allocation": "none_identified",
+      "allocation_detail": "Section 89.340 supplies physical-development and optional zoning-plan authority; it creates neither a municipal fair-share calculation nor a regional allocation of needed units.",
+      "contents": [],
+      "enforcement": "No state housing-element review or housing allocation enforcement appears in the reviewed sections. The plan is a commission recommendation for physical development.",
+      "key_distinction": "Do not treat optional blight/slum replanning, or an introduced bill proposing a housing element, as an enacted citywide housing-needs duty.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "mo-89340"
+          ],
+          "reasoning": "The required recommendations concern physical development/land use; listed blight and zoning subjects are permissive and no housing-needs element is specified."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "mo-89310",
+            "mo-89340"
+          ],
+          "reasoning": "Municipalities may create the planning framework; the resulting commission has plan duties but no express housing class is designated."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "mo-89340"
+          ],
+          "reasoning": "No housing-number methodology, allocating authority, or municipal quota appears in the operative plan-content section."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "mo-89310",
+            "mo-89340"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mo-89310",
+          "citation": "Mo. Rev. Stat. § 89.310",
+          "url": "https://revisor.mo.gov/main/OneSection.aspx?section=89.310",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "Any municipality in this state may make, adopt, amend, and carry out a city plan",
+          "supports": "Optional municipal plan/commission creation.",
+          "version_note": "Current official revisor; section effective August 28, 1963."
+        },
+        {
+          "id": "mo-89340",
+          "citation": "Mo. Rev. Stat. § 89.340",
+          "url": "https://revisor.mo.gov/main/OneSection.aspx?section=89.340",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "The commission shall make and adopt a city plan",
+          "supports": "Commission duty and enumerated contents; no express housing-needs component.",
+          "version_note": "Current official revisor; section effective August 28, 1963."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 6270541,
+      "population_rank": 18,
+      "fips": "29"
+    },
+    {
+      "state": "MD",
+      "name": "Maryland",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "Local jurisdictions must adopt and execute a comprehensive plan; a municipality may participate in an approved county plan.",
+      "housing_duty": "Housing element mandatory. As of the check date, it must address affordable housing need, including workforce and low-income housing, and applicable fair-housing assessment.",
+      "coverage": "Municipal corporations and counties; no population cutoff. Municipal participation in a county plan is allowed by mutual resolutions. Charter counties have parallel housing-element duties.",
+      "allocation": "local_assessment",
+      "allocation_detail": "Housing need is assessed within the local jurisdiction. Neither the operative housing provision nor the enacted October 2026 replacement establishes municipal numerical shares of regional housing need.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Address the jurisdiction's affordable housing need.",
+          "source_ids": [
+            "md-3114"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Workforce and low-income housing; low-income defined as below 60% of area median income.",
+          "source_ids": [
+            "md-3114"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Fair-housing assessment at plan enactment/amendment from January 1, 2023 under §3-114; January 1, 2025 for charter counties under §1-407.1.",
+          "source_ids": [
+            "md-3114",
+            "md-14071"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "conditional",
+          "detail": "ENACTED FUTURE: October 1, 2026 replacement §3-105 adds housing stock characteristics, adequate supply for current/future residents, substandard conditions and adequate future housing sites; not an express parcel inventory.",
+          "source_ids": [
+            "md-ch110"
+          ]
+        }
+      ],
+      "enforcement": "Mandatory plan content; state technical assistance. The fair-housing subsection expressly does not prescribe or prohibit a specific local action.",
+      "key_distinction": "HB243/Chapter 110 is enacted but takes effect October 1, 2026. Do not apply its expanded site/supply requirements before that date.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "md-3101",
+            "md-3102",
+            "md-3114"
+          ],
+          "reasoning": "Mandatory plan and housing-element provisions operate together."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "md-3101",
+            "md-guidance",
+            "md-14071"
+          ],
+          "reasoning": "Municipal county-plan participation is express; state guidance explains parallel charter-county coverage."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "md-3114",
+            "md-ch110"
+          ],
+          "reasoning": "Both versions require locally framed need/supply planning, without externally assigned municipal counts."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "md-3101",
+            "md-3114",
+            "md-14071"
+          ],
+          "reasoning": "Mandatory plan/content duties apply; §3-114(d)(3)–(4) provides technical assistance and disclaims prescribing a particular fair-housing action."
+        }
+      ],
+      "sources": [
+        {
+          "id": "md-3101",
+          "citation": "Md. Code, Land Use §3-101",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=glu&enactments=false&section=3-101",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(b)",
+          "quote": "A local jurisdiction shall enact, adopt, amend, and execute a plan",
+          "supports": "Plan mandate and county participation option.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "md-3102",
+          "citation": "Md. Code, Land Use §3-102(a)(1)(iv)",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=glu&enactments=false&section=3-102",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)(1)(iv)",
+          "quote": "a housing element",
+          "supports": "Mandatory housing element.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "md-3114",
+          "citation": "Md. Code, Land Use §3-114",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=glu&enactments=false&section=3-114",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(d)",
+          "quote": "shall address the need for affordable housing within the local jurisdiction",
+          "supports": "Income and fair-housing requirements in operative law.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "md-guidance",
+          "citation": "Maryland Department of Planning, Housing Planning",
+          "url": "https://planning.maryland.gov/Pages/OurWork/PBP/housing-element-mg/housing-planning.aspx",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Housing Element Models & Guidelines",
+          "quote": "requires a housing element in comprehensive plans for all Maryland jurisdictions",
+          "supports": "Parallel charter-county coverage.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "md-ch110",
+          "citation": "2026 Md. Laws ch.110 (HB243), new Land Use §3-105 and effective-date clause",
+          "url": "https://mgaleg.maryland.gov/2026RS/Chapters_noln/CH_110_hb0243t.pdf",
+          "kind": "session_law",
+          "accessed_on": "2026-09-20",
+          "locator": "Pages 36–38; final effective-date provision",
+          "quote": "THE PROVISION OF ADEQUATE SITES FOR FUTURE HOUSING",
+          "supports": "Enacted replacement content; future commencement.",
+          "version_note": "Approved April 14, 2026; takes effect October 1, 2026."
+        },
+        {
+          "id": "md-hb243",
+          "citation": "Maryland General Assembly, HB243 (2026) status",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB0243?ys=2026RS",
+          "kind": "legislative_status",
+          "accessed_on": "2026-09-20",
+          "locator": "Details",
+          "quote": "Effective Date(s): October 1, 2026",
+          "supports": "Confirms enactment and future commencement.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "md-14071",
+          "citation": "Md. Code, Land Use §1-407.1",
+          "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=glu&enactments=false&section=1-407.1",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(c)–(d), especially (d)(2)",
+          "quote": "on or after January 1, 2025",
+          "supports": "Parallel charter-county affordable housing and fair-housing duties; distinct assessment trigger date.",
+          "version_note": "Current official text read September 20, 2026; operative before October 1, 2026 recodification."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 6265347,
+      "population_rank": 19,
+      "fips": "24"
+    },
+    {
+      "state": "CO",
+      "name": "Colorado",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "The housing-needs assessment and housing action plan are separate statutory planning duties under Title24, part37, linked to the territory covered by local master plans.",
+      "housing_duty": "Covered local governments must complete a housing-needs assessment by December 31, 2026 and a narrower subset must adopt a responsive housing action plan by January 1, 2028; both repeat at least every six years.",
+      "coverage": "Assessment: local governments with population at least 1,000, excluding those whose most recent decennial census population fell at least 1%, unless they receive DOLA assessment funding; a timely regional assessment substitutes. Action plan: population at least 5,000, or at least 1,000 if participating in a regional assessment or qualifying as a rural resort community as of January 1, 2024; the same 1% decline exemption applies. Population is measured two years before the relevant deadline; counties count only unincorporated population. Rural-resort communities include municipalities in counties so classified by the state. Qualifying early-2024 plans receive a five-year transition.",
+      "allocation": "regional_subset",
+      "allocation_detail": "Optional regional assessments estimate a municipal allocation of regional housing need based on jobs and dependence on regional employment, among other factors. A local action plan must explain how it addresses any applicable regional allocation. Outside that pathway, the locality assesses its own need under state methodology and incorporates applicable state/regional needs as appropriate. This is a conditional regional planning allocation, not a statewide RHNA schedule or a construction quota.",
+      "timing_note": "Enacted duties: assessments due December 31, 2026; action plans due January 1, 2028. Regional participation is optional; municipal regional allocations apply where that assessment pathway is used.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Estimate housing stock and need, households, jobs by pay, displacement risk, with consideration of shortages/surpluses, vacancy, homelessness, job–housing balance and state demographic projections.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Sort need by income and dwelling type, including accessible, supportive, ownership and rental housing. Baseline categories include extremely low, very low, low, moderate and middle income.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Action plans assess existing zoning/density effects on the number and type of needed homes and opportunities for higher-density affordable housing near major transit.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Assess housing-market limitations and zoning/density effects; action plans identify recommended local-law changes.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Action plans choose goals and strategies for production and preservation of affordable and regulated affordable housing.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Action plans select at least two standard affordability strategies, one long-term strategy and a suitable displacement strategy; include a plan for legislative consideration and an inclusive engagement process.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Plan includes available six-year construction/permitting history. Three years after adoption report actual strategy/law adoption or a good-faith effort with alternatives; repeat assessment and plan at least every six years.",
+          "source_ids": [
+            "co-part37"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "required",
+          "detail": "Analyze areas or communities at elevated displacement risk and plan mitigation. These obligations do not expressly require a parcel-by-parcel available-land inventory.",
+          "source_ids": [
+            "co-part37"
+          ]
+        }
+      ],
+      "enforcement": "DOLA must reject assessments or plans lacking statutory components and reviews three-year implementation reports. Starting December 1, 2027 specified land-use/housing grant programs prioritize compliant jurisdictions, treating exempt jurisdictions as compliant. The provisions require planning and strategy review, not completion of an assigned construction count.",
+      "key_distinction": "Colorado is more than a zoning-strategy menu: participating regional assessments estimate municipal need allocations. That pathway is optional, while the size-based assessment and action-plan duties have approaching statutory deadlines.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "co-part37"
+          ],
+          "reasoning": "Sections3703 and3705 impose separate assessment and action-plan duties with different coverage and first deadlines."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "co-part37",
+            "co-rural"
+          ],
+          "reasoning": "Sections3703(4)–(5) and3705(1),(5),(8) provide size, decline, regional participation, rural resort and transition rules; Title29 defines rural resort by county classification."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "co-part37"
+          ],
+          "reasoning": "Section3702(1)(c)(V) requires regional methodology to estimate municipal allocations; §3704 permits regional participation; §3705(3)(b) requires responsive action plans. Local methodology instead uses applicable allocations as appropriate under3702(1)(d)(V)."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "co-part37"
+          ],
+          "reasoning": "Sections3703(3),3704(3),3705(4),(6) require departmental completeness/implementation review; §3710 establishes grant prioritization beginning December2027."
+        }
+      ],
+      "sources": [
+        {
+          "id": "co-part37",
+          "citation": "Colo. Rev. Stat. §§24-32-3702–3706, 24-32-3710 (2026)",
+          "url": "https://olls.info/crs/crs2026-title-24.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Title24, article32, part37; especially3702(1)(c)(V),3703(4),3705(1),(3)–(6),3710",
+          "quote": "Estimate an allocation of housing needs",
+          "supports": "Current assessment and action-plan contents, exact coverage and timing, optional regional allocations, review and grant consequences.",
+          "version_note": "Official 2026 CRS HTML, linked by General Assembly 2026 titles-download page; relevant sections retain 2024 SB174 source histories."
+        },
+        {
+          "id": "co-rural",
+          "citation": "Colo. Rev. Stat. §§29-32-101(10), 29-4-1107(1)(d)",
+          "url": "https://olls.info/crs/crs2026-title-29.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Rural resort community definition; state county classification",
+          "quote": "any county classified as a \"rural resort\"",
+          "supports": "Rural resort definition extends to municipalities in classified counties; §3705 uses qualification as of January1,2024.",
+          "version_note": "Official2026 CRS; §29-32-101(10) source history shows addition in2023 and no later amendment."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 6012561,
+      "population_rank": 20,
+      "fips": "08"
+    },
+    {
+      "state": "WI",
+      "name": "Wisconsin",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "A comprehensive plan is required for local governments enacting or amending the listed zoning, subdivision or official-mapping ordinances. City plan commissions have a master-plan function; the nine-element requirement is linked to these regulatory actions. A voluntarily adopted comprehensive plan also must contain all nine elements.",
+      "housing_duty": "The comprehensive plan must include a housing element addressing existing and forecast demand, housing stock and policies for housing choice, lower-income land availability and preservation.",
+      "coverage": "Cities, villages and towns using the land-use regulatory powers listed in §66.1001(3), with no population cutoff. The consistency requirement began January 1, 2010; §(3m) preserves historic grant-related extensions, including the now-expired January 1, 2012 exception and extensions lasting until their grant deadline.",
+      "allocation": "local_assessment",
+      "allocation_detail": "The element addresses the locality's existing and forecast housing demand. No externally assigned municipal housing-unit need appears in the reviewed provisions; regional comprehensive plans are expressly advisory to local governments under §66.1001(5).",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Assess existing and forecast housing demand and stock age, structure, value and occupancy.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Policies and programs must serve all income levels and age groups and persons with special needs.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "Policies and programs to maintain or rehabilitate existing housing stock.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Identify housing programs, including policies promoting land availability for low- and moderate-income development or redevelopment; the plan's implementation element sequences actions.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "The implementation element must describe how progress will be measured; update the comprehensive plan at least once every ten years.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        },
+        {
+          "item": "other",
+          "status": "required",
+          "detail": "The separate land-use element assesses land supply, demand, density and redevelopment, with 20-year projections in five-year increments and land-use maps. This is not coded as a suitable-parcel housing inventory.",
+          "source_ids": [
+            "wi-1001"
+          ]
+        }
+      ],
+      "enforcement": "Listed regulatory enactments and amendments must be consistent with the comprehensive plan; plan adoption requires all nine elements, public participation and a hearing. No state housing-element certification or municipal unit allocation was found in these provisions.",
+      "key_distinction": "The duty is tied to comprehensive planning and specified land-use powers, not a population-based universal housing quota. Enacted 2025 Act 173 changes city/village residential land and density planning and consistency rules beginning January 1, 2028; those future provisions are not treated as current inventory requirements.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "wi-1001",
+            "wi-1001-adoption",
+            "wi-6223"
+          ],
+          "reasoning": "Section 66.1001(2)(b) requires housing, (4)(c) prevents adoption without the nine elements, and (3) plus §62.23(3)(b) connects comprehensive planning to specified regulatory actions."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "wi-1001",
+            "wi-1001-adoption",
+            "wi-6223"
+          ],
+          "reasoning": "The trigger is the listed local ordinances, not municipal size; (3m) contains historical grant extensions."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "wi-1001",
+            "wi-1001-adoption"
+          ],
+          "reasoning": "The housing text refers to local demand; (5) makes regional plans advisory rather than assigned municipal housing-need schedules."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "wi-1001",
+            "wi-1001-adoption"
+          ],
+          "reasoning": "Consistency and adoption prerequisites create the identified plan compliance mechanism. Future Act 173 notes are separately dated."
+        }
+      ],
+      "sources": [
+        {
+          "id": "wi-1001",
+          "citation": "Wis. Stat. §66.1001(1)–(3)",
+          "url": "https://docs.legis.wisconsin.gov/document/statutes/66.1001",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (2)(b), (h), (i), (3), and Act173 effective-date notes",
+          "quote": "A comprehensive plan shall contain all of the following elements",
+          "supports": "Housing contents, land-use/implementation elements, regulatory triggers, future January 2028 amendments.",
+          "version_note": "Official 2023–24 compilation updated through 2025 Act247, published September 4, 2026; future changes designated by notes."
+        },
+        {
+          "id": "wi-1001-adoption",
+          "citation": "Wis. Stat. §66.1001(3m)–(5)",
+          "url": "https://docs.legis.wisconsin.gov/statutes/statutes/66/x/1001/3m",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (3m), (4)(c), (5)",
+          "quote": "A regional planning commission's comprehensive plan is only advisory",
+          "supports": "Historical extensions, nine-element adoption condition, public hearing and advisory regional plans.",
+          "version_note": "Same current official compilation; webpage continuation read directly. Section (3m) repealed effective January 1, 2028."
+        },
+        {
+          "id": "wi-6223",
+          "citation": "Wis. Stat. §62.23(2)–(3)",
+          "url": "https://docs.legis.wisconsin.gov/document/statutes/62.23",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (2), (3)(b)",
+          "quote": "if the city engages in any program or action described in s. 66.1001 (3)",
+          "supports": "City plan commission role and trigger for full comprehensive-plan contents.",
+          "version_note": "Official current compilation, with separate January 1, 2028 Act173 amendment note."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 5972787,
+      "population_rank": 21,
+      "fips": "55"
+    },
+    {
+      "state": "MN",
+      "name": "Minnesota",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "The Metropolitan Land Planning Act requires comprehensive plans and decennial review within the Metropolitan Council region. General municipal planning is governed separately by §462.355.",
+      "housing_duty": "Metropolitan comprehensive plans must include a housing element and housing implementation program.",
+      "coverage": "Metropolitan Council territory: Anoka, Carver, Dakota (excluding Northfield and Cannon Falls), Hennepin (excluding Hanover and Rockford), Ramsey, Scott (excluding New Prague), and Washington counties. No municipal population cutoff. Housing-element duty extends to communities without forecast sewer-serviced growth, although allocation/capacity requirements do not.",
+      "allocation": "regional_subset",
+      "allocation_detail": "Met Council forecasts regional affordable-housing need and assigns shares to communities expecting sewer-serviced household growth. Plans must guide adequate land at qualifying densities, rather than guarantee production. Current 2021–2030 need and the 2031–2040 allocation for 2050 plans are distinct; the latter focuses on affordability at ≤30%, 31–50%, and 51–60% AMI.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Existing and projected local/regional housing needs; 2050 guidance adds explicit analysis of existing community needs.",
+          "source_ids": [
+            "mn-content",
+            "mn-policy"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "Low/moderate income housing opportunities and the region's affordable-housing allocation.",
+          "source_ids": [
+            "mn-content",
+            "mn-allocation"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "conditional",
+          "detail": "Guide sufficient residential land at suitable density for allocated affordable need where sewer-serviced growth is forecast.",
+          "source_ids": [
+            "mn-policy"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Housing implementation program using official controls, fiscal tools and sequenced actions.",
+          "source_ids": [
+            "mn-content"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "required",
+          "detail": "2050 guidance includes maintenance/preservation and current housing needs within the implementation analysis.",
+          "source_ids": [
+            "mn-policy"
+          ]
+        }
+      ],
+      "enforcement": "Local plans go to Met Council before final approval. Local zoning and controls must conform to the comprehensive plan; Met Council reviews plans against metropolitan planning requirements.",
+      "key_distinction": "This is a metropolitan-region mandate with an affordable-need allocation, not a statewide requirement. Communities without forecast sewer-serviced growth still need a housing element but are exempt from allocation-dependent land requirements.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "mn-content",
+            "mn-plan"
+          ],
+          "reasoning": "§473.859 mandates housing element/implementation content; §473.858 establishes review and submission obligations."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "mn-region",
+            "mn-policy"
+          ],
+          "reasoning": "Statutory region excludes named border cities; official policy distinguishes housing duty from sewer-growth allocation."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "mn-content",
+            "mn-allocation",
+            "mn-policy"
+          ],
+          "reasoning": "Statutory regional share is implemented through Met Council's quantified allocation and land-guidance rules."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "mn-plan"
+          ],
+          "reasoning": "Plan submission and consistency of local controls are express requirements."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mn-content",
+          "citation": "Minn. Stat. §473.859, subds.2(c),4(3)",
+          "url": "https://www.revisor.mn.gov/statutes/cite/473.859",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subds.2(c),4(3)",
+          "quote": "meet the local unit's share of the metropolitan area need for low and moderate income housing",
+          "supports": "Housing element and housing implementation program.",
+          "version_note": "Official 2025 compilation displayed on access; no2026 amendment flag shown for these provisions."
+        },
+        {
+          "id": "mn-plan",
+          "citation": "Minn. Stat. §473.858",
+          "url": "https://www.revisor.mn.gov/statutes/cite/473.858",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subds.1,3",
+          "quote": "the zoning ordinance shall be brought into conformance with the plan",
+          "supports": "Plan reviews, submission before approval, consistency of official controls.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "mn-region",
+          "citation": "Minn. Stat. §473.121, subd.2",
+          "url": "https://www.revisor.mn.gov/statutes/cite/473.121",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subd.2",
+          "quote": "Dakota excluding the cities of Northfield and Cannon Falls",
+          "supports": "Metropolitan territory and border-city exclusions.",
+          "version_note": "2026 amendment flag concerns subd.5a, not the subd.2 geographic definition."
+        },
+        {
+          "id": "mn-allocation",
+          "citation": "Met Council, Allocation of Future Affordable Housing Need",
+          "url": "https://metrocouncil.org/Housing/Planning/Affordable-Housing-Measures/Allocation-of-Affordable-Housing-NEED.aspx",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Local Planning Assistance; Looking ahead to2031–2040",
+          "quote": "all communities expecting sewer-serviced household growth",
+          "supports": "Allocation method, no construction guarantee, separate planning decades.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "mn-policy",
+          "citation": "Met Council, Imagine2050: Roles, responsibilities, and implementation",
+          "url": "https://imagine2050.metrocouncil.org/reference-materials/housing/roles-responsibilities-and-implementation/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Housing requirements for local comprehensive plans; Future and current affordable housing need",
+          "quote": "Cities and townships without forecasted sewer-serviced growth are still required to include a housing element",
+          "supports": "Coverage, sufficient-land duty and forthcoming2050 plan content.",
+          "version_note": "Current adopted policy webpage read; distinguish2050 update/2031–2040 need from current-decade progress."
+        },
+        {
+          "id": "mn-general",
+          "citation": "Minn. Stat. §462.355, subds.1–3",
+          "url": "https://www.revisor.mn.gov/statutes/cite/462.355",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subds.1–3",
+          "quote": "The planning agency shall prepare the comprehensive municipal plan.",
+          "supports": "Separate general municipal planning procedures; metropolitan update explicitly cross-referenced.",
+          "version_note": "Current official code displayed on access."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 5830405,
+      "population_rank": 22,
+      "fips": "27"
+    },
+    {
+      "state": "SC",
+      "name": "South Carolina",
+      "checked_on": "2026-09-20",
+      "requirement": "required_if_plan",
+      "plan_mandate": "Creating a local planning commission is optional. A statutory comprehensive plan must include the housing element; housing-element adoption is also a prerequisite to land-development regulations under § 6-29-1130(A).",
+      "housing_duty": "Housing is a required comprehensive-plan element when a municipality undertakes the statutory comprehensive planning process.",
+      "coverage": "Municipalities/county planning jurisdictions using Chapter 29; no population cutoff. Plan elements may be adopted incrementally. Zoning requires at least land use; land-development regulations additionally require housing, community facilities, and priority investment elements.",
+      "allocation": "local_assessment",
+      "allocation_detail": "The local commission inventories conditions and states needs/goals; it must consider regional conflicts. Chapter 29 does not assign quantified regional housing need to individual municipalities.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Inventory existing housing location, type, age, condition, tenure and affordability; state needs and goals. This is housing-stock analysis, not a required parcel inventory.",
+          "source_ids": [
+            "sc-ch29"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "required",
+          "detail": "Analyze unnecessary regulatory costs and market-based affordability incentives; solicit homebuilder, developer, contractor and housing-finance input.",
+          "source_ids": [
+            "sc-ch29"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Planning elements must have implementation strategies and time frames.",
+          "source_ids": [
+            "sc-ch29"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Review at least every five years and update the comprehensive plan including all elements at least every ten years.",
+          "source_ids": [
+            "sc-ch29"
+          ]
+        }
+      ],
+      "enforcement": "Local hearings/adoption and periodic review apply. Housing-element adoption is required before land-development regulations; the reviewed chapter has no state municipal-need allocation or housing-element certification agency.",
+      "key_distinction": "Housing is mandatory within the statutory plan, while state law does not compel every municipality to create that planning framework. Housing-stock inventory is not California’s developable-site inventory.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "sc-ch29"
+          ],
+          "reasoning": "Section 6-29-510(D) says the plan must include listed elements and (6) is housing."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "sc-ch29"
+          ],
+          "reasoning": "Read optional creation in § 320 with mandatory process in § 340, plan contents in § 510, and separate regulatory prerequisites in §§ 720/1130."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "sc-ch29"
+          ],
+          "reasoning": "Section 510(C) requires a local statement of needs/goals; regional coordination is not a quantified assignment to municipalities."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "sc-ch29"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "sc-ch29",
+          "citation": "S.C. Code §§ 6-29-320, -340, -510, -530, -720, -1130",
+          "url": "https://www.scstatehouse.gov/code/t06c029.php",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§ 6-29-510(C), (D)(6), (E); § 6-29-1130(A)",
+          "quote": "a housing element which considers location, types, age, and condition of housing, owner and renter occupancy, and affordability of housing",
+          "supports": "Optional commission creation; required comprehensive-plan housing content; regulatory prerequisites and review cycle.",
+          "version_note": "Current official chapter; housing element amended in 2023 to require industry/finance input. Later chapter amendments displayed, including 2025."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 5570274,
+      "population_rank": 23,
+      "fips": "45"
+    },
+    {
+      "state": "AL",
+      "name": "Alabama",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "Municipalities may create a commission under § 11-52-2; an established commission has a master-plan duty under § 11-52-8.",
+      "housing_duty": "No express housing element or citywide housing-needs component appears in the reviewed master-plan contents.",
+      "coverage": "General city/town planning framework statewide; no housing-specific population trigger in §§ 11-52-2 or -8.",
+      "allocation": "none_identified",
+      "allocation_detail": "Section 11-52-8 enumerates physical-development and zoning recommendations without assigning housing need among municipalities. Section -9’s general attention to future growth is not municipal unit allocation.",
+      "contents": [],
+      "enforcement": "General master-plan adoption and public-project review procedures exist. The reviewed sections contain no housing-element certification or assigned housing-unit enforcement.",
+      "key_distinction": "An Alabama city may include housing in its own plan. That local choice does not make the subject a state-required housing element.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "al-code-mobile",
+            "al-8"
+          ],
+          "reasoning": "Reviewed the entire enumerated content list, including mandatory zoning recommendations, without a required housing-needs or housing-sites element."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "al-code-mobile",
+            "al-2",
+            "al-athens"
+          ],
+          "reasoning": "Plan duty attaches to commissions established under the general enabling framework; no housing-specific cutoff appears in the operative sections."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "al-code-mobile",
+            "al-8"
+          ],
+          "reasoning": "General future-growth surveys and physical recommendations supply no municipal fair-share or external housing allocation formula."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "al-code-mobile",
+            "al-8"
+          ],
+          "reasoning": "Sections -10/-11 supply general adoption/project-review procedures; no housing-specific compliance mechanism was identified."
+        },
+        {
+          "claim": "limitations",
+          "source_ids": [
+            "al-code-mobile",
+            "al-8",
+            "al-2"
+          ],
+          "reasoning": "A current official statewide section could not be extracted; this first-pass finding triangulates a 2015 official municipal reproduction, 2025 code mirrors, and current municipal guidance."
+        }
+      ],
+      "sources": [
+        {
+          "id": "al-code-mobile",
+          "citation": "Ala. Code §§ 11-52-2, -8 through -11 (municipally hosted reproduction)",
+          "url": "https://www.buildmobile.org/pdf/Title%2011%20Chapter%2052.pdf",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "PDF pp. 1, 4–5; §§ 11-52-2, -8, -9, -10, -11",
+          "quote": "a master plan for the physical development of the municipality",
+          "supports": "Optional commission creation, conditional master-plan duty, enumerated physical contents and procedures.",
+          "version_note": "City of Mobile-hosted code reproduction explicitly current through 2015. Sections -2 and -8 compared with the 2025 mirror; not represented as a current official statewide code edition."
+        },
+        {
+          "id": "al-8",
+          "citation": "Ala. Code § 11-52-8 (2025 mirror)",
+          "url": "https://law.justia.com/codes/alabama/title-11/title-2/chapter-52/article-1/section-11-52-8/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(e)",
+          "quote": "It shall be the function and duty of the commission",
+          "supports": "2025 text of municipal master-plan duty and full required physical-development list.",
+          "version_note": "Justia mirror; latest source note is Act 2014-13. Official current legislature app opened but did not expose section text to the research browser."
+        },
+        {
+          "id": "al-2",
+          "citation": "Ala. Code § 11-52-2 (2025 mirror)",
+          "url": "https://law.justia.com/codes/alabama/title-11/title-2/chapter-52/article-1/section-11-52-2/",
+          "kind": "statute_mirror",
+          "accessed_on": "2026-09-20",
+          "locator": "(a)–(b)",
+          "quote": "Any municipality is hereby authorized and empowered",
+          "supports": "Municipalities are authorized to plan and create a planning commission.",
+          "version_note": "2025 Justia mirror; compared with the City of Mobile-hosted reproduction."
+        },
+        {
+          "id": "al-athens",
+          "citation": "City of Athens, Planning & Zoning Documents",
+          "url": "https://athensalabama.us/498/Planning-Zoning-Documents",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Athens 2040 Comprehensive Master Plan",
+          "quote": "each municipality’s Planning Commission is required to prepare and adopt a master plan",
+          "supports": "Official municipal explanation of § 11-52-8; an actual local housing chapter does not establish statewide required housing content.",
+          "version_note": "Live city page, describing plan adoption March 28, 2023."
+        }
+      ],
+      "review_status": "needs_review",
+      "uncertainties": [
+        "The legislature’s current code app returned a shell instead of § 11-52-8 text. A current official statewide text check remains desirable; the 2025 mirror and City of Mobile reproduction agree on the operative contents."
+      ],
+      "population": 5193088,
+      "population_rank": 24,
+      "fips": "01"
+    },
+    {
+      "state": "LA",
+      "name": "Louisiana",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "Municipalities may create a planning commission under § 33:102; the commission then shall prepare/adopt a master plan under § 33:106.",
+      "housing_duty": "The reviewed municipal master-plan statutes do not require a citywide housing element. General public-housing layout and blight replanning are permissible subjects.",
+      "coverage": "General statewide municipal regime plus the special Shreveport master-plan statute reviewed. No housing-specific population cutoff appears in those content provisions.",
+      "allocation": "none_identified",
+      "allocation_detail": "Neither the general content statute nor the reviewed Shreveport provision identifies an external housing-need allocator or assigns municipal unit shares.",
+      "contents": [],
+      "enforcement": "No housing-element certification, housing production target, or housing-specific penalty appears in the reviewed master-plan provisions. General plan duties remain applicable to established commissions.",
+      "key_distinction": "Public-housing layout is an optional physical-planning subject under § 33:106(B)(2); it does not require an inventory of all developable housing sites or a municipal needs assessment.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "la-106",
+            "la-1408"
+          ],
+          "reasoning": "Distinguish mandatory plan preparation and road/public-property depiction from the permissive public-housing/blight subjects."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "la-102",
+            "la-1403",
+            "la-1408"
+          ],
+          "reasoning": "General statewide authority and Shreveport-specific contents were both reviewed; this is not an exhaustive audit of every home-rule charter."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "la-106",
+            "la-1408"
+          ],
+          "reasoning": "No numerical need allocation or external assigning body appears in either reviewed content section."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "la-106",
+            "la-1408"
+          ],
+          "reasoning": "These sections require general planning work but contain no dedicated housing-element compliance mechanism."
+        }
+      ],
+      "sources": [
+        {
+          "id": "la-102",
+          "citation": "La. Rev. Stat. § 33:102",
+          "url": "https://www.legis.la.gov/legis/Law.aspx?d=88647",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "Every parish and every municipality may make, adopt, amend, extend, add to, or carry out official plans",
+          "supports": "Optional general municipal/parish planning framework.",
+          "version_note": "Current official code; Acts 2004, No. 859 effective July 12, 2004."
+        },
+        {
+          "id": "la-106",
+          "citation": "La. Rev. Stat. § 33:106",
+          "url": "https://www.legis.la.gov/Legis/Law.aspx?d=88652",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "A(2), B(1)–(2), C–D",
+          "quote": "A municipal planning commission shall make and adopt a master plan",
+          "supports": "Duty of an established municipal commission; required road/public-property depiction versus optional public-housing and blight recommendations.",
+          "version_note": "Current official code; Acts 2004, No. 859 effective July 12, 2004."
+        },
+        {
+          "id": "la-1408",
+          "citation": "La. Rev. Stat. § 33:140.8",
+          "url": "https://www.legis.la.gov/legis/Law.aspx?d=89202",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "A–C",
+          "quote": "may include, among other things",
+          "supports": "Special Shreveport master-plan contents likewise contain no required housing-needs element.",
+          "version_note": "Current official code; Acts 2020, No. 294 effective January 1, 2022."
+        },
+        {
+          "id": "la-1403",
+          "citation": "La. Rev. Stat. § 33:140.3",
+          "url": "https://www.legis.la.gov/legis/Law.aspx?d=89174",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Definitions",
+          "quote": "the city of Shreveport",
+          "supports": "Geographic definition for the special master-plan statute.",
+          "version_note": "Current official code; geographic scope read with § 33:140.8."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 4618189,
+      "population_rank": 25,
+      "fips": "22"
+    },
+    {
+      "state": "KY",
+      "name": "Kentucky",
+      "checked_on": "2026-09-20",
+      "requirement": "encouraged",
+      "plan_mandate": "The planning commission of each Chapter 100 planning unit must prepare a comprehensive plan.",
+      "housing_duty": "Housing is expressly optional as an additional element under § 100.187(6), and expressly encouraged by state housing policy in § 198A.025(9).",
+      "coverage": "Local planning commissions under Chapter 100 statewide; no population cutoff in the housing encouragement. The underlying plan duty attaches to established planning units.",
+      "allocation": "none_identified",
+      "allocation_detail": "The reviewed provisions encourage local housing planning without a municipal unit allocation. Section 198A.025 describes state housing-policy objectives, not an apportionment formula.",
+      "contents": [],
+      "enforcement": "Core comprehensive-plan requirements remain applicable, but these provisions establish no penalty for omitting the expressly optional housing element.",
+      "key_distinction": "Kentucky is an explicit encouragement case. The state-owned-land inventory mentioned in § 198A.025 is a state policy objective, not a required municipal housing-site inventory.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ky-187",
+            "ky-198a025"
+          ],
+          "reasoning": "Housing is in the may-include list and a separate statute expressly encourages its inclusion."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ky-183",
+            "ky-198a025"
+          ],
+          "reasoning": "The operative underlying duty is on each planning unit’s commission; encouragement has no housing-specific population trigger."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ky-187",
+            "ky-198a025"
+          ],
+          "reasoning": "Neither local-plan contents nor state policy objectives allocate housing-unit needs among municipalities."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ky-187",
+            "ky-183",
+            "ky-198a025"
+          ],
+          "reasoning": "The cited planning or housing-plan provisions support the stated procedure and scoped enforcement finding; no unit-production guarantee is inferred."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ky-187",
+          "citation": "Ky. Rev. Stat. § 100.187",
+          "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=26711",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(6), read with (1)–(5)",
+          "quote": "The comprehensive plan may include any additional elements",
+          "supports": "Housing is a permissible additional element, beyond required land-use, transport, community-facility and other core provisions.",
+          "version_note": "Current official legislative PDF; effective June 24, 2003."
+        },
+        {
+          "id": "ky-183",
+          "citation": "Ky. Rev. Stat. § 100.183",
+          "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=26710",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "The planning commission of each unit shall prepare a comprehensive plan",
+          "supports": "Comprehensive plan duty belongs to an established planning unit.",
+          "version_note": "Current official PDF; effective July 15, 1986."
+        },
+        {
+          "id": "ky-198a025",
+          "citation": "Ky. Rev. Stat. § 198A.025",
+          "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=6926",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "(9), read with (1)–(10)",
+          "quote": "Encourage local planning commissions to include a housing element in the five (5) year comprehensive plan",
+          "supports": "Express state policy encouraging the optional local housing element.",
+          "version_note": "Current official PDF; effective July 15, 1996."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 4606864,
+      "population_rank": 26,
+      "fips": "21"
+    },
+    {
+      "state": "OR",
+      "name": "Oregon",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "All cities must plan for housing through comprehensive plans complying with Statewide Planning Goal 10.",
+      "housing_duty": "Goal 10 housing planning applies to all cities. Housing-capacity analyses and housing-production strategies impose expanded duties on designated jurisdictions.",
+      "coverage": "Basic duty: all cities. Expanded cycle generally applies at ≥10,000 population. ORS197A.015 also includes every Tillamook County city and Barview/Twin Rocks/Watseco, Cloverdale, Hebo, Neahkahnie, Neskowin, Netarts, Oceanside and Pacific City/Woods regardless of size, plus county jurisdiction over Metro urban unincorporated lands. Metro capacity cycle: six years; outside Metro: eight. Smaller cities also face inventory duties at specified plan reviews.",
+      "allocation": "state_or_regional",
+      "allocation_detail": "DAS allocates 20-year need to each city and a separate Metro-unincorporated allocation to each Metro county. Need is segmented at <30%, 30–<60%, 60–<80%, 80–<120%, and ≥120% median family income. Separate six-/eight-year production targets apply to expanded-duty jurisdictions; these are distinct from the universal need allocation.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Needed housing over the planning period; expanded-duty jurisdictions add contextualized needs.",
+          "source_ids": [
+            "or-program",
+            "or-197a"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "State allocations disaggregate affordability brackets.",
+          "source_ids": [
+            "or-184"
+          ]
+        },
+        {
+          "item": "land_inventory",
+          "status": "required",
+          "detail": "Goal 10 requires buildable residential land inventory. §197A.270 requires identifiable lots/parcels, except infill/redevelopment land; expanded program adds development-ready mapping.",
+          "source_ids": [
+            "or-goal10",
+            "or-197a",
+            "or-program"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Determine whether buildable land accommodates 20-year need; detailed cyclic analyses for expanded-duty jurisdictions.",
+          "source_ids": [
+            "or-197a"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "conditional",
+          "detail": "Production strategies consider market conditions and development barriers.",
+          "source_ids": [
+            "or-197a"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "conditional",
+          "detail": "Expanded production strategies must promote fair housing.",
+          "source_ids": [
+            "or-197a"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "conditional",
+          "detail": "Expanded jurisdictions adopt timed housing-production actions, normally within a year after capacity-analysis deadline.",
+          "source_ids": [
+            "or-197a"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "conditional",
+          "detail": "Mid-cycle production-strategy evaluation and state acceleration program for expanded jurisdictions.",
+          "source_ids": [
+            "or-program"
+          ]
+        }
+      ],
+      "enforcement": "DLCD reviews production strategies and may approve or remand them; its housing acceleration program tracks production and implementation for expanded jurisdictions.",
+      "key_distinction": "The 10,000 cutoff is not an exemption from housing planning or from allocation of 20-year need. Distinguish statewide need allocation from the separate production-target/strategy system.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "or-goal10",
+            "or-program"
+          ],
+          "reasoning": "Mandatory buildable-land inventory plus official confirmation that Goal10 applies to all cities."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "or-197a",
+            "or-program"
+          ],
+          "reasoning": "Definitions extend the expanded threshold to named communities; §§197A.270/.280/.335 distinguish review cycles."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "or-184"
+          ],
+          "reasoning": "§184.453 assigns need to each city, while §184.455 specifies the separate production-target cohort."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "or-program"
+          ],
+          "reasoning": "Official 2026 program guidance identifies state production-strategy review, progress checks and acceleration."
+        }
+      ],
+      "sources": [
+        {
+          "id": "or-goal10",
+          "citation": "OAR660-015-0000(10), Statewide Planning Goal10",
+          "url": "https://www.oregon.gov/lcd/OP/Documents/goal10.pdf",
+          "kind": "regulation",
+          "accessed_on": "2026-09-20",
+          "locator": "page 1 operative goal",
+          "quote": "Buildable lands for residential use shall be inventoried",
+          "supports": "Baseline buildable-land inventory; guideline recommendations distinguished from operative text.",
+          "version_note": "Current official code displayed on access."
+        },
+        {
+          "id": "or-197a",
+          "citation": "Or. Rev. Stat. §§197A.015, .100, .270, .280, .335",
+          "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors197a.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§197A.015(3); .100; .270(3); .280; .335",
+          "quote": "Any city within Tillamook County",
+          "supports": "Coverage exceptions, inventory and production duties.",
+          "version_note": "2025 codified chapter fetched and read directly after web-renderer failures; official program page supplies 2026 implementation context."
+        },
+        {
+          "id": "or-184",
+          "citation": "Or. Rev. Stat. §§184.453–.455",
+          "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors184.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§184.453(2), (4); §184.455",
+          "quote": "the department shall allocate a housing need for each city",
+          "supports": "Separate universal 20-year allocations and threshold-based production targets.",
+          "version_note": "Current code incorporates 2025 chapter476 amendments."
+        },
+        {
+          "id": "or-program",
+          "citation": "DLCD, Oregon’s Housing Planning Program",
+          "url": "https://www.oregon.gov/lcd/Housing/Pages/Planning_Program.aspx",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "opening; Steps1–3",
+          "quote": "All communities in Oregon must plan for housing",
+          "supports": "Current baseline/expanded duties, mapping, timing and review.",
+          "version_note": "Page describes January1,2026 implementation and current planning program."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 4273586,
+      "population_rank": 27,
+      "fips": "41"
+    },
+    {
+      "state": "OK",
+      "name": "Oklahoma",
+      "checked_on": "2026-09-20",
+      "requirement": "no_explicit_requirement",
+      "plan_mandate": "General commissions are optional under § 45-101 and prepare plans under § 45-103. The additional large-city framework authorizes commissions with a master-plan duty under § 47-106.",
+      "housing_duty": "No express citywide housing element, housing-needs inventory, or housing allocation is required by the reviewed general and large-city plan-content provisions.",
+      "coverage": "General municipal commissions plus the separate large-city regime reviewed. Section 47-101 opens with a population threshold of at least 200,000 by latest federal census (its municipality definition says over 200,000); that is a planning-regime threshold, not a housing-element trigger.",
+      "allocation": "none_identified",
+      "allocation_detail": "Neither municipal physical planning nor regional coordination in the reviewed Title 11 provisions apportions housing-unit need among municipalities.",
+      "contents": [],
+      "enforcement": "The reviewed provisions establish general planning duties; no dedicated housing-element certification or allocated-unit compliance requirement is identified.",
+      "key_distinction": "Plans for a municipality’s betterment as a place of residence and a zoning plan do not themselves require a housing-needs element. Population thresholds distinguish commission powers, not housing obligations.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ok-title11",
+            "ok-47106"
+          ],
+          "reasoning": "Reviewed both municipal planning routes; neither content section requires a housing element or quantified housing-needs assessment."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ok-45101",
+            "ok-47101",
+            "ok-title11"
+          ],
+          "reasoning": "General enabling statute and separate large-city applicability were checked instead of assuming one municipal planning regime."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ok-title11",
+            "ok-47106"
+          ],
+          "reasoning": "General/regional planning powers contain no external municipal housing-share formula."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ok-title11",
+            "ok-47106"
+          ],
+          "reasoning": "No housing-specific certification, target or penalty is present in these reviewed planning provisions."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ok-45101",
+          "citation": "Okla. Stat. tit. 11, § 45-101",
+          "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=76537",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "A municipal governing body may appoint a municipal planning commission",
+          "supports": "Optional municipal planning commission framework.",
+          "version_note": "Official Oklahoma State Courts Network; source note effective July 1, 1978."
+        },
+        {
+          "id": "ok-title11",
+          "citation": "Okla. Stat. tit. 11, §§ 45-103, 46-103, 47-102",
+          "url": "https://oksenate.gov/sites/default/files/2019-12/os11.pdf",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "PDF pp. 466–474; §§ 45-103, 46-103, 47-102",
+          "quote": "plans for the betterment of the municipality as a place of residence or for business",
+          "supports": "General and regional planning duties; optional large-city master-plan framework.",
+          "version_note": "Official Senate-hosted Title 11 compilation; URL dates to 2019. Operative § 45-103 source note is 1977; cross-checked against a 2025 statute mirror."
+        },
+        {
+          "id": "ok-47101",
+          "citation": "Okla. Stat. tit. 11, § 47-101",
+          "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=76545",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Opening sentence and definition 1",
+          "quote": "population of not less than two hundred thousand (200,000)",
+          "supports": "Coverage of additional large-city planning regime.",
+          "version_note": "Official OSCN; opening applicability threshold is at least 200,000 by latest federal census, while definition 1 says over 200,000."
+        },
+        {
+          "id": "ok-47106",
+          "citation": "Okla. Stat. tit. 11, § 47-106",
+          "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=76550",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "Whole section",
+          "quote": "make and adopt a master plan for the physical development of the municipality",
+          "supports": "Master-plan duty and enumerated required contents for large-city commissions.",
+          "version_note": "Official OSCN; source note effective July 1, 1978."
+        },
+        {
+          "id": "ok-hb1051",
+          "citation": "Oklahoma HB1051, 60th Legislature, bill status",
+          "url": "https://www.oklegislature.gov/BillInfo.aspx?Bill=hb1051&Session=2500",
+          "kind": "bill_status",
+          "accessed_on": "2026-09-20",
+          "locator": "History, February 4, 2025",
+          "quote": "Referred to County and Municipal Government",
+          "supports": "Proposed Fair Zoning Act has no enactment shown; not coded as law.",
+          "version_note": "Accessed official status shows committee referral and no enactment."
+        },
+        {
+          "id": "ok-hb1114",
+          "citation": "Oklahoma HB1114, 60th Legislature, bill status",
+          "url": "https://www.oklegislature.gov/BillInfo.aspx?Bill=hb1114&Session=2500",
+          "kind": "bill_status",
+          "accessed_on": "2026-09-20",
+          "locator": "History and versions",
+          "quote": "municipal land bank program",
+          "supports": "Proposed municipal land-bank program is not coded as an enacted housing-element duty.",
+          "version_note": "Accessed official history ends with February 24, 2025 committee recommendation; no enactment shown."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 4123288,
+      "population_rank": 28,
+      "fips": "40"
+    },
+    {
+      "state": "CT",
+      "name": "Connecticut",
+      "checked_on": "2026-09-20",
+      "requirement": "required_statewide",
+      "plan_mandate": "Each municipality must prepare a housing growth plan or elect to comply with its regional plan. It may be combined with a coinciding plan of conservation and development.",
+      "housing_duty": "New housing growth planning law effective January 1, 2026 replaces repealed §8-30j. First municipal/regional plans are due in 2028 or 2029, then every five years.",
+      "coverage": "All municipalities; no population cutoff. June 1, 2028: Capitol, Northeastern, Lower Connecticut River Valley, Northwest Hills and Southeastern regions. After June 1, 2028 but by June 1, 2029: South Central, Greater Bridgeport, Naugatuck Valley and Western regions. The lowest twenty municipalities by adjusted equalized net grand list per capita have preservation-focused plans and are excluded from recommended-goal allocation.",
+      "allocation": "advisory_allocation",
+      "timing_note": "First targets pending; municipal plans due in 2028 or 2029.",
+      "allocation_detail": "Enacted framework, first targets pending: OPM sets state/regional growth targets by December 1, 2026; COGs recommend municipal affordable-unit shares by June 1, 2027, with OPM approval. Recommended goals are capped at 20% of occupied units. A municipality preparing its own plan may adopt a different goal with written reasons; this is an advisory allocation, not California-style binding need.",
+      "contents": [
+        {
+          "item": "land_inventory",
+          "status": "required",
+          "detail": "Inventory developable land; identify practicable zones/parcels and maximum density for the affordable goal.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        },
+        {
+          "item": "capacity_analysis",
+          "status": "required",
+          "detail": "Identify infrastructure needs, including wastewater capacity.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        },
+        {
+          "item": "fair_housing",
+          "status": "required",
+          "detail": "Explain compliance with fair housing, choice and economic-diversity duties.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Housing diversity, disability accessibility, consistency with other plans, and implementation schedule.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Annual progress reports after plan approval.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        },
+        {
+          "item": "preservation",
+          "status": "conditional",
+          "detail": "Lowest twenty wealth-measure municipalities prioritize existing affordability, rehabilitation, displacement prevention and infrastructure.",
+          "source_ids": [
+            "ct-growth"
+          ]
+        }
+      ],
+      "enforcement": "COG review, OPM approval limited to statutory conformity, and annual reporting. Late plans affect access to new §8-30g moratoria; growth-program awards depend on progress.",
+      "key_distinction": "Legally enacted now, but initial plans and recommended shares are not yet due. Municipalities can explain departures from the recommended regional goal.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ct-growth",
+            "ct-pa25"
+          ],
+          "reasoning": "Section 8-13bb requires a municipal or regional plan; PA25-1 repealed §8-30j effective January 2026."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ct-growth"
+          ],
+          "reasoning": "Subsection 8-13bb(a) supplies regional deadlines and (e) special preservation plans; §8-13dd(c) excludes those municipalities from allocation."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ct-growth",
+            "ct-secog"
+          ],
+          "reasoning": "State targets feed COG municipal recommendations, subject to the express local-departure option in §8-13bb(c)."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ct-growth",
+            "ct-pa26-129"
+          ],
+          "reasoning": "Sections 8-13bb(f)–(l) and 8-13cc(c)–(f) govern review, reporting, growth grants, late-plan consequences and council review."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ct-growth",
+          "citation": "Conn. Gen. Stat. §§8-13aa–8-13dd (2026 Supp.)",
+          "url": "https://prdext3.cga.ct.gov/2026/sup/chap_124b.htm",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "§8-13bb(a)–(l); §8-13dd(b)–(g)",
+          "quote": "such municipality shall provide a written explanation",
+          "supports": "Plan duty, content, regional deadlines, allocation methodology and local departure.",
+          "version_note": "Effective January 1, 2026; initial municipal plans due 2028/29. 2026 supplement checked against later acts below."
+        },
+        {
+          "id": "ct-pa25",
+          "citation": "Conn. Nov. Sp. Sess. P.A.25-1, §§4–7, 53",
+          "url": "https://www.cga.ct.gov/2025/act/Pa/pdf/2025PA-00001-R00HB-08002SS1-PA.PDF",
+          "kind": "session_law",
+          "accessed_on": "2026-09-20",
+          "locator": "§53; §§4–7",
+          "quote": "Sections 4-68ii, 8-2p, 8-30j and 8-446a of the general statutes are repealed.",
+          "supports": "Repeal and replacement effective date.",
+          "version_note": "Approved November 26, 2025; planning and repeal provisions effective January 1, 2026."
+        },
+        {
+          "id": "ct-secog",
+          "citation": "Southeastern Connecticut Council of Governments, SSPA25-1 implementation",
+          "url": "https://secogct.gov/sspa-25-1-an-act-concerning-housing-growth",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "Housing Growth Plans; recommended affordable goals",
+          "quote": "it does not require municipalities to produce a specific number of units",
+          "supports": "Official regional implementation clarifies recommendation and development distinction.",
+          "version_note": "Current official text read September 20, 2026."
+        },
+        {
+          "id": "ct-pa26-138",
+          "citation": "Conn. P.A.26-138, §3",
+          "url": "https://www.cga.ct.gov/2026/ACT/PA/PDF/2026PA-00138-R00HB-05287-PA.PDF",
+          "kind": "session_law",
+          "accessed_on": "2026-09-20",
+          "locator": "§3",
+          "quote": "Effective October 1, 2026",
+          "supports": "Future technical wording correction to planning-region definition; no change in substantive allocation.",
+          "version_note": "PDF retrieved directly and read locally; approved June 4, 2026."
+        },
+        {
+          "id": "ct-pa26-129",
+          "citation": "Conn. P.A.26-129, §5",
+          "url": "https://www.cga.ct.gov/2026/ACT/PA/PDF/2026PA-00129-R00HB-05521-PA.PDF",
+          "kind": "session_law",
+          "accessed_on": "2026-09-20",
+          "locator": "§5",
+          "quote": "Council on Housing Development",
+          "supports": "Council composition/authority update; no substantive replacement of §8-13bb or §8-13dd.",
+          "version_note": "PDF retrieved directly and read locally; §5 effective July 1, 2026."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [
+        "OPM's implementation guidelines and first targets were not independently located in this review. Classification concerns the statutory framework, not completed implementation."
+      ],
+      "population": 3688496,
+      "population_rank": 29,
+      "fips": "09"
+    },
+    {
+      "state": "UT",
+      "name": "Utah",
+      "checked_on": "2026-09-20",
+      "requirement": "required_subset",
+      "plan_mandate": "Each municipality must prepare and adopt a comprehensive, long-range general plan under §10-20-401.",
+      "housing_duty": "Specified municipalities must include a moderate-income housing element meeting §10-21-201. Other municipalities are encouraged to address moderate-income housing.",
+      "coverage": "Cities of the first through fourth classes (population at least 10,000), plus fifth-class cities with population at least 5,000 in first-, second- or third-class counties (county population at least 40,000). A municipality newly qualifying as of January 1 must amend its plan by August 1 that year. Fixed-guideway public-transit stations trigger additional strategy requirements.",
+      "allocation": "local_assessment",
+      "allocation_detail": "The municipality analyzes how it will give a realistic opportunity to meet additional moderate-income housing needs during the next five years. The reviewed provisions prescribe strategy menus and implementation duties, not an externally allocated regional unit share.",
+      "contents": [
+        {
+          "item": "needs_assessment",
+          "status": "required",
+          "detail": "Analyze the municipality's additional moderate-income housing needs for the next five years and realistic opportunities to meet them.",
+          "source_ids": [
+            "ut-201"
+          ]
+        },
+        {
+          "item": "income_groups",
+          "status": "required",
+          "detail": "The element focuses on moderate-income housing, defined as affordable at 80% of county median gross household income, adjusted for household size.",
+          "source_ids": [
+            "ut-guidance"
+          ]
+        },
+        {
+          "item": "implementation",
+          "status": "required",
+          "detail": "Without a fixed-guideway station: select at least three listed strategies, or at least one of the special housing-zone/density-bonus strategies (X)–(CC). With a station: five including station-area planning and specified transit-density or parking reform, or the alternative three-strategy combination. Adopt a five-year implementation timeline with specific benchmarks.",
+          "source_ids": [
+            "ut-201"
+          ]
+        },
+        {
+          "item": "monitoring",
+          "status": "required",
+          "detail": "Specified municipalities report implementation actions and barriers, ADUs, entitlements, building permits, occupancy and zoning information. The ordinary report is due August 1; 2026 has a statutory reporting pause and carryover compliance, with a separate July 1 occupancy-count requirement.",
+          "source_ids": [
+            "ut-202",
+            "ut-guidance"
+          ]
+        },
+        {
+          "item": "constraints",
+          "status": "conditional",
+          "detail": "Strategies can address zoning, fees, parking, infrastructure and approvals; no single reform is universally required because municipalities choose among statutory alternatives.",
+          "source_ids": [
+            "ut-201"
+          ]
+        }
+      ],
+      "enforcement": "State review determines compliance and allows cure and appeal. Noncompliance can cause specified transportation-funding ineligibility and daily fees; the statute also authorizes injunctive enforcement. The 2026 reporting pause preserves qualifying 2025 compliance; normal implementation reporting resumes in 2027.",
+      "key_distinction": "This is a mandatory planning-and-strategy system for a population-defined subset, not a California-style assigned unit obligation. The 2025 recodification and July 2026 amendments make older §10-9a citations and older strategy counts incomplete.",
+      "evidence": [
+        {
+          "claim": "requirement",
+          "source_ids": [
+            "ut-401",
+            "ut-403",
+            "ut-201"
+          ],
+          "reasoning": "General plans are universal, but §403 mandates the moderate-income element specifically for defined specified municipalities."
+        },
+        {
+          "claim": "coverage",
+          "source_ids": [
+            "ut-101",
+            "ut-cityclasses",
+            "ut-countyclasses",
+            "ut-403"
+          ],
+          "reasoning": "The definition's municipal and county classes translate to the precise thresholds stated; §403 supplies the newly qualifying deadline."
+        },
+        {
+          "claim": "allocation",
+          "source_ids": [
+            "ut-201"
+          ],
+          "reasoning": "Section 201 requires local five-year needs analysis and chosen strategies; it does not assign cities a state or regional numerical need."
+        },
+        {
+          "claim": "monitoring",
+          "source_ids": [
+            "ut-202",
+            "ut-guidance"
+          ],
+          "reasoning": "The effective July 2026 text contains the report pause and carryover rules, which qualify the ordinary annual reporting requirement."
+        },
+        {
+          "claim": "enforcement",
+          "source_ids": [
+            "ut-202"
+          ],
+          "reasoning": "Section202 provides compliance review, cure/appeal, funding consequences, fees and injunctive enforcement, with a 2026 reporting exception."
+        }
+      ],
+      "sources": [
+        {
+          "id": "ut-401",
+          "citation": "Utah Code §10-20-401",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter20/C10-20-S401_2025110620251206.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (1)–(3)",
+          "quote": "a municipality shall prepare and adopt a comprehensive, long-range general plan",
+          "supports": "Universal municipal general plan; discretionary extent and town housing encouragement.",
+          "version_note": "Effective November 6, 2025; official version read."
+        },
+        {
+          "id": "ut-403",
+          "citation": "Utah Code §10-20-403",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter20/C10-20-S403_2025110620251206.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (1)–(2)",
+          "quote": "shall include a moderate income housing element",
+          "supports": "Mandatory subset and newly qualifying deadline.",
+          "version_note": "Effective November 6, 2025; official version read."
+        },
+        {
+          "id": "ut-101",
+          "citation": "Utah Code §10-21-101(25)",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter21/C10-21-S101_2026050620260701.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "definition of specified municipality",
+          "quote": "a city of the first, second, third, or fourth class",
+          "supports": "Specified municipality definition and fifth-class city/county conditions.",
+          "version_note": "Effective July 1, 2026; official version read."
+        },
+        {
+          "id": "ut-cityclasses",
+          "citation": "Utah Code §10-2-301",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter2/C10-2-S301_1800010118000101.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsection (2)",
+          "quote": "A municipality with a population of 10,000 or more but less than 30,000 is a city of the fourth class.",
+          "supports": "Population classes.",
+          "version_note": "Current official text; last amendment 2003."
+        },
+        {
+          "id": "ut-countyclasses",
+          "citation": "Utah Code §17-60-104",
+          "url": "https://le.utah.gov/xcode/Title17/Chapter60/C17-60-S104_2025110620251206.pdf",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsection (2)(a)–(c)",
+          "quote": "40,000 or more but less than 260,000",
+          "supports": "County class threshold: first through third classes together cover at least 40,000.",
+          "version_note": "Effective November 6, 2025; official PDF read."
+        },
+        {
+          "id": "ut-201",
+          "citation": "Utah Code §10-21-201",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter21/C10-21-S201_2026050620260701.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "subsections (2)–(4)",
+          "quote": "a realistic opportunity to meet the need for additional moderate income housing within the municipality during the next five years",
+          "supports": "Local analysis, current menu alternatives, station conditions and five-year implementation benchmarks.",
+          "version_note": "Effective July 1, 2026; official version read."
+        },
+        {
+          "id": "ut-202",
+          "citation": "Utah Code §10-21-202",
+          "url": "https://le.utah.gov/xcode/Title10/Chapter21/C10-21-S202_2026050620260701.html",
+          "kind": "statute",
+          "accessed_on": "2026-09-20",
+          "locator": "reporting, review, compliance, 2026 exceptions and enforcement provisions",
+          "quote": "a specified municipality complies with the reporting requirements described in this section if the specified municipality satisfied the reporting requirements in 2025",
+          "supports": "Current reporting, pause, state review and enforcement.",
+          "version_note": "Effective July 1, 2026; page flags a further version on July 1, 2027."
+        },
+        {
+          "id": "ut-guidance",
+          "citation": "Utah Housing Division, Moderate Income Housing",
+          "url": "https://housing.utah.gov/affordable-housing/moderate-income/",
+          "kind": "agency_guidance",
+          "accessed_on": "2026-09-20",
+          "locator": "MIH planning requirements and 2026 reporting updates",
+          "quote": "there is a one-year pause in the progress reporting for moderate-income housing plans.",
+          "supports": "80%-of-county-median definition; optional/required jurisdictions; 2026 reporting implementation.",
+          "version_note": "Current official guidance read September 20, 2026; reflects 2026 HB436."
+        }
+      ],
+      "review_status": "source_checked",
+      "uncertainties": [],
+      "population": 3538904,
+      "population_rank": 30,
+      "fips": "49"
+    }
+  ],
+  "missing_states": []
+}
