@@ -1,0 +1,950 @@
+MICHIGAN PLANNING ENABLING ACT
+Act 33 of 2008
+AN ACT to codify the laws regarding and to provide for county, township, city, and village
+planning; to provide for the creation, organization, powers, and duties of local planning
+commissions; to provide for the powers and duties of certain state and local governmental
+officers and agencies; to provide for the regulation and subdivision of land; and to repeal acts
+and parts of acts.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+The People of the State of Michigan enact:
+ARTICLE I.
+GENERAL PROVISIONS
+125.3801 Short title.
+Sec. 1.
+This act shall be known and may be cited as the "Michigan planning enabling act".
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3803 Definitions.
+Sec. 3.
+As used in this act:
+(a) "Chief administrative official" means the manager or other highest nonelected
+administrative official of a city or village.
+(b) "Chief elected official" means the mayor of a city, the president of a village, the
+supervisor of a township, or, subject to section 5, the chairperson of the county board of
+commissioners of a county.
+(c) "County board of commissioners", subject to section 5, means the elected county board
+of commissioners, except that, as used in sections 39 and 41, county board of commissioners
+means 1 of the following:
+(i) A committee of the county board of commissioners, if the county board of
+commissioners delegates its powers and duties under this act to the committee.
+(ii) The regional planning commission for the region in which the county is located, if the
+county board of commissioners delegates its powers and duties under this act to the regional
+planning commission.
+(d) "Ex officio member", in reference to a planning commission, means a member, with full
+voting rights unless otherwise provided by charter, who serves on the planning commission by
+virtue of holding another office, for the term of that other office. 
+(e) "Legislative body" means the county board of commissioners of a county, the board of
+trustees of a township, or the council or other elected governing body of a city or village.
+(f) "Local unit of government" or "local unit" means a county or municipality.
+(g) "Master plan" means either of the following:
+Rendered Saturday, September 5, 2026 Page 1 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(i) As provided in section 81(1), any plan adopted or amended before September 1, 2008
+under a planning act repealed under section 85. 
+(ii) Any plan adopted or amended under this act. This includes, but is not limited to, a plan
+prepared by a planning commission authorized by this act and used to satisfy the requirement
+of section 203(1) of the Michigan zoning enabling act, 2006 PA 110, MCL 125.3203,
+regardless of whether it is entitled a master plan, basic plan, county plan, development plan,
+guide plan, land use plan, municipal plan, township plan, plan, or any other term. 
+(h) "Municipality" or "municipal" means or refers to a city, village, or township.
+(i) "Planning commission" means either of the following, as applicable:
+(i) A planning commission created pursuant to section 11(1).
+(ii) A planning commission retained pursuant to section 81(2) or (3), subject to the
+limitations on the application of this act provided in section 81(2) and (3).
+(j) "Planning jurisdiction" for a county, city, or village refers to the areas encompassed by
+the legal boundaries of that county, city, or village, subject to section 31(1). Planning
+jurisdiction for a township refers to the areas encompassed by the legal boundaries of that
+township outside of the areas of incorporated villages and cities, subject to section 31(1).
+(k) "Population" means the population according to the most recent federal decennial census
+or according to a special census conducted under section 7 of the Glenn Steil state revenue
+sharing act of 1971, 1971 PA 140, MCL 141.907, whichever is the more recent.
+(l) "Public transportation agency" means a governmental entity that operates or is
+authorized to operate intercity or local commuter passenger rail service in this state or a public
+transit authority created under 1 of the following acts:
+(i) The metropolitan transportation authorities act of 1967, 1967 PA 204, MCL 124.401 to
+124.426.
+(ii) The public transportation authority act, 1986 PA 196, MCL 124.451 to 124.479. 
+(iii) 1963 PA 55, MCL 124.351 to 124.359.
+(iv) The home rule city act, 1909 PA 279, MCL 117.1 to 117.38.
+(v) The revenue bond act of 1933, 1933 PA 94, MCL 141.101 to 141.140.
+(vi) The charter township act, 1947 PA 359, MCL 42.1 to 42.34.
+(vii) The urban cooperation act of 1967, 1967 (Ex Sess) PA 7, MCL 124.501 to 124.512.
+(m) "Public transportation facility" means that term as defined in section 2 of the
+metropolitan transportation authorities act of 1967, 1967 PA 204, MCL 124.402.
+(n) "Street" means a street, avenue, boulevard, highway, road, lane, alley, viaduct, or other
+public way intended for use by motor vehicles, bicycles, pedestrians, and other legal users.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 134, Imd. Eff. Aug. 2, 2010 ;-- Am. 2010, Act
+306, Imd. Eff. Dec. 17, 2010 
+125.3805 Assignment of power or duty to county officer or body.
+Sec. 5.
+The assignment of a power or duty under this act to a county officer or body is subject to
+1966 PA 293, MCL 45.501 to 45.521, or 1973 PA 139, MCL 45.551 to 45.573, in a county
+organized under 1 of those acts.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 2 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3807 Master plan; adoption, amendment, and implementation by local government;
+purpose.
+Sec. 7.
+(1) A local unit of government may adopt, amend, and implement a master plan as provided
+in this act.
+(2) The general purpose of a master plan is to guide and accomplish, in the planning
+jurisdiction and its environs, development that satisfies all of the following criteria:
+(a) Is coordinated, adjusted, harmonious, efficient, and economical.
+(b) Considers the character of the planning jurisdiction and its suitability for particular uses,
+judged in terms of such factors as trends in land and population development.
+(c) Will, in accordance with present and future needs, best promote public health, safety,
+morals, order, convenience, prosperity, and general welfare.
+(d) Includes, among other things, promotion of or adequate provision for 1 or more of the
+following:
+(i) A system of transportation to lessen congestion on streets and provide for safe and
+efficient movement of people and goods by motor vehicles, bicycles, pedestrians, and other
+legal users.
+(ii) Safety from fire and other dangers.
+(iii) Light and air.
+(iv) Healthful and convenient distribution of population.
+(v) Good civic design and arrangement and wise and efficient expenditure of public funds.
+(vi) Public utilities such as sewage disposal and water supply and other public
+improvements.
+(vii) Recreation. 
+(viii) The use of resources in accordance with their character and adaptability.
+(ix) A range of housing types, costs, affordability, attainability, ages, and other
+characteristics, including single- and multiple-family dwellings, to serve the housing demands
+of a diverse population.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 134, Imd. Eff. Aug. 2, 2010 ;-- Am. 2024, Act
+153, Eff. Apr. 2, 2025 
+ARTICLE II.
+PLANNING COMMISSION CREATION AND ADMINISTRATION
+125.3811 Planning commission; creation; adoption of ordinance by local unit of
+government; notice required; exception; adoption of charter provision by city or home
+rule village; effect of repeal of planning act; continued exercise or transfer of powers and
+duties of zoning board or zoning commission.
+Sec. 11.
+(1) A local unit of government may adopt an ordinance creating a planning commission with
+powers and duties provided in this act. The planning commission of a local unit of government
+shall be officially called "the planning commission", even if a charter, ordinance, or resolution
+uses a different name such as "plan board" or "planning board".
+Rendered Saturday, September 5, 2026 Page 3 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(2) Within 14 days after a local unit of government adopts an ordinance under subsection
+(1) creating a planning commission, the clerk of the local unit shall transmit notice of the
+adoption to the planning commission of the county where the local unit is located. However, if
+there is not a county planning commission or if the local unit adopting the ordinance is a
+county, notice shall be transmitted to the regional planning commission engaged in planning
+for the region within which the local unit is located. Notice under this subsection is not
+required when a planning commission created before the effective date of this act continues in
+existence under this act, but is required when an ordinance governing or creating a planning
+commission is amended or superseded under section 81(2)(b) or (3)(b).
+(3) If, after the effective date of this act, a city or home rule village adopts a charter
+provision providing for a planning commission, the charter provision shall be implemented by
+an ordinance that conforms to this act. Section 81(2) provides for the continuation of a
+planning commission created by a charter provision adopted before the effective date of this
+act.
+(4) Section 81(3) provides for the continuation of a planning commission created under a
+planning act repealed under section 85.
+(5) Section 83 provides for the continued exercise by a planning commission, or the transfer
+to a planning commission, of the powers and duties of a zoning board or zoning commission.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3813 Planning commission; effect of township ordinance; number of days; petition
+requesting submission of ordinance to electors; filing; petition subject to Michigan
+election law; violation.
+Sec. 13.
+(1) Subject to subsection (2), a township ordinance creating a planning commission under
+this act shall take effect 63 days after the ordinance is published by the township board in a
+newspaper having general circulation in the township.
+(2) Subject to subsection (3), before a township ordinance creating a planning commission
+takes effect, a petition may be filed with the township clerk requesting the submission of the
+ordinance to the electors residing in the unincorporated portion of the township for their
+approval or rejection. The petition shall be signed by a number of qualified and registered
+electors residing in the unincorporated portion of the township equal to not less than 8% of the
+total vote cast for all candidates for governor, at the last preceding general election at which a
+governor was elected. If such a petition is filed, the ordinance shall not take effect until
+approved by a majority of the electors residing in the unincorporated portion of the township
+voting thereon at the next regular or special election that allows reasonable time for proper
+notices and printing of ballots or at any special election called for that purpose, as determined
+by the township board. The township board shall specify the language of the ballot question.
+(3) Subsection (2) does not apply if the planning commission created by the ordinance is the
+successor to an existing zoning commission or zoning board as provided for under section 301
+of the Michigan zoning enabling act, 2006 PA 110, MCL 125.3301.
+(4) If a township board does not on its own initiative adopt an ordinance under this act
+creating a planning commission, a petition may be filed with the township clerk requesting the
+township board to adopt such an ordinance. The petition shall be signed by a number of
+qualified and registered electors as provided in subsection (2). If such a petition is filed, the
+township board, at its first meeting following the filing shall submit the question to the
+electors of the township in the same manner as provided under subsection (2).
+Rendered Saturday, September 5, 2026 Page 4 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(5) A petition under this section, including the circulation and signing of the petition, is
+subject to section 488 of the Michigan election law, 1954 PA 116, MCL 168.488. A person
+who violates a provision of the Michigan election law, 1954 PA 116, MCL 168.1 to 168.992,
+applicable to a petition described in this section is subject to the penalties prescribed for that
+violation in the Michigan election law, 1954 PA 116, MCL 168.1 to 168.992.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3815 Planning commission; membership; appointment; terms; vacancy;
+representation; qualifications; ex-officio members; board serving as planning
+commission; removal of member; conditions; conflict of interest; additional
+requirements.
+Sec. 15.
+(1) In a municipality, the chief elected official shall appoint members of the planning
+commission, subject to approval by a majority vote of the members of the legislative body
+elected and serving. In a county, the county board of commissioners shall determine the
+method of appointment of members of the planning commission by resolution of a majority of
+the full membership of the county board.
+(2) A city, village, or township planning commission shall consist of 5, 7, or 9 members. A
+county planning commission shall consist of 5, 7, 9, or 11 members. Members of a planning
+commission other than ex officio members under subsection (5) shall be appointed for 3-year
+terms. However, of the members of the planning commission, other than ex officio members,
+first appointed, a number shall be appointed to 1-year or 2-year terms such that, as nearly as
+possible, the terms of 1/3 of all the planning commission members will expire each year. If a
+vacancy occurs on a planning commission, the vacancy must be filled for the unexpired term
+in the same manner as provided for an original appointment. A member shall hold office until
+a successor is appointed.
+(3) The membership of a planning commission must be representative of important
+segments of the community, such as the economic, governmental, educational, and social
+development of the local unit of government, in accordance with the major interests of the
+local unit of government, such as agriculture, natural resources, recreation, education, public
+health, government, transportation, industry, housing, and commerce. The membership must
+also be representative of the entire territory of the local unit of government to the extent
+practicable. 
+(4) Members of a planning commission must be qualified electors of the local unit of
+government. However, the following number of planning commission members may be
+individuals who are not qualified electors of the local unit of government but are qualified
+electors of another local unit of government:
+(a) 3, in a city that on September 1, 2008 had a population of more than 2,700 but less than
+2,800.
+(b) 2, in a city or village that has, or on September 1, 2008 had, a population of less than
+5,000, except as provided in subdivision (a).
+(c) 1, in a local unit of government not described in subdivision (a) or (b).
+(5) In a township that on September 1, 2008 had a planning commission created under
+former 1931 PA 285, 1 member of the legislative body or the chief elected official, or both,
+may be appointed to the planning commission as ex officio members. In any other township, 1
+member of the legislative body must be appointed to the planning commission as an ex officio
+member. In a city, village, or county, the chief administrative official or an individual
+Rendered Saturday, September 5, 2026 Page 5 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+designated by the chief administrative official, if any, the chief elected official, 1 or more
+members of the legislative body, or any combination thereof, may be appointed to the planning
+commission as ex officio members, unless prohibited by charter. However, in a city, village, or
+county, not more than 1/3 of the members of the planning commission may be ex officio
+members. Except as provided in this subsection, an elected officer or employee of the local
+unit of government is not eligible to be a member of the planning commission. The term of an
+ex officio member of a planning commission is as follows:
+(a) The term of a chief elected official must correspond to the individual's term as chief
+elected official.
+(b) The term of a chief administrative official expires with the term of the chief elected
+official that appointed the chief administrative official.
+(c) The term of a member of the legislative body expires with the member's term on the
+legislative body.
+(6) For a county planning commission, the county shall make every reasonable effort to
+ensure that the membership of the county planning commission includes a member of a public
+school board or an administrative employee of a school district located, in whole or in part,
+within the county's boundaries. This subsection applies each time an appointment is to be
+made to the planning commission, unless an incumbent is being reappointed or an ex officio
+member is being appointed under subsection (5).
+(7) Subject to subsection (8), a city or village that has a population of less than 5,000, and
+that has not created a planning commission by charter, may by an ordinance adopted under
+section 11(1) provide that 1 of the following boards serve as its planning commission:
+(a) The board of directors of the economic development corporation of the city or village
+created under the economic development corporations act, 1974 PA 338, MCL 125.1601 to
+125.1636.
+(b) The board of a downtown development authority created under part 2 of the recodified
+tax increment financing act, 2018 PA 57, MCL 125.4201 to 125.4230, if the boundaries of the
+downtown district are the same as the boundaries of the city or village.
+(c) The board of a tax increment finance authority under part 3 of the recodified tax
+increment financing act, 2018 PA 57, MCL 125.4301 to 125.4329, if the boundaries of the
+authority district are the same as the boundaries of the city or village.
+(8) Subsections (1) to (5) do not apply to a planning commission established under
+subsection (7). All other provisions of this act apply to a planning commission established
+under subsection (7).
+(9) The legislative body may remove a member of the planning commission for
+misfeasance, malfeasance, or nonfeasance in office on written charges and after a public
+hearing. Before casting a vote on a matter on which a member may reasonably be considered
+to have a conflict of interest, the member shall disclose the potential conflict of interest to the
+planning commission. The member is disqualified from voting on the matter if so provided by
+the bylaws or by a majority vote of the remaining members of the planning commission.
+Failure of a member to disclose a potential conflict of interest as required by this subsection
+constitutes malfeasance in office. Unless the legislative body, by ordinance, defines conflict of
+interest for the purposes of this subsection, the planning commission shall do so in its bylaws.
+(10) An ordinance creating a planning commission may impose additional requirements
+relevant to the subject matter of, but not inconsistent with, this section.
+Rendered Saturday, September 5, 2026 Page 6 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 105, Imd. Eff. June 29, 2010 ;-- Am. 2024, Act
+153, Eff. Apr. 2, 2025 
+125.3817 Chairperson, secretary, and other offices; election; terms; appointment of
+advisory committees.
+Sec. 17.
+(1) A planning commission shall elect a chairperson and secretary from its members and
+create and fill other offices as it considers advisable. An ex officio member of the planning
+commission is not eligible to serve as chairperson. The term of each officer shall be 1 year,
+with opportunity for reelection as specified in bylaws adopted under section 19.
+(2) A planning commission may appoint advisory committees whose members are not
+members of the planning commission.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3819 Bylaws; adoption; public record requirements; annual report by planning
+commission.
+Sec. 19.
+(1) A planning commission shall adopt bylaws for the transaction of business, and shall
+keep a public record of its resolutions, transactions, findings, and determinations.
+(2) A planning commission shall make an annual written report to the legislative body
+concerning its operations and the status of planning activities, including recommendations
+regarding actions by the legislative body related to planning and development.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3821 Meetings; frequency; time; place; special meeting; notice; compliance with
+open meetings act; availability of writings to public.
+Sec. 21.
+(1) A planning commission shall hold not less than 4 regular meetings each year, and by
+resolution shall determine the time and place of the meetings. Unless the bylaws provide
+otherwise, a special meeting of the planning commission may be called by the chairperson or
+by 2 other members, upon written request to the secretary. Unless the bylaws provide
+otherwise, the secretary shall send written notice of a special meeting to planning commission
+members not less than 48 hours before the meeting.
+(2) The business that a planning commission may perform shall be conducted at a public
+meeting of the planning commission held in compliance with the open meetings act, 1976 PA
+267, MCL 15.261 to 15.275. Public notice of the time, date, and place of a regular or special
+meeting shall be given in the manner required by that act.
+(3) A writing prepared, owned, used, in the possession of, or retained by a planning
+commission in the performance of an official function shall be made available to the public in
+compliance with the freedom of information act, 1976 PA 442, MCL 15.231 to 15.246.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 7 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3823 Compensation; expenses; preparation of budget; acceptance of gifts.
+Sec. 23.
+(1) Members of a planning commission may be compensated for their services as provided
+by the legislative body. A planning commission may adopt bylaws relative to compensation
+and expenses of its members and employees for travel when engaged in the performance of
+activities authorized by the legislative body, including, but not limited to, attendance at
+conferences, workshops, educational and training programs, and meetings.
+(2) After preparing the annual report required under section 19, a planning commission may
+prepare a detailed budget and submit the budget to the legislative body for approval or
+disapproval. The legislative body annually may appropriate funds for carrying out the
+purposes and functions permitted under this act, and may match local government funds with
+federal, state, county, or other local government or private grants, contributions, or
+endowments.
+(3) A planning commission may accept gifts for the exercise of its functions. However, in a
+township, other than a township that on the effective date of this act had a planning
+commission created under former 1931 PA 285, only the township board may accept such
+gifts, on behalf of the planning commission. A gift of money so accepted in either case shall be
+deposited with the treasurer of the local unit of government in a special nonreverting planning
+commission fund for expenditure by the planning commission for the purpose designated by
+the donor. The treasurer shall draw a warrant against the special nonreverting fund only upon
+receipt of a voucher signed by the chairperson and secretary of the planning commission and
+an order drawn by the clerk of the local unit of government. The expenditures of a planning
+commission, exclusive of gifts and grants, shall be within the amounts appropriated by the
+legislative body.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3825 Employment of planning director and other personnel; contract for services;
+use of information and advice provided by public officials, departments, and agencies.
+Sec. 25.
+(1) A local unit of government may employ a planning director and other personnel as it
+considers necessary, contract for the services of planning and other technicians, and incur
+other expenses, within a budget authorized by the legislative body. This authority shall be
+exercised by the legislative body, unless a charter provision or ordinance delegates this
+authority to the planning commission or another body or official. The appointment of
+employees is subject to the same provisions of law as govern other corresponding civil
+employees of the local unit of government.
+(2) For the purposes of this act, a planning commission may make use of maps, data, and
+other information and expert advice provided by appropriate federal, state, regional, county,
+and municipal officials, departments, and agencies. All public officials, departments, and
+agencies shall make available public information for the use of planning commissions and
+furnish such other technical assistance and advice as they may have for planning purposes.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 8 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+ARTICLE III.
+PREPARATION AND ADOPTION OF MASTER PLAN
+125.3831 Master plan; preparation by planning commission; meetings with other
+governmental planning commissions or agency staff; powers.
+Sec. 31.
+(1) A planning commission shall make and approve a master plan as a guide for
+development within the planning jurisdiction subject to section 81 and the following:
+(a) For a county, the master plan may include planning in cooperation with the constituted
+authorities for incorporated areas in whole or to the extent to which, in the planning
+commission's judgment, they are related to the planning of the unincorporated area or of the
+county as a whole.
+(b) For a township that on September 1, 2008 had a planning commission created under
+former 1931 PA 285, or for a city or village, the planning jurisdiction may include any areas
+outside of the municipal boundaries that, in the planning commission's judgment, are related to
+the planning of the municipality.
+(2) In the preparation of a master plan, a planning commission shall do all of the following,
+as applicable:
+(a) Make careful and comprehensive surveys and studies of present conditions and future
+growth within the planning jurisdiction with due regard to its relation to neighboring
+jurisdictions.
+(b) Consult with representatives of adjacent local units of government in respect to their
+planning so that conflicts in master plans and zoning may be avoided.
+(c) Cooperate with all departments of the state and federal governments, public
+transportation agencies, and other public agencies concerned with programs for economic,
+social, and physical development within the planning jurisdiction and seek the maximum
+coordination of the local unit of government's programs with these agencies.
+(3) In the preparation of the master plan, the planning commission may meet with other
+governmental planning commissions or agency staff to deliberate.
+(4) In general, a planning commission has such lawful powers as may be necessary to
+enable it to promote local planning and otherwise carry out the purposes of this act.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 306, Imd. Eff. Dec. 17, 2010 
+125.3833 Master plan; land use and infrastructure issues; inclusion of maps, plats,
+charts, and other related matter; recommendations for physical development; additional
+subjects; implementation of master street plan or certain elements; specifications; section
+subject to MCL 125.3881(1); public transportation facilities.
+Sec. 33.
+(1) A master plan must address land use and infrastructure issues and may project 20 years
+or more into the future. A master plan must include maps, plats, charts, and descriptive,
+explanatory, and other related matter and must show the planning commission's
+recommendations for the physical development of the planning jurisdiction.
+(2) A master plan must also include those of the following subjects that reasonably can be
+considered as pertinent to the future development of the planning jurisdiction:
+Rendered Saturday, September 5, 2026 Page 9 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(a) A land use plan that consists in part of a classification and allocation of land for
+agriculture, residences, commerce, industry, recreation, ways and grounds, subject to
+subsection (5), public transportation facilities, public buildings, schools, soil conservation,
+forests, woodlots, open space, wildlife refuges, and other uses and purposes. If a county has
+not adopted a zoning ordinance under former 1943 PA 183 or the Michigan zoning enabling
+act, 2006 PA 110, MCL 125.3101 to 125.3702, a land use plan and program for the county
+may be a general plan with a generalized future land use map.
+(b) The general location, character, and extent of all of the following:
+(i) All components of a transportation system and their interconnectivity, including streets
+and bridges, public transit including public transportation facilities and routes, bicycle
+facilities, pedestrian ways, freight facilities and routes, port facilities, railroad facilities, and
+airports, to provide for the safe and efficient movement of people and goods in a manner that
+is appropriate to the context of the community and, as applicable, considers all legal users of
+the public right-of-way.
+(ii) Waterways and waterfront developments. 
+(iii) Sanitary sewers and water supply systems. 
+(iv) Facilities for flood prevention, drainage, pollution prevention, and maintenance of
+water levels. 
+(v) Public utilities and structures.
+(c) Recommendations as to the general character, extent, and layout of redevelopment or
+rehabilitation of blighted areas, and the removal, relocation, widening, narrowing, vacating,
+abandonment, change of use, or extension of streets, grounds, open spaces, buildings, utilities,
+or other facilities.
+(d) For a local unit of government that has adopted a zoning ordinance, a zoning plan for
+various zoning districts controlling the height, area, bulk, location, and use of buildings and
+premises. The zoning plan must include an explanation of how the land use categories on the
+future land use map relate to the districts on the zoning map.
+(e) An assessment of the community's existing and forecasted housing demands, with
+strategies and policies for addressing those demands.
+(f) Recommendations for implementing any of the master plan's proposals.
+(3) If a master plan is or includes a master street plan or 1 or more elements described in
+subsection (2)(b)(i), the means for implementing the master street plan or elements in
+cooperation with the county road commission and the state transportation department must be
+specified in the master street plan in a manner consistent with the respective powers and duties
+of and any written agreements between these entities and the municipality.
+(4) This section is subject to section 81(1).
+(5) The reference to public transportation facilities in subsection (2)(a) only applies to a
+master plan that is adopted or substantively amended after March 17, 2011.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 134, Imd. Eff. Aug. 2, 2010 ;-- Am. 2010, Act
+306, Imd. Eff. Dec. 17, 2010 ;-- Am. 2024, Act 153, Eff. Apr. 2, 2025 
+125.3835 Subplan; adoption.
+Sec. 35.
+A planning commission may, by a majority vote of the members, adopt a subplan for a
+geographic area less than the entire planning jurisdiction, if, because of the unique physical
+Rendered Saturday, September 5, 2026 Page 10 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+characteristics of that area, more intensive planning is necessary for the purposes set forth in
+section 7.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3837 Metropolitan county planning commission; designation; powers.
+Sec. 37.
+(1) A county board of commissioners may designate the county planning commission as the
+metropolitan county planning commission. A county planning commission so designated shall
+perform metropolitan and regional planning whenever necessary or desirable. The
+metropolitan county planning commission may engage in comprehensive planning, including,
+but not limited to, the following:
+(a) Preparation, as a guide for long-range development, of general physical plans with
+respect to the pattern and intensity of land use and the provision of public facilities, together
+with long-range fiscal plans for such development.
+(b) Programming of capital improvements based on relative urgency, together with
+definitive financing plans for the improvements to be constructed in the earlier years of the
+program.
+(c) Coordination of all related plans of local governmental agencies within the metropolitan
+area or region.
+(d) Intergovernmental coordination of all related planning activities among the state and
+local governmental agencies within the metropolitan area or region.
+(2) In addition to the powers conferred by other provisions of this act, a metropolitan county
+planning commission may apply for, receive, and accept grants from any local, regional, state,
+or federal governmental agency and agree to and comply with the terms and conditions of
+such grants. A metropolitan county planning commission may do any and all things necessary
+or desirable to secure the financial aid or cooperation of a regional, state, or federal
+governmental agency in carrying out its functions, when approved by a 2/3 vote of the county
+board of commissioners.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3839 Master plan; adoption; procedures; notice; submittals; use of electronic mail.
+Sec. 39.
+(1) A master plan shall be adopted under the procedures set forth in this section and sections
+41 and 43. A master plan may be adopted as a whole or by successive parts corresponding with
+major geographical areas of the planning jurisdiction or with functional subject matter areas of
+the master plan.
+(2) Before preparing a master plan, a planning commission shall send to all of the
+following, by first-class mail or personal delivery, a notice explaining that the planning
+commission intends to prepare a master plan and requesting the recipient's cooperation and
+comment:
+(a) For any local unit of government undertaking a master plan, the planning commission,
+or if there is no planning commission, the legislative body, of each municipality located within
+or contiguous to the local unit of government.
+(b) For a county undertaking a master plan, the regional planning commission for the region
+in which the county is located, if any.
+Rendered Saturday, September 5, 2026 Page 11 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(c) For a county undertaking a master plan, the county planning commission, or if there is
+no county planning commission, the county board of commissioners, for each county located
+contiguous to the county.
+(d) For a municipality undertaking a master plan, the regional planning commission for the
+region in which the municipality is located, if there is no county planning commission for the
+county in which that municipality is located. If there is a county planning commission, the
+municipal planning commission may consult with the regional planning commission but is not
+required to do so.
+(e) For a municipality undertaking a master plan, the county planning commission, or if
+there is no county planning commission, the county board of commissioners, for the county in
+which that municipality is located.
+(f) For any local unit of government undertaking a master plan, each public utility company,
+railroad company, and public transportation agency owning or operating a public utility,
+railroad, or public transportation system within the local unit of government, and any
+government entity that registers its name and mailing address for this purpose with the
+planning commission.
+(g) If the master plan will include a master street plan, the county road commission and the
+state transportation department.
+(3) A submittal under section 41 or 43 by or to an entity described in subsection (2) may be
+made by personal or first-class mail delivery of a hard copy or by electronic mail. However,
+the planning commission preparing the plan shall not make such submittals by electronic mail
+unless, in the notice described in subsection (2), the planning commission states that it intends
+to make such submittals by electronic mail and the entity receiving that notice does not
+respond by objecting to the use of electronic mail. Electronic mail may contain a link to a
+website on which the submittal is posted if the website is accessible to the public free of
+charge.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 306, Imd. Eff. Dec. 17, 2010 
+125.3841 Preparation of proposed master plan; submission to legislative body for review
+and comment; approval required; notice; submission of comments; statements as
+advisory.
+Sec. 41.
+(1) After preparing a proposed master plan, a planning commission shall submit the
+proposed master plan to the legislative body for review and comment. The process of adopting
+a master plan shall not proceed further unless the legislative body approves the distribution of
+the proposed master plan.
+(2) If the legislative body approves the distribution of the proposed master plan, it shall
+notify the secretary of the planning commission, and the secretary of the planning commission
+shall submit, in the manner provided in section 39(3), a copy of the proposed master plan, for
+review and comment, to all of the following:
+(a) For any local unit of government proposing a master plan, the planning commission, or
+if there is no planning commission, the legislative body, of each municipality located within or
+contiguous to the local unit of government.
+(b) For a county proposing a master plan, the regional planning commission for the region
+in which the county is located, if any.
+Rendered Saturday, September 5, 2026 Page 12 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(c) For a county proposing a master plan, the county planning commission, or if there is no
+county planning commission, the county board of commissioners, for each county located
+contiguous to the county.
+(d) For a municipality proposing a master plan, the regional planning commission for the
+region in which the municipality is located, if there is no county planning commission for the
+county in which that local unit of government is located. If there is a county planning
+commission, the secretary of the municipal planning commission may submit a copy of the
+proposed master plan to the regional planning commission but is not required to do so.
+(e) For a municipality proposing a master plan, the county planning commission, or if there
+is no county planning commission, the county board of commissioners, for the county in
+which that municipality is located. The secretary of the municipal planning commission shall
+concurrently submit to the county planning commission, in the manner provided in section
+39(3), a statement that the requirements of subdivision (a) have been met or, if there is no
+county planning commission, shall submit to the county board of commissioners, in the
+manner provided in section 39(3), a statement that the requirements of subdivisions (a) and (d)
+have been met. The statement shall be signed by the secretary and shall include the name and
+address of each planning commission or legislative body to which a copy of the proposed
+master plan was submitted under subdivision (a) or (d), as applicable, and the date of
+submittal.
+(f) For any local unit of government proposing a master plan, each public utility company,
+railroad company, and public transportation agency owning or operating a public utility,
+railroad, or public transportation system within the local unit of government, and any
+government entity that registers its name and address for this purpose with the secretary of the
+planning commission. An entity described in this subdivision that receives a copy of a
+proposed master plan, or of a final master plan as provided in section 43(5), shall reimburse
+the local unit of government for any copying and postage costs thereby incurred.
+(g) If the proposed master plan is or includes a proposed master street plan, the county road
+commission and the state transportation department.
+(3) An entity described in subsection (2) may submit comments on the proposed master plan
+to the planning commission in the manner provided in section 39(3) within 63 days after the
+proposed master plan was submitted to that entity under subsection (2). If the county planning
+commission or the county board of commissioners that receives a copy of a proposed master
+plan under subsection (2)(e) submits comments, the comments shall include, but need not be
+limited to, both of the following, as applicable:
+(a) A statement whether the county planning commission or county board of commissioners
+considers the proposed master plan to be inconsistent with the master plan of any municipality
+or region described in subsection (2)(a) or (d).
+(b) If the county has a county master plan, a statement whether the county planning
+commission considers the proposed master plan to be inconsistent with the county master plan.
+(4) The statements provided for in subsection (3)(a) and (b) are advisory only.
+History: 2008, Act 33, Eff. Sept. 1, 2008 ;-- Am. 2010, Act 306, Imd. Eff. Dec. 17, 2010 
+125.3843 Proposed master plan; public hearing; notice; approval by resolution of
+planning commission; statement; submission of copy of master plan to legislative body;
+approval or rejection by legislative body; procedures; submission of adopted master plan
+to certain entities.
+Sec. 43.
+Rendered Saturday, September 5, 2026 Page 13 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(1) Before approving a proposed master plan, a planning commission shall hold not less
+than 1 public hearing on the proposed master plan. The hearing shall be held after the
+expiration of the deadline for comment under section 41(3). The planning commission shall
+give notice of the time and place of the public hearing not less than 15 days before the hearing
+by publication in a newspaper of general circulation within the local unit of government. The
+planning commission shall also submit notice of the public hearing in the manner provided in
+section 39(3) to each entity described in section 39(2). This notice may accompany the
+proposed master plan submitted under section 41.
+(2) The approval of the proposed master plan shall be by resolution of the planning
+commission carried by the affirmative votes of not less than 2/3 of the members of a city or
+village planning commission or not less than a majority of the members of a township or
+county planning commission. The resolution shall refer expressly to the maps and descriptive
+and other matter intended by the planning commission to form the master plan. A statement
+recording the planning commission's approval of the master plan, signed by the chairperson or
+secretary of the planning commission, shall be included on the inside of the front or back
+cover of the master plan and, if the future land use map is a separate document from the text of
+the master plan, on the future land use map. Following approval of the proposed master plan
+by the planning commission, the secretary of the planning commission shall submit a copy of
+the master plan to the legislative body.
+(3) Approval of the proposed master plan by the planning commission under subsection (2)
+is the final step for adoption of the master plan, unless the legislative body by resolution has
+asserted the right to approve or reject the master plan. In that case, after approval of the
+proposed master plan by the planning commission, the legislative body shall approve or reject
+the proposed master plan. A statement recording the legislative body's approval of the master
+plan, signed by the clerk of the legislative body, shall be included on the inside of the front or
+back cover of the master plan and, if the future land use map is a separate document from the
+text of the master plan, on the future land use map.
+(4) If the legislative body rejects the proposed master plan, the legislative body shall submit
+to the planning commission a statement of its objections to the proposed master plan. The
+planning commission shall consider the legislative body's objections and revise the proposed
+master plan so as to address those objections. The procedures provided in subsections (1) to
+(3) and this subsection shall be repeated until the legislative body approves the proposed
+master plan.
+(5) Upon final adoption of the master plan, the secretary of the planning commission shall
+submit, in the manner provided in section 39(3), copies of the adopted master plan to the same
+entities to which copies of the proposed master plan were required to be submitted under
+section 41(2).
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3845 Extension, addition, revision, or other amendment to master plan; adoption;
+procedures; review and findings.
+Sec. 45.
+(1) An extension, addition, revision, or other amendment to a master plan shall be adopted
+by following the procedure under sections 39, 41, and 43, subject to all of the following:
+(a) Any of the following amendments to a master plan may be made without following the
+procedure under sections 39, 41, and 43:
+(i) A grammatical, typographical, or similar editorial change.
+Rendered Saturday, September 5, 2026 Page 14 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(ii) A title change.
+(iii) A change to conform to an adopted plat.
+(b) Subject to subdivision (a), the review period provided for in section 41(3) shall be 42
+days instead of 63 days.
+(c) When a planning commission sends notice to an entity under section 39(2) that it intends
+to prepare a subplan, the notice may indicate that the local unit of government intends not to
+provide that entity with further notices of or copies of proposed or final subplans otherwise
+required to be submitted to that entity under section 39, 41, or 43. Unless the entity responds
+that it chooses to receive notice of subplans, the local unit of government is not required to
+provide further notice of subplans to that entity.
+(2) At least every 5 years after adoption of a master plan, a planning commission shall
+review the master plan and determine whether to commence the procedure to amend the
+master plan or adopt a new master plan. The review and its findings shall be recorded in the
+minutes of the relevant meeting or meetings of the planning commission.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3847 Part of county master plan covering incorporated area; adoption by
+appropriate city or village required; exception.
+Sec. 47.
+(1) Subject to subsection (2), a part of a county master plan covering an incorporated area
+within the county shall not be recognized as the official master plan or part of the official
+master plan for that area unless adopted by the appropriate city or village in the manner
+prescribed by this act.
+(2) Subsection (1) does not apply if the incorporated area is subject to county zoning
+pursuant to the Michigan zoning enabling act, 2006 PA 110, MCL 125.3101 to 125.3702, and a
+contract under the urban cooperation act, 1967 (Ex Sess) PA 7, MCL 124.501 to 124.512, or
+1967 (Ex Sess) PA 8, MCL 124.531 to 124.536.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3849 City or village planning department; authority to submit proposed master plan,
+or proposed extension, addition, revision, or other amendment.
+Sec. 49.
+(1) This act does not alter the authority of a planning department of a city or village created
+by charter to submit a proposed master plan, or a proposed extension, addition, revision, or
+other amendment to a master plan, to the planning commission, whether directly or indirectly
+as provided by charter.
+(2) Subsection (1) notwithstanding, a planning commission described in subsection (1) shall
+comply with the requirements of this act.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3851 Public interest and understanding; promotion.
+Sec. 51.
+Rendered Saturday, September 5, 2026 Page 15 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(1) To promote public interest in and understanding of the master plan, a planning
+commission may publish and distribute copies of the master plan or of any report, and employ
+other means of publicity and education.
+(2) A planning commission shall consult with and advise public officials and agencies,
+public utility companies, civic, educational, professional, and other organizations, and citizens
+concerning the promotion or implementation of the master plan.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+ARTICLE IV .
+SPECIAL PROVISIONS, INCLUDING CAPITAL IMPROVEMENTS
+AND SUBDIVISION REVIEW
+125.3861 Construction of certain projects in area covered by municipal master plan;
+approval; initiation of work on project; requirements; report and advice.
+Sec. 61.
+(1) A street; square, park, playground, public way, ground, or other open space; or public
+building or other structure shall not be constructed or authorized for construction in an area
+covered by a municipal master plan unless the location, character, and extent of the street,
+public way, open space, structure, or utility have been submitted to the planning commission
+by the legislative body or other body having jurisdiction over the authorization or financing of
+the project and has been approved by the planning commission. The planning commission
+shall submit its reasons for approval or disapproval to the body having jurisdiction. If the
+planning commission disapproves, the body having jurisdiction may overrule the planning
+commission by a vote of not less than 2/3 of its entire membership for a township that on the
+enactment date of this act had a planning commission created under former 1931 PA 285, or
+for a city or village, or by a vote of not less than a majority of its membership for any other
+township. If the planning commission fails to act within 35 days after submission of the
+proposal to the planning commission, the project shall be considered to be approved by the
+planning commission.
+(2) Following adoption of the county plan or any part of a county plan and the certification
+by the county planning commission to the county board of commissioners of a copy of the
+plan, work shall not be initiated on any project involving the expenditure of money by a
+county board, department, or agency for the acquisition of land, the erection of structures, or
+the extension, construction, or improvement of any physical facility by any county board,
+department, or agency unless a full description of the project, including, but not limited to, its
+proposed location and extent, has been submitted to the county planning commission and the
+report and advice of the planning commission on the proposal have been received by the
+county board of commissioners and by the county board, department, or agency submitting the
+proposal. However, work on the project may proceed if the planning commission fails to
+provide in writing its report and advice upon the proposal within 35 days after the proposal is
+filed with the planning commission. The planning commission shall provide copies of the
+report and advice to the county board, department, or agency sponsoring the proposal.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 16 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3863 Approval of construction project before effective date of act; rescission of
+authorization; failure of planning commission to act within certain period of time.
+Sec. 63.
+If the opening, widening, or extension of a street, or the acquisition or enlargement of any
+square, park, playground, or other open space has been approved by a township planning
+commission that was created before the effective date of this act under former 1931 PA 285 or
+by a city or village planning commission and authorized by the legislative body as provided
+under section 61, the legislative body shall not rescind its authorization unless the matter has
+been resubmitted to the planning commission and the rescission has been approved by the
+planning commission. The planning commission shall hold a public hearing on the matter. The
+planning commission shall submit its reasons for approval or disapproval of the rescission to
+the legislative body. If the planning commission disapproves the rescission, the legislative
+body may overrule the planning commission by a vote of not less than 2/3 of its entire
+membership. If the planning commission fails to act within 63 days after submission of the
+proposed rescission to the planning commission, the proposed rescission shall be considered to
+be approved by the planning commission.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3865 Capital improvements program of public structures and improvements;
+preparation; basis.
+Sec. 65.
+(1) To further the desirable future development of the local unit of government under the
+master plan, a planning commission, after adoption of a master plan, shall annually prepare a
+capital improvements program of public structures and improvements, unless the planning
+commission is exempted from this requirement by charter or otherwise. If the planning
+commission is exempted, the legislative body either shall prepare and adopt a capital
+improvements program, separate from or as a part of the annual budget, or shall delegate the
+preparation of the capital improvements program to the chief elected official or a nonelected
+administrative official, subject to final approval by the legislative body. The capital
+improvements program shall show those public structures and improvements, in the general
+order of their priority, that in the commission's judgment will be needed or desirable and can
+be undertaken within the ensuing 6-year period. The capital improvements program shall be
+based upon the requirements of the local unit of government for all types of public structures
+and improvements. Consequently, each agency or department of the local unit of government
+with authority for public structures or improvements shall upon request furnish the planning
+commission with lists, plans, and estimates of time and cost of those public structures and
+improvements.
+(2) Any township may prepare and adopt a capital improvement program. However,
+subsection (1) is only mandatory for a township if the township, alone or jointly with 1 or
+more other local units of government, owns or operates a water supply or sewage disposal
+system.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 17 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3867 Programs for public structures and improvements; recommendations.
+Sec. 67.
+A planning commission may recommend to the appropriate public officials programs for
+public structures and improvements and for the financing thereof, regardless of whether the
+planning commission is exempted from the requirement to prepare a capital improvements
+program under section 65.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3869 Copy of zoning ordinance and amendments; request by county planning
+commission for submission by municipal planning commission.
+Sec. 69.
+If a municipal planning commission has zoning duties pursuant to section 83 and the
+municipality has adopted a zoning ordinance, the county planning commission, if any, may, by
+first-class mail or personal delivery, request the municipal planning commission to submit to
+the county planning commission a copy of the zoning ordinance and any amendments. The
+municipal planning commission shall submit the requested documents to the county planning
+commission within 63 days after the request is received and shall submit any future
+amendments to the zoning ordinance within 63 days after the amendments are adopted. The
+municipal planning commission may submit a zoning ordinance or amendment under this
+subsection electronically.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3871 Recommendations for ordinances or rules governing subdivision of land; public
+hearing; notice; action on proposed plat; approval, approval with conditions, or
+disapproval by planning commission; approval of plat as amendment to master plan.
+Sec. 71.
+(1) A planning commission may recommend to the legislative body provisions of an
+ordinance or rules governing the subdivision of land authorized under section 105 of the land
+division act, 1967 PA 288, MCL 560.105. If a township is subject to county zoning consistent
+with section 209 of the Michigan zoning enabling act, 2006 PA 110, MCL 125.3209, or a city
+or village is subject to county zoning pursuant to the Michigan zoning enabling act, 2006 PA
+110, MCL 125.3101 to 125.3702, and a contract under the urban cooperation act of 1967, 1967
+(Ex Sess) PA 7, MCL 124.501 to 124.512, or 1967 (Ex Sess) PA 8, MCL 124.531 to 124.536,
+the county planning commission may recommend to the legislative body of the municipality
+provisions of an ordinance or rules governing the subdivision of land authorized under section
+105 of the land division act, 1967 PA 288, MCL 560.105. A planning commission may
+proceed under this subsection on its own initiative or upon request of the appropriate
+legislative body.
+(2) Recommendations for a subdivision ordinance or rule may address plat design,
+including the proper arrangement of streets in relation to other existing or planned streets and
+to the master plan; adequate and convenient open spaces for traffic, utilities, access of
+firefighting apparatus, recreation, light, and air; and the avoidance of congestion of population,
+including minimum width and area of lots. The recommendations may also address the extent
+to which streets shall be graded and improved and to which water and sewer and other utility
+Rendered Saturday, September 5, 2026 Page 18 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+mains, piping, or other facilities shall be installed as a condition precedent to the approval of a
+plat. 
+(3) Before recommending an ordinance or rule described in subsection (1), the planning
+commission shall hold a public hearing on the proposed ordinance or rule. The planning
+commission shall give notice of the time and place of the public hearing not less than 15 days
+before the hearing by publication in a newspaper of general circulation within the local unit of
+government. 
+(4) If a municipality has adopted a master plan or master street plan, the planning
+commission of that municipality shall review and make recommendations on plats before
+action thereon by the legislative body under section 112 of the land division act, 1967 PA 288,
+MCL 560.112. If a township is subject to county zoning consistent with section 209 of the
+Michigan zoning enabling act, 2006 PA 110, MCL 125.3209, or a city or village is subject to
+county zoning pursuant to the Michigan zoning enabling act, 2006 PA 110, MCL 125.3101 to
+125.3702, and a contract under the urban cooperation act of 1967, 1967 (Ex Sess) PA 7, MCL
+124.501 to 124.512, or 1967 (Ex Sess) PA 8, MCL 124.531 to 124.536, and the municipality
+has adopted a master plan or master street plan, the county planning commission shall also
+review and make recommendations on plats before action thereon by the legislative body of
+the municipality under section 112 of the land division act, 1967 PA 288, MCL 560.112.
+(5) A planning commission shall not take action on a proposed plat without affording an
+opportunity for a public hearing thereon. A plat submitted to the planning commission shall
+contain the name and address of the proprietor or other person to whom notice of a hearing
+shall be sent. Not less than 15 days before the date of the hearing, notice of the date, time, and
+place of the hearing shall be sent to that person at that address by mail and shall be published
+in a newspaper of general circulation in the municipality. Similar notice shall be mailed to the
+owners of land immediately adjoining the proposed platted land.
+(6) A planning commission shall recommend approval, approval with conditions, or
+disapproval of a plat within 63 days after the plat is submitted to the planning commission. If
+applicable standards under the land division act, 1967 PA 288, MCL 560.101 to 560.293, and
+an ordinance or published rules governing the subdivision of land authorized under section
+105 of that act, MCL 560.105, are met, the planning commission shall recommend approval of
+the plat. If the planning commission fails to act within the required period, the plat shall be
+considered to have been recommended for approval, and a certificate to that effect shall be
+issued by the planning commission upon request of the proprietor. However, the proprietor
+may waive this requirement and consent to an extension of the 63-day period. The grounds for
+any recommendation of disapproval of a plat shall be stated upon the records of the planning
+commission.
+(7) A plat approved by a municipality and recorded under section 172 of the land division
+act, 1967 PA 288, MCL 560.172, shall be considered to be an amendment to the master plan
+and a part thereof. Approval of a plat by a municipality does not constitute or effect an
+acceptance by the public of any street or other open space shown upon the plat. 
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+ARTICLE V .
+TRANSITIONAL PROVISIONS AND REPEALER
+Rendered Saturday, September 5, 2026 Page 19 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3881 Plan adopted or amended under planning act repealed under MCL 125.3885;
+effect; city or home rule village charter provision creating planning commission or
+ordinance implementing provision before effective date of act; ordinance creating
+planning commission under former law; ordinance or rules governing subdivision of
+land.
+Sec. 81.
+(1) Unless rescinded by the local unit of government, any plan adopted or amended under a
+planning act repealed under section 85 need not be readopted under this act but continues in
+effect as a master plan under this act, regardless of whether it is entitled a master plan, basic
+plan, county plan, development plan, guide plan, land use plan, municipal plan, township plan,
+plan, or any other term. This includes, but is not limited to, a plan prepared by a planning
+commission and adopted before the effective date of this act to satisfy the requirements of
+section 1 of the former city and village zoning act, 1921 PA 207, section 3 of the former
+township zoning act, 1943 PA 184, section 3 of the former county zoning act, 1943 PA 183, or
+section 203(1) of the Michigan zoning enabling act, 2006 PA 110, MCL 125.3203. The master
+plan is subject to the requirements of this act, including, but not limited to, the requirement for
+periodic review under section 45(2) and the amendment procedures set forth in this act.
+However, the master plan is not subject to the requirements of section 33 until it is first
+amended under this act. 
+(2) Unless repealed, a city or home rule village charter provision creating a planning
+commission before the effective date of this act and any ordinance adopted before the effective
+date of this act implementing that charter provision continues in effect under this act, and the
+planning commission need not be newly created by an ordinance adopted under this act.
+However, both of the following apply:
+(a) The legislative body may by ordinance increase the powers and duties of the planning
+commission to correspond with the powers and duties of a planning commission created under
+this act. Provisions of this act regarding planning commission powers and duties do not
+otherwise apply to a planning commission created by charter before the effective date of this
+act and provisions of this act regarding planning commission membership, appointment, and
+organization do not apply to such a planning commission. All other provisions of this act,
+including, but not limited to, provisions regarding planning commission selection of officers,
+meetings, rules, records, appointment of employees, contracts for services, and expenditures,
+do apply to such a planning commission.
+(b) The legislative body shall amend any ordinance adopted before the effective date of this
+act to implement the charter provision, or repeal the ordinance and adopt a new ordinance, to
+fully conform to the requirements of this act made applicable by subdivision (a), by the earlier
+of the following dates:
+(i) The date when an amendatory or new ordinance is first adopted under this act for any
+purpose.
+(ii) July 1, 2011.
+(3) Unless repealed, an ordinance creating a planning commission under former 1931 PA
+285 or former 1945 PA 282 or a resolution creating a planning commission under former 1959
+PA 168 continues in effect under this act, and the planning commission need not be newly
+created by an ordinance adopted under this act. However, all of the following apply:
+(a) Beginning on the effective date of this act, the duties of the planning commission are
+subject to the requirements of this act.
+Rendered Saturday, September 5, 2026 Page 20 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+(b) The legislative body shall amend the ordinance, or repeal the ordinance or resolution and
+adopt a new ordinance, to fully conform to the requirements of this act by the earlier of the
+following dates:
+(i) The date when an amendatory or new ordinance is first adopted under this act for any
+purpose. 
+(ii) July 1, 2011.
+(c) An ordinance adopted under subdivision (b) is not subject to referendum.
+(4) Unless repealed or rescinded by the legislative body, an ordinance or published rules
+governing the subdivision of land authorized under section 105 of the land division act, 1967
+PA 288, MCL 560.105, need not be readopted under this act or amended to comply with this
+act but continue in effect under this act. However, if amended, the ordinance or published rules
+shall be amended under the procedures of this act.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+125.3883 Transfer of powers, duties, and records.
+Sec. 83.
+(1) If, on the effective date of this act, a planning commission had the powers and duties of
+a zoning board or zoning commission under the former city and village zoning act, 1921 PA
+207, the former county zoning act, 1943 PA 183, or the former township zoning act, 1943 PA
+184, and under the Michigan zoning enabling act, 2006 PA 110, MCL 125.3101 to 125.3702,
+the planning commission may continue to exercise those powers and duties without
+amendment of the ordinance, resolution, or charter provision that created the planning
+commission. 
+(2) If, on the effective date of this act, a local unit of government had a planning
+commission without zoning authority created under former 1931 PA 285, former 1945 PA 282,
+or former 1959 PA 168, the legislative body may by amendment to the ordinance creating the
+planning commission, or, if the planning commission was created by resolution, may by
+resolution, transfer to the planning commission all the powers and duties provided to a zoning
+board or zoning commission created under the Michigan zoning enabling act, 2006 PA 110,
+MCL 125.3101 to 125.3702. If an existing zoning board or zoning commission in the local
+unit of government is nearing the completion of its draft zoning ordinance, the legislative body
+shall postpone the transfer of the zoning board's or zoning commission's powers, duties, and
+records until the completion of the draft zoning ordinance, but is not required to postpone the
+transfer more than 1 year.
+(3) If, on or after the effective date of this act, a planning commission is created in a local
+unit of government that has had a zoning board or zoning commission since before the
+effective date of this act, the legislative body shall transfer all the powers, duties, and records
+of the zoning board or zoning commission to the planning commission before July 1, 2011. If
+the existing zoning board or zoning commission is nearing the completion of its draft zoning
+ordinance, the legislative body may, by resolution, postpone the transfer of the zoning board's
+or zoning commission's powers, duties, and records until the completion of the draft zoning
+ordinance, but not later than until 1 year after creation of the planning commission or July 1,
+2011, whichever comes first.
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 21 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov
+125.3885 Repeal of certain acts.
+Sec. 85.
+(1) The following acts are repealed:
+(a) 1931 PA 285, MCL 125.31 to 125.45.
+(b) 1945 PA 282, MCL 125.101 to 125.115.
+(c) 1959 PA 168, MCL 125.321 to 125.333.
+(2) Any plan adopted or amended under an act repealed under subsection (1) is subject to
+section 81(1).
+History: 2008, Act 33, Eff. Sept. 1, 2008 
+Rendered Saturday, September 5, 2026 Page 22 of 22 Michigan Compiled Laws Complete Through PA 91 of 2026
+Courtesy of legislature.mi.gov

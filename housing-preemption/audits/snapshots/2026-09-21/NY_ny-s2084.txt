@@ -1,0 +1,176 @@
+[get_page_text] Title: NY State Senate Bill 2025-S2084
+URL: https://nysenate.gov
+Source element: <main>
+---
+DO YOU SUPPORT THIS BILL?
+AYE
+NAY
+GET STATUS ALERTS FOR 2025-S2084
+EMAIL ADDRESS
+SUBSCRIBE
+Senate Bill S2084
+2025-2026 Legislative Session
+
+Relates to requiring municipalities to determine whether it is in the public interest to create and periodically update a comprehensive plan
+
+ DOWNLOAD BILL TEXT PDF
+SHARE THIS BILL
+ 
+ 
+SPONSORED BY
+ 
+Brian Kavanagh
+
+(D) 27TH SENATE DISTRICT
+
+CURRENT BILL STATUS -
+In Assembly Committee
+ 
+ 
+ 
+   
+ACTIONS
+VIEW ACTIONS (16)
+Date of Action	Assembly Actions - Lowercase
+Senate Actions - UPPERCASE
+Mar 19, 2026	Referred To Local Governments
+DELIVERED TO ASSEMBLY
+PASSED SENATE
+
+Mar 12, 2026	ADVANCED TO THIRD READING
+
+Mar 11, 2026	2ND REPORT CAL.
+
+Mar 10, 2026	1ST REPORT CAL.499
+
+Jan 07, 2026	REFERRED TO LOCAL GOVERNMENT
+Returned To Senate
+Died In Assembly
+
+May 28, 2025	Referred To Local Governments
+DELIVERED TO ASSEMBLY
+PASSED SENATE
+
+May 19, 2025	ADVANCED TO THIRD READING
+
+May 15, 2025	2ND REPORT CAL.
+
+May 14, 2025	1ST REPORT CAL.1104
+
+Jan 15, 2025	REFERRED TO LOCAL GOVERNMENT
+
+VOTES
+VIEW VOTES
+2025-S2084 (ACTIVE) - DETAILS
+See Assembly Version of this Bill:
+A49
+Current Committee:
+Assembly Local Governments
+Law Section:
+General Municipal Law
+Laws Affected:
+Amd §239-d, Gen Muni L; amd §28-a, add Art 3 Art Head, Gen City L; amd §272-a, Town L; amd §7-722, Vil L
+Versions Introduced in 2023-2024 Legislative Session:
+S9073, A8904
+
+2025-S2084 (ACTIVE) - SUMMARY
+
+Requires municipalities to determine whether it is in the public interest to create a comprehensive plan adapted to the special requirements of the municipality and to determine whether it is in the public interest to update such comprehensive plan at least once every ten years to ensure that such plan addresses housing needs.
+
+2025-S2084 (ACTIVE) - SPONSOR MEMO
+                                 
+BILL NUMBER: S2084
+
+SPONSOR: KAVANAGH
+ 
+TITLE OF BILL:
+
+An act to amend the general municipal law, the general city law, the
+town law and the village law, in relation to requiring municipalities to
+determine whether it is in the public interest to create and period-
+ically update a comprehensive plan to ensure that it addresses housing
+needs
+
+ 
+PURPOSE OR GENERAL IDEA OF BILL:
+
+This bill would require municipalities to determine whether it is in the
+public interest to create and periodically update a comprehensive plan.
+
+ 
+SUMMARY OF PROVISIONS:
+
+Section 1 amends the general municipal law to empower the county legis-
+lative body, or by resolution of such body the planning board or a
+special board, to determine whether it is in the public interest to
+prepare a proposed county comprehensive plan, amendments thereto and
+              
+VIEW MORE (68 LINES)
+2025-S2084 (ACTIVE) - BILL TEXT
+DOWNLOAD PDF
+                             
+                     S T A T E   O F   N E W   Y O R K
+ ________________________________________________________________________
+ 
+                                   2084
+ 
+                        2025-2026 Regular Sessions
+ 
+                             I N  S E N A T E
+ 
+                             January 15, 2025
+                                ___________
+ 
+ Introduced  by Sen. KAVANAGH -- read twice and ordered printed, and when
+   printed to be committed to the Committee on Local Government
+ 
+ AN ACT to amend the general municipal law, the  general  city  law,  the
+   town  law and the village law, in relation to requiring municipalities
+   to determine whether it is in the public interest to create and  peri-
+   odically update a comprehensive plan to ensure that it addresses hous-
+   ing needs
+ 
+   THE  PEOPLE OF THE STATE OF NEW YORK, REPRESENTED IN SENATE AND ASSEM-
+ BLY, DO ENACT AS FOLLOWS:
+ 
+   Section 1. Subdivisions 2, 8, 9 and 10 of section 239-d of the general
+ municipal law, as added by chapter 451 of the laws of 1997, are  amended
+ to read as follows:
+   2.  Preparation. The county legislative body, or by resolution of such
+ body the planning board or a special board, [may] SHALL DETERMINE WHETH-
+ ER IT IS IN THE PUBLIC INTEREST TO prepare a proposed county  comprehen-
+ sive  plan  [and], amendments thereto AND UPDATES THEREOF TO ENSURE THAT
+ IT ADDRESSES HOUSING NEEDS.  In the event the planning board or  special
+ board  is directed to prepare a proposed comprehensive plan or amendment
+ thereto OR UPDATE THEREOF TO ENSURE THAT  IT  ADDRESSES  HOUSING  NEEDS,
+ such  board shall, by resolution, recommend such proposed plan or amend-
+ ment to the county legislative body.
+   8. Filing of adopted county comprehensive  plan.  The  adopted  county
+ comprehensive plan [and], any amendments thereto AND ALL UPDATES THEREOF
+ shall  be filed in the office of the county clerk or register and a copy
+ thereof filed in the office of  the  county  planning  board,  with  the
+ secretary of state, as well as with the clerk of each municipality with-
+ in the county.
+   9.  Effect  of  adoption.  (a) All county land acquisitions and public
+ improvements, including those identified  in  the  county  official  map
+ adopted or amended pursuant to this article, shall be in accordance with
+ a county comprehensive plan[, if one exists].
+ 
+  EXPLANATION--Matter in ITALICS (underscored) is new; matter in brackets
+                       [ ] is old law to be omitted.
+                                                            LBD00033-01-5
+              
+VIEW MORE (94 LINES)
+COMMENTS
+
+Open Legislation is a forum for New York State legislation. All comments are subject to review and community moderation is encouraged.
+
+Comments deemed off-topic, commercial, campaign-related, self-promotional; or that contain profanity, hate or toxic speech; or that link to sites outside of the nysenate.gov domain are not permitted, and will not be published. Attempts to intimidate and silence contributors or deliberately deceive the public, including excessive or extraneous posting/posts, or coordinated activity, are prohibited and may result in the temporary or permanent banning of the user. Comment moderation is generally performed Monday through Friday. By contributing or voting you agree to the Terms of Participation and verify you are over 13.
+
+Create an account. An account allows you to sign petitions with a single click, officially support or oppose key legislation, and follow issues, committees, and bills that matter to you. When you create an account, you agree to this platform's terms of participation.
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "NY State Senate Bill 2025-S2084" (https://nysenate.gov)
